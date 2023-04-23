@@ -1,0 +1,86 @@
+{% extends "_layouts/site-layout-base.twig" %}
+{% import '_macros/_textpic' as m_textpic %}
+
+{# -- Primary content block -- #}
+{% block titleTag %}
+<title>{{ globalVars.displayUrl }}</title>
+{% endblock titleTag %}
+
+{% block bodyTag %}
+	<body class="home-page">
+{% endblock bodyTag %}
+
+{% block header %}
+	{% include "_partials/info-header-home.twig" %}
+{% endblock %}
+
+{% block content %}
+	{% set topics = craft.entries().section('homePage').all() %}
+	{% set swapClass = false %}
+	{% for topic in topics %}
+		{% if topic.type.handle is same as 'textPic' %}
+			{% if (swapClass == "swapOrder") %}
+				{% set swapClass = "" %}
+			{% else %}
+				{% set swapClass = "swapOrder" %}
+			{% endif %}
+
+			<section class="row TextPic">
+				<div class="TextBlock {{ swapClass }}">
+					<div class="topBorder"></div>
+					<div>
+						<h3>{{ topic.topicTitle }}</h3>
+						<h5>{{ topic.topicDesc }}</h5>
+						<p>{{ topic.topicIntro }}</p>
+					</div>
+				<div>
+				{% for link in topic.topicLink %}
+				<span class="button buttonLink">
+					<a href="{{ link.uri }}">{{ link.label }}</a>
+				</span>
+				{% endfor %}
+
+				{% if false %}
+						<span class="button buttonLink">
+								<a href="#">Button</a>
+							</span>
+					{% endif %}
+						</div>
+				</div>
+				<div class="PicBlock">
+					{% set image = topic.topicImage.one() %}
+					<img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+				</div>
+			</section>
+		{% elseif topic.type.handle is same as 'banner' %}
+			<section class="row BannerPic">
+				<div class="BannerImg">
+					{% set image = topic.topicImage.one() %}
+					{% if image %}				
+						<img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+					{% endif %}
+					<div class="bannerText">
+						<h2>{{ topic.topicTitle }}</h2>
+						<h4>{{ topic.topicDesc }}</h4>	
+						{% for link in topic.topicLink %}
+							<span class="button buttonLink white">
+								<a href="{{ link.uri }}">{{ link.label }}</a>
+							</span>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		{% endif %}
+	{% endfor %}
+	
+
+	
+{% endblock %}                
+
+{# -- Content that appears below the primary content block -- #}
+{% block subcontent %}
+{% endblock %}
+
+{% block pageJs %}
+{% endblock pageJs %}
+

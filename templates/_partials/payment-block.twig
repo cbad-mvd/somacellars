@@ -1,0 +1,113 @@
+
+{% set wrapperClass = wrapperClass ? wrapperClass : "" %}
+{% set newReturnUrl = '/account/response?success="true"&order: '~cart.totalPrice %}
+<div class="{{ wrapperClass }}">
+    {% if formHandle is defined %}
+        {% set form = craft.freeform.form(formHandle, {
+            id: formHandle,
+            errorClass: "formError",
+            rowClass: "formRow",
+            submitClass: "button",
+            returnUrl: url('account/response', {success: 'true', order: cart.number}),
+            formAttributes: { "data-error-message": "Please fix the errors displayed below and try again" },
+            overrideValues: {
+                "hiddenAmount": cart.totalPrice,
+            }
+        }) %}
+
+        {{ form.renderTag }}
+
+        {% if form.hasErrors %}
+        <div class="freeform-form-has-errors">
+            {{ "Error! Please review the form and try submitting again."|t('freeform') }}
+
+            {% if form.errors|length %}
+            <ul>
+                {% for error in form.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endif %}
+
+            <h5>Payment Details</h5>
+
+            {% for index, row in form %}
+
+                {% if index == 1 %}
+                <div class="ccRow">
+                {% else %}
+                <div class="formRow">
+                {% endif %}
+                
+                    {% for field in row %}
+
+                        {% set numCols = row|length %}
+                        {% switch numCols %}
+                        {% case 2 %}
+                            {% set columnClass = 'w49 ' %}                            
+                        {% case 3 %}
+                            {% set columnClass = 'w30 ' %}                        
+                        {% default %}
+                            {% set columnClass = 'w100 ' %}
+                        {% endswitch %}
+                                
+                        {% set columnClass = columnClass ~ form.customAttributes.columnClass %}
+                        {% if field.type == "submit" %}
+                            {% set columnClass = columnClass ~ " btnRow" %}
+                        {% endif %}
+
+                        <div class="{{ columnClass }}"{{ field.rulesHtmlData }}>
+
+                            {% if (field.type == "submit") and (optionalBtn is defined) %}
+                                <a class="{{ optionalBtn.class }}" href="{{ optionalBtn.href }}">{{ optionalBtn.text }}</a>
+                            {% endif %}
+
+                            {{ field.render({
+                            class: field.type != "submit" ? "freeform-input" : "",
+                            labelClass: "freeform-label" ~ (field.inputOnly ? " freeform-input-only-label" : "") ~ (field.required ? " freeform-required" : ""),
+                            errorClass: "freeform-errors",
+                            instructionsClass: "freeform-instructions",
+                            }) }}
+
+                            {# FOR FREEFORM PAYMENTS #}                    
+                            {% if field.layoutRows is defined %}
+                                {% for layoutRow in field.layoutRows %}
+                                    {% set numCols = layoutRow|length %}
+                                    {% switch numCols %}
+                                    {% case 2 %}
+                                        {% set columnClass = 'w49 ' %}                            
+                                    {% case 3 %}
+                                        {% set columnClass = 'w30 ' %}                        
+                                    {% default %}
+                                        {% set columnClass = 'w100 ' %}
+                                    {% endswitch %}
+
+                                    <div class="freeform-row {{ form.customAttributes.rowClass }}">
+                                        {% for layoutField in layoutRow %}
+                                            <div class="{{ columnClass }}">
+                                            {{ layoutField.render({
+                                                class: "freeform-input",
+                                                labelClass: "freeform-label" ~ (layoutField.inputOnly ? " freeform-input-only-label" : "") ~ (layoutField.required ? " freeform-required" : ""),
+                                                errorClass: "freeform-errors",
+                                                instructionsClass: "freeform-instructions",
+                                            }) }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                        </div>
+
+                    {% endfor %}
+                </div>
+
+            {% endfor %}
+        <div class="group">    
+        </div>
+
+        {{ form.renderClosingTag }}
+    {% endif %}
+</div>

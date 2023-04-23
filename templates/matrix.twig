@@ -1,0 +1,4 @@
+{## enumerate all blocks and load block type handler ##}
+{% for block in matrix %}
+    {% include ["matrix/" ~ block.type, "matrix/default"] %}
+{% endfor %}

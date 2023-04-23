@@ -1,0 +1,39 @@
+/****************************************
+ Global Spacing Styles
+*****************************************/
+
+$vspace-base: 1.5rem;           // 24px     for vertical rythm 
+
+
+/* Default Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+	margin-bottom: $vspace-base * 0.25;
+}
+
+input,
+textarea,
+select,
+fieldset {
+	margin-bottom: $vspace-base;
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form {
+	margin: $vspace-base 0;
+}

@@ -1,0 +1,91 @@
+//
+// base colors
+//
+$alpha_primary: #5e1c1c; // red
+$alpha_primary: #791b1b; // red
+$bravo_primary: #3e4147; // green
+$charlie_primary: #fffedf; // yellow
+$delta_primary: #2a2c31; // blue
+$echo_primary: #dfba69; // accent
+$alpha_gray: #333; //black
+$alpha_purple: #4639b0;
+
+$color-bodytext: $alpha_gray;
+$color-headings: $alpha_gray;
+$color-headings-highlight: $alpha_primary;
+$color-headings-highlight: $alpha_gray;
+
+//
+// link colors
+//
+$color-link: $alpha_gray;
+$color-link: $alpha_purple;
+$color-link-hover: lighten($alpha_primary, 20%);
+
+//
+// default font settings for app
+//
+$font-stack: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size: 1.5em;
+$font-line-height: 1.6;
+$font-weight: 400;
+$font-weight-bold: 600;
+$font-weight-heading: 300;
+
+//
+// default font settings for emphasized text
+//
+$em-font-stack: "Merriweather", "Georgia", serif;
+
+//
+// set h1 size, h2-h6 calculated this
+//
+$font-desktop-h1-size: 5rem;
+$font-mobile-h1-size: 4rem;
+
+//
+// heading line spacing
+//
+$font-h1-lh: 1.2;
+$font-h2-lh: 1.25;
+$font-h3-lh: 1.3;
+$font-h4-lh: 1.35;
+$font-h5-lh: 1.5;
+$font-h6-lh: 1.6;
+
+$heading-top-margin: 0;
+$heading-bottom-margin: 0.2em;
+$heading-bottom-margin: 2rem;
+
+// layout-two colors
+.jim {
+	color: #c06014;
+	color: #eddbcd;
+	color: #000000;
+	color: #cdcdcd;
+
+	// warm tones
+	color: #d7cec7; // grain
+	color: #565656; // blackboard
+	color: #76323f; // oxblood
+	color: #c09f80; // tan
+}
+
+$color-quote: #e60c26;
+
+// warm tones
+$color-grain: #d7cec7;
+$color-blackboard: #565656;
+$color-oxblood: #76323f;
+$color-oxblood: #e60c26;
+$color-oxblood: #7b74b6;
+$color-oxblood: #0090d3;
+$color-tan: #c09f80;
+
+$color-testimonial: lighten($color-quote, 47.5%);
+
+$color-page-bg: $color-grain;
+$color-header-bg: $color-oxblood;
+$color-content-bg: lighten($color-grain, 15%);
+$color-footer-bg: $color-blackboard;
+$color-header-text: #791b1b;

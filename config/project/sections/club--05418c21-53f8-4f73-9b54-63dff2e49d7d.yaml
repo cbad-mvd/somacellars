@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: club
+name: Club
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  ba700213-75f7-4cac-90d0-83101e67f7db: # Soma Cellars
+    enabledByDefault: true
+    hasUrls: true
+    template: entry
+    uriFormat: 'club/{slug}'
+structure:
+  maxLevels: null
+  uid: cd4a669d-be84-4d4c-b21f-783558b25956
+type: structure

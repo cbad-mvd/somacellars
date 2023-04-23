@@ -1,0 +1,18 @@
+{% extends "matrix/default" %}
+
+{% block blockContent %}
+    {% set image = block.image.one() %}
+    <div class="image-full my-5">
+        {% if image %}
+            <figure>
+                <img src="{{ image.url }}"/>
+                {% if block.caption %}
+                    <figcaption class="text-xs text-gray-600">
+                        {{ block.caption }}
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+    </div>
+
+{% endblock %}

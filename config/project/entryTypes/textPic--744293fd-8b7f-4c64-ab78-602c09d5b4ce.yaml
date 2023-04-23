@@ -1,0 +1,127 @@
+fieldLayouts:
+  6c7c31a1-f11d-41d3-a997-018eec3dfebf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 98089804-9d51-4552-a785-6088f849d8bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c51f1b8-451f-41d5-b139-f9d030efcf45 # Topic Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 091ecd9d-1505-4111-ac26-397ccd892d53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9bb85d0-926f-4d90-be7d-e623f12398f2 # Topic Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdc267fd-2514-4030-b7ba-f8f18ed65e74
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9e8d83f1-6587-4a9a-bea2-71055e8310e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4e67ca40-b001-4a5e-b820-0843dca449a5 # Topic Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc0831d0-c490-4be2-b02d-ed1aa7a5cd0b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 62d7bcb0-16d2-42a9-831e-9cc80bab4b5b # Topic Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3794fe8b-2e00-48c3-a959-e517468e6565
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c779ce8d-8c31-4f64-a04c-206ba77d3a8a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34ab3893-e93c-4b44-ab2b-0a2fb9827fe3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a1f05f85-09e9-4ea9-9948-6ad4a55357f8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7810368c-df9c-4b65-b9a2-59ce7f82b0ed
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 965b65dc-4871-45c6-8546-9becfd112d7d
+        userCondition: null
+handle: textPic
+hasTitleField: true
+name: TextPic
+section: 249bc4ae-d94e-454b-95df-7e56c57eff08 # Home Page
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

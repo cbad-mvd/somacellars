@@ -1,0 +1,16 @@
+{% extends "entry/default" %}
+{% import '_macros/_srcset'  as m_srcset %}
+{# {% set entry = craft.entries().section('wines').type('default').one() %} #}
+
+{% block entryContent %}
+    <section class="row WineInfo">
+        <div class="bottle">
+            {% set image = entry.topicImage.one() %}
+            <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+        </div>
+        <div class="info">
+            <h2>{{ entry.title }}</h2>
+        </div>
+
+    </section>
+{% endblock %}

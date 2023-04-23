@@ -1,0 +1,19 @@
+columnSuffix: gqzxgsbb
+contentColumnType: text
+fieldGroup: d757e6b1-163c-497f-8356-5d82e49d796b # Intro
+handle: introHeading
+instructions: null
+name: 'Intro Heading'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

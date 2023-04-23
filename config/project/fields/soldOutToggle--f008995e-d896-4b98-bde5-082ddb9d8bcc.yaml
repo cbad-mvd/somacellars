@@ -1,0 +1,14 @@
+columnSuffix: ytjexhgh
+contentColumnType: boolean
+fieldGroup: bfc48201-3ef2-4750-9269-167f90da381f # globalVars
+handle: soldOutToggle
+instructions: null
+name: 'Sold Out Toggle'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

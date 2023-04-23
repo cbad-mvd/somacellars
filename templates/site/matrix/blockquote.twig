@@ -1,0 +1,12 @@
+{% extends "matrix/default" %}
+
+{% block blockContent %}
+    <blockquote>
+        {{ block.quote }}
+    </blockquote>
+    {% if block.citation != "" %}
+        <cite>
+            {{ block.citation }}
+        </cite>
+    {% endif %}
+{% endblock %}

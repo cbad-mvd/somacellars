@@ -1,0 +1,115 @@
+fieldLayouts:
+  36f4613d-97df-46ec-8628-fbe9bc5ed4ca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6c3ccdc9-80a7-4eb0-bb58-a46314767677
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e524f9fc-7285-428c-b0f0-71307175c157 # Intro Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 407bf39c-681b-405c-819c-e76315a143c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69e40dcf-ec92-4a65-8a58-1730aa7eaf14 # Intro Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a1186f7-8ddf-44fe-b1c0-f98cb294bfdd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ffdcc74b-97d2-41a6-91bf-4459dbbad872 # Intro Hero
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c518b4ac-177f-4824-a2a4-cbc815907c05
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5913033f-7b45-4065-bcd2-5188d9764973 # Contact Info
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 19605e6c-3c93-4f12-bac8-3d05d273fdc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e88b6eff-e6b3-4a5f-8db7-fcf54a8e9c57 # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e3a8a4b-5549-4961-a31e-d0911dd41382
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b210e6df-b6ce-436e-8b65-10f838522fff # Global Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c483f9b6-c55f-456c-9c89-4a8115f852e4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 307ec3ba-ac12-4867-96b2-a1f65ac81edb
+        userCondition: null
+handle: intro
+hasTitleField: true
+name: Intro
+section: 88b07f04-8ede-4f0c-81e1-707bfd88b65a # Site Info
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

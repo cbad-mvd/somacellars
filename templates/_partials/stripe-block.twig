@@ -1,0 +1,19 @@
+<form method="post">
+    {{ csrfInput() }}
+    {{ hiddenInput('action', 'commerce/payments/pay') }}
+    {{ hiddenInput('redirect', '/customer/order?number={number}'|hash) }}
+    {{ hiddenInput('cancelUrl', '/checkout/payment'|hash) }}
+    {{ hiddenInput('cancelUrl', '/account/form'|hash) }}
+    {{ hiddenInput('gatewayId', 2) }}
+    <style>
+        .stripe-payment-intents-form {
+            width: 100%;
+        }
+    </style>
+    {{ cart.gateway.getPaymentFormHtml({firstName: bFirst, lastName: bLast})|raw }}
+    
+    <div class="btnRow">
+        <button type="submit">Pay Now</button>
+    </div>
+    
+</form>     

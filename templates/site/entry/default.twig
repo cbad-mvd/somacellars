@@ -1,0 +1,25 @@
+{% extends "_layouts/site-layout-base.twig" %}
+
+{% block content %}
+    <div class="font-copy text-white {{ entry.section.handle }}">  
+        <div class="my-2 entry-header">
+            {% if entry.type == "link" %}
+                <h2 class="font-normal font-title break-normal text-gray-100 pt-6 txt-1x1 md:text-3x1">
+                        <a href="{{ entry.linkUrl }}" class="text-gray-100">{{ entry.title }}</a>
+                        <a href="{{ entry.url }}">&neArr;</a>
+                </h2>
+            {% else %}
+                <h2 class="font-normal font-title break-normal text-gray-100 pt-6 txt-4x1 md:text-4x1">
+                    <a href="{{ entry.url }}" class="teext-gray-100">{{ entry.title }}</a>
+                </h2>
+                <p class="txt-lg font-normal text-gray-100">{{ entry.postDate | date('M,d,Y') }}</p>
+            {% endif %}
+        </div>
+
+        {% block itemContent %}
+            {% if entry.body %}
+                {% include "matrix" with {"matrix": entry.body} %}
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}

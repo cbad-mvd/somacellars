@@ -1,0 +1,19 @@
+{% extends "item/default" %}
+{% import '_macros/_srcset'  as m_srcset %}
+
+{% block itemContent %}
+{# default item is handled by the page entry block #}
+<section class="row PageIntro">
+    <div class="pageText">
+        <h2>{{ item.topicTitle }}</h2>
+    </div>
+    <div class="pageImg">
+        {{ m_srcset.srcset(item.topicImage.one(), 'default') }}      
+    </div>
+    <div class="pageText">
+        <p>{{ item.topicIntro }}</p>
+    </div>
+</section>
+
+{% endblock %}
+

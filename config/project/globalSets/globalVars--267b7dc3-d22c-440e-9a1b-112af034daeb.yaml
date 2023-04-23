@@ -1,0 +1,108 @@
+fieldLayouts:
+  1703ab82-3045-48e7-b1f9-275322a9f5a5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0b9622bd-967e-4c41-8bc0-38a79d56c3c6 # Display Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57c7ffce-b021-4cda-a356-e0a392ae6888
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59f07717-3303-4e4e-9601-50490246953b # Page Title Base
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: feb987eb-698c-4e9d-9e6a-bcea10931eed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e88b6eff-e6b3-4a5f-8db7-fcf54a8e9c57 # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3f156276-b6fe-4130-b451-d7d1ccd5cd23
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 82f95698-31c1-45a9-b953-e7d8c4eea07c # Site Logo Dark BG
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a246ddd-2d12-4d2b-9198-91e77a721564
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d6fcde0d-7cc8-4640-bc3e-01ff7fdcc14a # Mobile Menu Open
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c540597-15e0-4c43-bc42-1dabd26cd3bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: adfa3f60-5907-4783-88eb-599be0d471eb # Mobile Menu Close
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc97a423-11a0-4867-9146-720414533498
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c463785e-e4a5-4ff8-b55a-ef45370e727a # Sold Out
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05d941b6-2f20-40d6-a6af-2781cdba83e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 920134a8-c4e4-444b-b1ca-38a95d0a7b43 # Return
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef1e07ab-7697-40f4-9c17-4bbd7b190d1f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Fields
+        uid: 6e6fc68f-1bed-45aa-b31d-de6748c74eae
+        userCondition: null
+handle: globalVars
+name: 'Global Vars'
+sortOrder: 1

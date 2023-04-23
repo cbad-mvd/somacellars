@@ -1,0 +1,77 @@
+
+{% import '_macros/_user' as m_user %}
+
+    		{% set myEntryQuery = craft.entries().section('globalHeader').limit(1) %}
+            {% set thisEntry = myEntryQuery.one() %}
+
+            {% set thisSlug = entry is defined ? entry.slug : "" %}
+
+            <header class="CheckOutHeader dark">
+                <div class="branding">
+                    <div class="logo">
+                        {% set image = thisEntry.siteLogo.one() %}
+                        <a href="{{ alias('@web') }}">
+                            <img class="lazyloaded" src="{{ image.url }}" alt="{{ image.altText }}">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <h2 id="jsCheckoutTitle">Checkout</h2>
+                    </div>
+                </div>
+                <div id="jsProgressBar" class="status">
+                    <div class="progress" style="display: none;">
+                        <div class="labels">
+                            <span>Review</span>
+                            <span>Account</span>
+                            <span>Details</span>
+                            <span>Billing</span>
+                            <span>Payment</span>
+                            <span>Confirmation</span>
+                        </div>
+                        <div class="track">
+                            <div id="jsProgressState" class="state s0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="HdrNavRow nav-wrapper">
+                        <div class="checkoutNav">
+                            <ul class="checkoutNav-menu">
+                                {% for item in thisEntry.globalNav %}
+                                    <li>
+                                        {% if thisSlug == item.menuUrl %}
+                                            {% set linkClass = "active" %}
+                                        {% elseif (thisSlug == "home") and (item.menuUrl == "/") %}
+                                            {% set linkClass = "active" %}
+                                    {% else %}
+                                            {% set linkClass = thisSlug %}
+                                        {% endif %}
+                                    {#
+                                            {% set linkClass = thisSlug ~ item.menuUrl %}
+                                    #}
+                                        <a href="{{ alias('@web') }}/{{ item.menuUrl }}" class="{{ linkClass }}" title="{{ item.menuTip }}">{{ item.menuText }}</a>
+                                    </li>
+                                {% endfor %}
+                                <li>
+                                    {# <a href="{{ m_user.getLoginLink() }}" class="{{ thisSlug }}" title="{{ m_user.getLoginLinkTitle() }}">{{ m_user.getLoginLinkTitle() }}</a> #}
+                                    <a href="" class="jsShowUserMenu userIcon" title=""><span></span></a>                                
+                                </li>
+                            </ul>
+                            <div id="userMenu" class="usermenu">
+                                <ul>
+                                    {% if currentUser %}
+                                        <li><a href="/customer" class="">Order History</a></li>
+                                    {% else %}
+                                    {% endif %}
+                                    <li class="last"><a href="{{ m_user.getLoginLink() }}">{{ m_user.getLoginLinkTitle() }}</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="mobile-nav">
+                            {% set image = globalVars.mobileMenu.one() %}
+                            <img id="jsMobileShow" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />
+                        </div>
+                    </div>
+                </div>
+
+			</header>

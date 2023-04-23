@@ -1,0 +1,37 @@
+/****************************************
+ Core Global Styles
+*****************************************/
+
+/*
+ * set box-sizing to use border-box by default
+ */
+ html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+ * default boilerplate styles
+ */
+
+#page-container,
+#content-container {
+	margin: 0;
+	padding: 0;
+}

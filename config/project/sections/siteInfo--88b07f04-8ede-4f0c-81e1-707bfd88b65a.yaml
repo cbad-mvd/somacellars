@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: siteInfo
+name: 'Site Info'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  ba700213-75f7-4cac-90d0-83101e67f7db: # Soma Cellars
+    enabledByDefault: true
+    hasUrls: true
+    template: siteInfo/_entry
+    uriFormat: 'siteInfo/{slug}'
+type: channel

@@ -1,0 +1,14 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+/web/assets/forms
+/node_modules
+
+### misc files
+jim.html
+tailwind.config.js
+templates.zip
+/twsrc
+/templates/brands
+/templates/paddles

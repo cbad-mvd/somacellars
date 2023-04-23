@@ -1,0 +1,55 @@
+fieldLayouts:
+  be67045d-43cb-4731-91e7-7cac547d7476:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 142f2368-0b4b-4e3c-a0c0-d5ab30eebd9e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bacc9914-340e-463e-8d19-5345afda9138 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f36e1036-9890-40c0-82b6-c7c8588d5b95
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 28f160e6-c38f-4171-81ce-a78981e48881
+        userCondition: null
+handle: blockQuote
+hasTitleField: true
+name: 'Block Quote'
+section: 8890c4af-24db-46a4-bdba-7c9733d4e525 # Blog
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

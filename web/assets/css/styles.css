@@ -1,0 +1,3453 @@
+@charset "UTF-8";
+/* Main CSS File for deMaggs Dining
+
+Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+ - Config
+ - Normalize
+ - Base Styles
+ - Typography
+ - Layout
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*******************************
+ Basic global core styles 
+*******************************/
+/****************************************
+ Core Global Styles
+*****************************************/
+/*
+ * set box-sizing to use border-box by default
+ */
+html {
+  box-sizing: border-box;
+}
+
+/*
+ * provide smooth scrolling to #hash links
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****************************************
+ Color Styles
+*****************************************/
+/* Backgrounds
+__________________________________________________ */
+body {
+  background-color: #e9e8e4;
+}
+
+.page {
+  color: #e9e8e4;
+}
+
+.dark {
+  background-color: #e9e8e4;
+}
+.dark25 {
+  background-color: rgba(33, 33, 37, 0.25);
+}
+.dark50 {
+  background-color: #e9e8e4;
+}
+
+/* Text
+__________________________________________________ */
+p, h1, h2, .compenent-title, h3, h4, h5, .title, h6 {
+  color: #5b574d;
+}
+
+.dark p, .dark h1, .dark h2, .dark .compenent-title, .dark h3, .dark h4, .dark h5, .dark .title, .dark h6, .dark ol, .dark ul, .dark a, .dark form {
+  color: #eeeeee;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #465bd1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #601008;
+}
+
+.dark a {
+  color: #601008;
+}
+.dark a:hover {
+  color: #601008;
+  text-decoration: underline;
+}
+
+.button,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  color: #5b574d;
+  background-color: #601008;
+}
+.button > a,
+button > a,
+input[type=submit] > a,
+input[type=reset] > a,
+input[type=button] > a {
+  color: inherit;
+}
+.button > a:hover,
+button > a:hover,
+input[type=submit] > a:hover,
+input[type=reset] > a:hover,
+input[type=button] > a:hover {
+  color: inherit;
+}
+.button:hover,
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
+  color: #cf0505;
+}
+.button.off,
+button.off,
+input[type=submit].off,
+input[type=reset].off,
+input[type=button].off {
+  background-color: #ccc;
+}
+
+/****************************************
+ Global Spacing Styles
+*****************************************/
+/* Default Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 0.375rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+div,
+p,
+h1,
+h2,
+.compenent-title,
+h3,
+h4,
+h5,
+.title,
+h6,
+pre,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form {
+  margin: 1.5rem 0;
+}
+
+/*
+ * Responsive: since everything is rem/em based, control document font-size
+ *             with media queries setting the base size in html
+ */
+html {
+  font-size: 87.5%;
+  /* Larger than phablet */
+  /* Larger than standard desktop */
+}
+@media (min-width: 550px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  color: #5b574d;
+}
+
+.headerDefaults, h6, h5, .title, h4, h3, h2, .compenent-title, h1 {
+  font-size: 1rem;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+}
+
+h2, .compenent-title {
+  font-family: "Crimson Text", serif;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h6 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.smallText {
+  font-size: 0.75rem;
+}
+
+.bodyText {
+  font-size: 1rem;
+}
+
+.largeText {
+  font-size: 1.25rem;
+}
+
+.compenent-title {
+  font-size: 3rem;
+  color: red;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  display: inline-block;
+  margin: 0;
+  padding: 0 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 2.25rem;
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button > a,
+button > a,
+input[type=submit] > a,
+input[type=reset] > a,
+input[type=button] > a {
+  display: block;
+}
+.button > a:hover,
+button > a:hover,
+input[type=submit] > a:hover,
+input[type=reset] > a:hover,
+input[type=button] > a:hover {
+  text-decoration: none;
+}
+.buttonLink {
+  border-top: 2px solid #b18956;
+  border-bottom: 2px solid #b18956;
+  background-color: #e9e8e4;
+  border-radius: 0;
+  padding: 0 0.5rem;
+  color: #b18956;
+  font-weight: normal;
+}
+.buttonLink:hover {
+  border-top: 2px solid #b18956;
+  border-bottom: 2px solid #b18956;
+  background-color: #b18956;
+  color: white;
+}
+.buttonLink.white {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+.buttonLink.white:hover {
+  border-top: 2px solid #b18956;
+  border-bottom: 2px solid #b18956;
+  background-color: #b18956;
+}
+.buttonLink.disabled {
+  border-top: 2px solid #666666;
+  border-bottom: 2px solid #666666;
+  background-color: transparent;
+  color: #666666;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+li {
+  line-height: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.ListWithTitle > h5, .ListWithTitle > .title, .ListWithTitle > h6 {
+  margin-bottom: 0.75rem;
+}
+.ListWithTitle > ol, .ListWithTitle > ul {
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+form fieldset > div {
+  margin: 0;
+}
+
+form fieldset label {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+form fieldset label.right {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+form fieldset input {
+  margin: 0.5rem 0;
+}
+
+label[for=textarea] {
+  vertical-align: top;
+}
+
+.radio-group {
+  margin-bottom: 1rem;
+}
+.radio-group > p.title {
+  margin-bottom: 0.5rem;
+}
+.radio-group input[type=radio] {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.radio-group label {
+  line-height: inherit;
+  margin-right: 0.5rem;
+}
+.radio-group > span {
+  display: block;
+}
+
+.checkbox-group {
+  margin-bottom: 1rem;
+}
+.checkbox-group > p.title {
+  margin-bottom: 0.5rem;
+}
+.checkbox-group input[type=checkbox] {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.checkbox-group label {
+  line-height: inherit;
+  margin-right: 0.5rem;
+}
+.checkbox-group > span {
+  display: block;
+}
+
+/*******************************
+ Keyframes for animations
+*******************************/
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation come-in go-out
+ * ----------------------------------------
+ */
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes go-out {
+  to {
+    transform: translateY(-4.5rem);
+  }
+}
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes motionUpxxx {
+  0% {
+    opacity: 0;
+    transform: translatey(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+@keyframes motionUp {
+  to {
+    transform: translateY(0);
+  }
+}
+.row {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+  /* Larger than phablet */
+  /* Larger than iPad */
+  /* Larger than standard desktop */
+}
+.row.nomargins {
+  margin: 0;
+}
+@media (min-width: 550px) {
+  .row {
+    margin: 3rem 0;
+  }
+}
+@media (min-width: 750px) {
+  .row {
+    margin: 3rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .row {
+    margin: 3rem 0;
+  }
+}
+
+.home-page .row {
+  margin: 3rem 0;
+  /* Larger than phablet */
+  /* Larger than iPad */
+  /* Larger than standard desktop */
+}
+@media (min-width: 550px) {
+  .home-page .row {
+    margin: 4.5rem 0;
+  }
+}
+@media (min-width: 750px) {
+  .home-page .row {
+    margin: 6rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .home-page .row {
+    margin: 6rem 0;
+  }
+}
+
+.home-page .row.nomargins {
+  margin: 0;
+}
+
+.topic,
+.heading,
+.content {
+  width: 100%;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+.FooterSections {
+  display: flex;
+  flex-flow: row;
+  margin-top: 1rem;
+  padding: 2rem 0.25rem;
+  height: 4rem;
+  background-color: rgb(33, 33, 37);
+  background-color: #d2d0c8;
+  color: #ffffff;
+  /*
+   * the two divs being controled by FooterSections flex
+   */
+}
+.FooterSections .footerInfo,
+.FooterSections .footerSocial {
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  min-height: 10px;
+}
+.FooterSections .footerInfo {
+  width: 75%;
+  text-align: left;
+}
+.FooterSections .footerSocial {
+  width: 25%;
+  justify-content: flex-end;
+}
+.FooterSections .footerInfo span,
+.FooterSections .footerSocial span {
+  padding: 0.5rem 0.5rem 0;
+  font-size: 0.75rem;
+  line-height: 1.2em;
+}
+.FooterSections .footerLinks {
+  display: none;
+}
+.FooterSections .footerLogo {
+  width: 4rem;
+}
+.FooterSections .footerSocial {
+  justify-content: flex-end;
+}
+.FooterSections .footerSocial-icons {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+.FooterSections a.footerSocial-icons--fb {
+  background-image: url("../img/social-facebook.svg");
+}
+.FooterSections a.footerSocial-icons--twitter {
+  background-image: url("../img/social-twitter.svg");
+}
+.FooterSections a.footerSocial-icons--fb:hover {
+  background-image: url("../img/social-facebook-hot.svg");
+}
+.FooterSections a.footerSocial-icons--twitter:hover {
+  background-image: url("../img/social-twitter-hot.svg");
+}
+@media (min-width: 750px) {
+  .FooterSections {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  .FooterSections .footerInfo {
+    width: 75%;
+  }
+  .FooterSections .footerInfo .footerLinks {
+    display: block;
+  }
+  .FooterSections .footerSocial {
+    width: 75%;
+  }
+}
+
+.ItemGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.ItemGrid-item {
+  position: relative;
+  width: 50%;
+  min-width: 20rem;
+}
+
+/*
+ * a row element with a side by side text block / image
+ */
+.BannerPic {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+  width: 100%;
+  /*
+   * PicBlock and TextBlock controlled by TextPic flex
+   */
+}
+.BannerPic div {
+  margin: 0;
+}
+.BannerPic .BannerImg {
+  position: relative;
+  width: 100%;
+  order: 1;
+}
+.BannerPic .BannerImg .bannerText {
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.BannerPic .BannerImg h2, .BannerPic .BannerImg .compenent-title {
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0;
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 7px rgba(127, 127, 127, 0.4), 2px 2px 7px rgba(127, 127, 127, 0.4), 3px 3px 7px rgba(127, 127, 127, 0.4);
+}
+.BannerPic .BannerImg h4 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: white;
+}
+
+/*
+ * a row element with a side by side text block / image
+ */
+.TextPic {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+  width: 95%;
+  /*
+   * PicBlock and TextBlock controlled by TextPic flex
+   */
+}
+.TextPic div {
+  margin: 0;
+}
+.TextPic .PicBlock {
+  position: relative;
+  width: 100%;
+  order: 1;
+}
+.TextPic .TextBlock {
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  order: 2;
+}
+.TextPic .TextBlock h3, .TextPic .TextBlock h5, .TextPic .TextBlock .title, .TextPic .TextBlock p {
+  width: 94%;
+  margin: 1rem auto;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.TextPic .TextBlock h3 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+}
+.TextPic .TextBlock h5, .TextPic .TextBlock .title {
+  text-transform: uppercase;
+  color: #5b574d;
+}
+.TextPic .TextBlock div.variants {
+  display: inline-block;
+  width: 50%;
+}
+.TextPic .TextBlock div.variants label,
+.TextPic .TextBlock div.variants select {
+  width: 100%;
+}
+.TextPic .TextBlock div.variants label {
+  margin-left: 6px;
+  text-align: left;
+}
+.TextPic .TextBlock .topBorder {
+  position: relative;
+}
+.TextPic .TextBlock .topBorder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 0.25rem;
+  background-color: #b18956;
+}
+.TextPic .TextBlock.swapOrder {
+  order: 2;
+  align-items: flex-end;
+}
+.TextPic .TextBlock.textOnTop {
+  order: 0;
+}
+@media (min-width: 750px) {
+  .TextPic {
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+  .TextPic .PicBlock {
+    width: 60%;
+  }
+  .TextPic .TextBlock {
+    width: 37%;
+    margin-top: 0;
+  }
+  .TextPic .TextBlock h3, .TextPic .TextBlock h5, .TextPic .TextBlock .title, .TextPic .TextBlock p {
+    width: 100%;
+  }
+  .TextPic .TextBlock .topBorder::after {
+    width: 10rem;
+  }
+  .TextPic .TextBlock.swapOrder {
+    order: 0;
+    text-align: right;
+  }
+  .TextPic .TextBlock.swapOrder .topBorder::after {
+    left: auto;
+    right: 0;
+  }
+  .TextPic .TextBlock.swapOrder h3, .TextPic .TextBlock.swapOrder h5, .TextPic .TextBlock.swapOrder .title, .TextPic .TextBlock.swapOrder p {
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+  .TextPic .TextBlock.textOnTop {
+    order: 2;
+  }
+}
+
+/*
+ * wine choices flex grid
+ */
+.WineInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+  padding: 0 6rem;
+  width: 95%;
+}
+.WineInfo .wineEntry {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.WineInfo .wineEntry .bottle {
+  width: 25%;
+}
+.WineInfo .wineEntry .bottle img {
+  max-width: 150%;
+}
+.WineInfo .wineEntry .info {
+  width: 70%;
+}
+.WineInfo .wineEntry h2, .WineInfo .wineEntry .compenent-title {
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+  text-align: left;
+}
+.WineInfo .wineEntry h3, .WineInfo .wineEntry p {
+  margin: 0;
+}
+.WineInfo .wineEntry h3 {
+  margin-top: 1rem;
+  color: #601008;
+}
+.WineInfo .wineEntry p.bodytext {
+  margin-bottom: 1rem;
+}
+.WineInfo .wineEntry .specs {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-top: 1px solid #5b574d;
+  margin-bottom: 0.75rem;
+}
+.WineInfo .wineEntry .specs div {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.WineInfo .wineEntry .specs .specBlock {
+  margin-top: 0.5rem;
+  width: 46%;
+}
+.WineInfo .wineEntry .specs .specRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding-bottom: 0.75rem;
+}
+.WineInfo .wineEntry .specs .label {
+  width: 50%;
+  font-weight: bold;
+}
+.WineInfo .wineEntry .specs .value {
+  width: 50%;
+}
+.WineInfo .wineEntry .buttons {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  width: 50%;
+}
+.WineInfo .wineEntry .buttons span {
+  width: 40%;
+  display: inline-block;
+}
+.WineInfo .wineEntry .buttons p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.WineInfo .wineItem {
+  width: 48%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 20rem;
+  margin: 3rem 0;
+}
+.WineInfo .wineItem div {
+  margin: 0;
+}
+.WineInfo .wineItem .buttons {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+}
+.WineInfo .wineItem .buttons span {
+  width: 40%;
+  display: inline-block;
+}
+.WineInfo .wineItem .buttons p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.WineInfo .wineItem .PicBlock {
+  position: relative;
+  width: 30%;
+  order: 1;
+}
+.WineInfo .wineItem .TextBlock {
+  width: 70%;
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  order: 2;
+}
+.WineInfo .wineItem .TextBlock h3, .WineInfo .wineItem .TextBlock h5, .WineInfo .wineItem .TextBlock .title, .WineInfo .wineItem .TextBlock p {
+  width: 94%;
+  margin: 1rem auto;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.WineInfo .wineItem .TextBlock h3 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+}
+.WineInfo .wineItem .TextBlock h5, .WineInfo .wineItem .TextBlock .title {
+  text-transform: uppercase;
+  color: #5b574d;
+}
+.WineInfo .wineItem .TextBlock div.variants {
+  display: inline-block;
+  width: 50%;
+}
+.WineInfo .wineItem .TextBlock div.variants label,
+.WineInfo .wineItem .TextBlock div.variants select {
+  width: 100%;
+}
+.WineInfo .wineItem .TextBlock div.variants label {
+  margin-left: 6px;
+  text-align: left;
+}
+.WineInfo .wineItem .TextBlock .topBorder {
+  position: relative;
+}
+.WineInfo .wineItem .TextBlock .topBorder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 0.25rem;
+  background-color: #b18956;
+}
+.WineInfo .wineItem .TextBlock.swapOrder {
+  order: 2;
+  align-items: flex-end;
+}
+.WineInfo .wineItem .TextBlock.textOnTop {
+  order: 0;
+}
+@media (min-width: 750px) {
+  .WineInfo {
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+  .WineInfo .PicBlock {
+    width: 60%;
+  }
+  .WineInfo .TextBlock {
+    width: 37%;
+    margin-top: 0;
+  }
+  .WineInfo .TextBlock h3, .WineInfo .TextBlock h5, .WineInfo .TextBlock .title, .WineInfo .TextBlock p {
+    width: 100%;
+  }
+  .WineInfo .TextBlock .topBorder::after {
+    width: 10rem;
+  }
+  .WineInfo .TextBlock.swapOrder {
+    order: 0;
+    text-align: right;
+  }
+  .WineInfo .TextBlock.swapOrder .topBorder::after {
+    left: auto;
+    right: 0;
+  }
+  .WineInfo .TextBlock.swapOrder h3, .WineInfo .TextBlock.swapOrder h5, .WineInfo .TextBlock.swapOrder .title, .WineInfo .TextBlock.swapOrder p {
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+  .WineInfo .TextBlock.textOnTop {
+    order: 2;
+  }
+}
+
+.MenuChoices {
+  margin: 0 2rem 6rem 2rem;
+}
+.MenuChoices-item {
+  min-width: 20rem;
+}
+.MenuChoices div {
+  margin: 0;
+}
+.MenuChoices-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2%;
+}
+.MenuChoices-contents {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+.MenuChoices-title, .MenuChoices-subtitle {
+  margin-top: 15%;
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.MenuChoices-subtitle {
+  margin-top: 1rem;
+  text-transform: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.MenuChoices-select {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #b2d237;
+  padding: 0 11px;
+  line-height: 2rem;
+  height: 2.25rem;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.5s ease 0s;
+  margin: 1.25rem auto;
+  text-align: center;
+  width: 40%;
+}
+.MenuChoices-imgWrap > img {
+  margin: 0;
+  width: 100%;
+}
+
+/*
+ * MainHdr displayed at the top of each page
+ */
+.MainHdr {
+  background-color: #e9e8e4;
+  background-color: transparent;
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.25rem 0;
+  transition: all 0.3s ease-out 0s;
+  /*
+   * topContactRow: upper portion of MainHdr (hidden for now, may not need)
+   */
+  /* Larger than phablet */
+  /* Larger than iPad */
+}
+.MainHdr--down {
+  top: 4.5rem;
+  background-color: rgb(0, 0, 0);
+  background-color: #e9e8e4;
+  background-color: #601008;
+}
+.MainHdr.mobile {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  margin: 0;
+  width: 40%;
+}
+.MainHdr .TopContactRow {
+  display: none;
+  background-color: rgba(45, 47, 48, 0.5);
+  margin: 0;
+  padding: 0.25rem 0;
+  text-align: right;
+  transition: all 0.3s ease-out 0s;
+}
+.MainHdr .TopContactRow--down {
+  background-color: rgb(45, 47, 48);
+  padding: 0;
+}
+.MainHdr .TopContactRow > div {
+  margin: 0 4rem;
+}
+.MainHdr .TopContactRow > div a {
+  color: #fff;
+  font-size: 0.75rem;
+  margin-left: 1.5rem;
+}
+.MainHdr .TopContactRow--down {
+  padding: 0;
+}
+@media (min-width: 550px) {
+  .MainHdr {
+    padding: 1rem 0;
+  }
+  .MainHdr--down {
+    top: 0;
+    padding: 2rem 0;
+  }
+}
+@media (min-width: 750px) {
+  .MainHdr {
+    padding: 2rem 0;
+  }
+}
+
+/*
+ * 	 &-hdrNavRow: logo and navigation
+ */
+.HdrCheckoutRow,
+.HdrNavRow {
+  min-height: 6rem;
+  margin: 0;
+  padding: 1.25rem 3rem;
+  position: relative;
+  /* Larger than phablet */
+  /* Larger than iPad */
+  /* Larger than standard desktop */
+}
+.HdrCheckoutRow.nav-wrapper,
+.HdrNavRow.nav-wrapper {
+  min-height: 0;
+}
+.HdrCheckoutRow .logo,
+.HdrNavRow .logo {
+  position: absolute;
+  top: 0.25rem;
+  left: 1rem;
+  margin: 0;
+  height: 2.5rem;
+}
+.HdrCheckoutRow .logo svg,
+.HdrCheckoutRow .logo img,
+.HdrNavRow .logo svg,
+.HdrNavRow .logo img {
+  width: 20rem;
+  fill: #601008;
+}
+.HdrCheckoutRow .l2Nav,
+.HdrCheckoutRow .checkoutNav,
+.HdrCheckoutRow .nav,
+.HdrNavRow .l2Nav,
+.HdrNavRow .checkoutNav,
+.HdrNavRow .nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  min-height: 2.5rem;
+}
+.HdrCheckoutRow .l2Nav-menu,
+.HdrCheckoutRow .checkoutNav-menu,
+.HdrCheckoutRow .nav-menu,
+.HdrNavRow .l2Nav-menu,
+.HdrNavRow .checkoutNav-menu,
+.HdrNavRow .nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-top: 2rem;
+  margin-top: 4.75rem;
+  padding-right: 1.5rem;
+}
+.HdrCheckoutRow .l2Nav-menu li,
+.HdrCheckoutRow .checkoutNav-menu li,
+.HdrCheckoutRow .nav-menu li,
+.HdrNavRow .l2Nav-menu li,
+.HdrNavRow .checkoutNav-menu li,
+.HdrNavRow .nav-menu li {
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-bottom: 0;
+}
+.HdrCheckoutRow .l2Nav-menu li a,
+.HdrCheckoutRow .checkoutNav-menu li a,
+.HdrCheckoutRow .nav-menu li a,
+.HdrNavRow .l2Nav-menu li a,
+.HdrNavRow .checkoutNav-menu li a,
+.HdrNavRow .nav-menu li a {
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 2rem;
+  height: 2rem;
+  color: #5b574d;
+  margin-bottom: 0;
+  padding: 0 0.5rem;
+}
+.HdrCheckoutRow .l2Nav-menu li a:hover,
+.HdrCheckoutRow .checkoutNav-menu li a:hover,
+.HdrCheckoutRow .nav-menu li a:hover,
+.HdrNavRow .l2Nav-menu li a:hover,
+.HdrNavRow .checkoutNav-menu li a:hover,
+.HdrNavRow .nav-menu li a:hover {
+  color: #601008;
+}
+.HdrCheckoutRow .l2Nav-menu li a.active,
+.HdrCheckoutRow .checkoutNav-menu li a.active,
+.HdrCheckoutRow .nav-menu li a.active,
+.HdrNavRow .l2Nav-menu li a.active,
+.HdrNavRow .checkoutNav-menu li a.active,
+.HdrNavRow .nav-menu li a.active {
+  color: #601008;
+}
+.HdrCheckoutRow .l2Nav-menu li.active a,
+.HdrCheckoutRow .checkoutNav-menu li.active a,
+.HdrCheckoutRow .nav-menu li.active a,
+.HdrNavRow .l2Nav-menu li.active a,
+.HdrNavRow .checkoutNav-menu li.active a,
+.HdrNavRow .nav-menu li.active a {
+  background: #2f2f35 none repeat scroll 0 0;
+  color: #b2d338;
+}
+.HdrCheckoutRow .l2Nav div.usermenu,
+.HdrCheckoutRow .checkoutNav div.usermenu,
+.HdrCheckoutRow .nav div.usermenu,
+.HdrNavRow .l2Nav div.usermenu,
+.HdrNavRow .checkoutNav div.usermenu,
+.HdrNavRow .nav div.usermenu {
+  display: none;
+  position: absolute;
+  top: 3.75rem;
+  right: 2rem;
+  margin: 0;
+  min-width: 20%;
+  background-color: #e9e8e4;
+}
+.HdrCheckoutRow .l2Nav div.usermenu > ul,
+.HdrCheckoutRow .checkoutNav div.usermenu > ul,
+.HdrCheckoutRow .nav div.usermenu > ul,
+.HdrNavRow .l2Nav div.usermenu > ul,
+.HdrNavRow .checkoutNav div.usermenu > ul,
+.HdrNavRow .nav div.usermenu > ul {
+  font-size: 0.75rem;
+  list-style: none;
+  margin: 0.25rem;
+  padding: 0.75rem;
+}
+.HdrCheckoutRow .l2Nav div.usermenu > ul li.last,
+.HdrCheckoutRow .checkoutNav div.usermenu > ul li.last,
+.HdrCheckoutRow .nav div.usermenu > ul li.last,
+.HdrNavRow .l2Nav div.usermenu > ul li.last,
+.HdrNavRow .checkoutNav div.usermenu > ul li.last,
+.HdrNavRow .nav div.usermenu > ul li.last {
+  margin-bottom: 0;
+}
+.HdrCheckoutRow .l2Nav div.usermenu > ul li a,
+.HdrCheckoutRow .checkoutNav div.usermenu > ul li a,
+.HdrCheckoutRow .nav div.usermenu > ul li a,
+.HdrNavRow .l2Nav div.usermenu > ul li a,
+.HdrNavRow .checkoutNav div.usermenu > ul li a,
+.HdrNavRow .nav div.usermenu > ul li a {
+  color: white;
+}
+.HdrCheckoutRow .l2Nav div.usermenu > ul li a:hover,
+.HdrCheckoutRow .checkoutNav div.usermenu > ul li a:hover,
+.HdrCheckoutRow .nav div.usermenu > ul li a:hover,
+.HdrNavRow .l2Nav div.usermenu > ul li a:hover,
+.HdrNavRow .checkoutNav div.usermenu > ul li a:hover,
+.HdrNavRow .nav div.usermenu > ul li a:hover {
+  color: #601008;
+}
+.HdrCheckoutRow .l2Nav,
+.HdrNavRow .l2Nav {
+  width: 100%;
+}
+.HdrCheckoutRow .l2Nav-menu li a,
+.HdrNavRow .l2Nav-menu li a {
+  color: #bbb;
+}
+.HdrCheckoutRow .l2Nav-menu li a:hover,
+.HdrNavRow .l2Nav-menu li a:hover {
+  color: white;
+}
+.HdrCheckoutRow .l2Nav-menu li a.active,
+.HdrNavRow .l2Nav-menu li a.active {
+  color: white;
+}
+.HdrCheckoutRow .l2Nav-menu,
+.HdrCheckoutRow .checkoutNav-menu,
+.HdrNavRow .l2Nav-menu,
+.HdrNavRow .checkoutNav-menu {
+  margin: 0.25rem;
+  padding-right: 0;
+}
+.HdrCheckoutRow .l2Nav div.usermenu,
+.HdrCheckoutRow .checkoutNav div.usermenu,
+.HdrNavRow .l2Nav div.usermenu,
+.HdrNavRow .checkoutNav div.usermenu {
+  top: 2.5rem;
+  right: 0;
+  background-color: #111;
+}
+.HdrCheckoutRow .HdrNavRow,
+.HdrNavRow .HdrNavRow {
+  min-height: 6rem;
+  margin: 0;
+  padding: 1.25rem 3rem;
+  position: relative;
+}
+.HdrCheckoutRow .mobile-nav,
+.HdrNavRow .mobile-nav {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  margin: 0;
+}
+.HdrCheckoutRow .mobile-nav img,
+.HdrNavRow .mobile-nav img {
+  width: 4rem;
+  height: 4rem;
+}
+.HdrCheckoutRow--down,
+.HdrNavRow--down {
+  margin: 1rem 0;
+}
+.HdrCheckoutRow--down .logo svg,
+.HdrCheckoutRow--down .logo img,
+.HdrNavRow--down .logo svg,
+.HdrNavRow--down .logo img {
+  fill: white;
+  width: 14rem;
+}
+.HdrCheckoutRow--down .l2Nav-menu li a,
+.HdrCheckoutRow--down .checkoutNav-menu li a,
+.HdrCheckoutRow--down .nav-menu li a,
+.HdrNavRow--down .l2Nav-menu li a,
+.HdrNavRow--down .checkoutNav-menu li a,
+.HdrNavRow--down .nav-menu li a {
+  color: #bbb;
+}
+.HdrCheckoutRow--down .l2Nav-menu li a:hover,
+.HdrCheckoutRow--down .l2Nav-menu li a:active,
+.HdrCheckoutRow--down .checkoutNav-menu li a:hover,
+.HdrCheckoutRow--down .checkoutNav-menu li a:active,
+.HdrCheckoutRow--down .nav-menu li a:hover,
+.HdrCheckoutRow--down .nav-menu li a:active,
+.HdrNavRow--down .l2Nav-menu li a:hover,
+.HdrNavRow--down .l2Nav-menu li a:active,
+.HdrNavRow--down .checkoutNav-menu li a:hover,
+.HdrNavRow--down .checkoutNav-menu li a:active,
+.HdrNavRow--down .nav-menu li a:hover,
+.HdrNavRow--down .nav-menu li a:active {
+  color: #fff;
+}
+.HdrCheckoutRow--downx,
+.HdrNavRow--downx {
+  margin: 1rem 0;
+}
+.HdrCheckoutRow--downx .logo,
+.HdrNavRow--downx .logo {
+  top: 3rem;
+}
+.HdrCheckoutRow--downx .logo svg,
+.HdrCheckoutRow--downx .logo img,
+.HdrNavRow--downx .logo svg,
+.HdrNavRow--downx .logo img {
+  fill: white;
+  width: 6rem;
+}
+@media (min-width: 550px) {
+  .HdrCheckoutRow,
+  .HdrNavRow {
+    min-height: 5rem;
+  }
+  .HdrCheckoutRow .logo,
+  .HdrNavRow .logo {
+    left: 2.5rem;
+  }
+  .HdrCheckoutRow .logo svg,
+  .HdrCheckoutRow .logo img,
+  .HdrNavRow .logo svg,
+  .HdrNavRow .logo img {
+    width: 16rem;
+  }
+  .HdrCheckoutRow .l2Nav,
+  .HdrCheckoutRow .checkoutNav,
+  .HdrCheckoutRow .nav,
+  .HdrNavRow .l2Nav,
+  .HdrNavRow .checkoutNav,
+  .HdrNavRow .nav {
+    display: none;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrCheckoutRow .nav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu,
+  .HdrNavRow .nav-menu {
+    margin-top: 2.75rem;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu {
+    margin: 0.25rem;
+  }
+  .HdrCheckoutRow .mobile-nav,
+  .HdrNavRow .mobile-nav {
+    display: block;
+  }
+  .HdrCheckoutRow--down .logo,
+  .HdrNavRow--down .logo {
+    top: 2.75rem;
+  }
+  .HdrCheckoutRow--down .logo svg,
+  .HdrCheckoutRow--down .logo img,
+  .HdrNavRow--down .logo svg,
+  .HdrNavRow--down .logo img {
+    fill: white;
+    width: 14rem;
+  }
+  .HdrCheckoutRow--down .nav,
+  .HdrNavRow--down .nav {
+    top: 2.5rem;
+  }
+}
+@media (min-width: 750px) {
+  .HdrCheckoutRow .logo,
+  .HdrNavRow .logo {
+    left: 4rem;
+  }
+  .HdrCheckoutRow .logo svg,
+  .HdrCheckoutRow .logo img,
+  .HdrNavRow .logo svg,
+  .HdrNavRow .logo img {
+    width: 20rem;
+  }
+  .HdrCheckoutRow .l2Nav,
+  .HdrCheckoutRow .checkoutNav,
+  .HdrCheckoutRow .nav,
+  .HdrNavRow .l2Nav,
+  .HdrNavRow .checkoutNav,
+  .HdrNavRow .nav {
+    display: block;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrCheckoutRow .nav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu,
+  .HdrNavRow .nav-menu {
+    margin-top: 2.75rem;
+  }
+  .HdrCheckoutRow .l2Nav-menu li a,
+  .HdrCheckoutRow .checkoutNav-menu li a,
+  .HdrCheckoutRow .nav-menu li a,
+  .HdrNavRow .l2Nav-menu li a,
+  .HdrNavRow .checkoutNav-menu li a,
+  .HdrNavRow .nav-menu li a {
+    padding: 0 0.5rem;
+  }
+  .HdrCheckoutRow .mobile-nav,
+  .HdrNavRow .mobile-nav {
+    display: none;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu {
+    margin: 0.25rem;
+  }
+  .HdrCheckoutRow--down .logo,
+  .HdrNavRow--down .logo {
+    top: 2.75rem;
+  }
+  .HdrCheckoutRow--down .logo svg,
+  .HdrCheckoutRow--down .logo img,
+  .HdrNavRow--down .logo svg,
+  .HdrNavRow--down .logo img {
+    width: 14rem;
+  }
+  .HdrCheckoutRow--down .nav,
+  .HdrNavRow--down .nav {
+    top: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .HdrCheckoutRow .logo,
+  .HdrNavRow .logo {
+    left: 4rem;
+    height: 3.5rem;
+  }
+  .HdrCheckoutRow .logo svg,
+  .HdrCheckoutRow .logo img,
+  .HdrNavRow .logo svg,
+  .HdrNavRow .logo img {
+    width: 22rem;
+  }
+  .HdrCheckoutRow .l2Nav,
+  .HdrCheckoutRow .checkoutNav,
+  .HdrCheckoutRow .nav,
+  .HdrNavRow .l2Nav,
+  .HdrNavRow .checkoutNav,
+  .HdrNavRow .nav {
+    height: 3.5rem;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrCheckoutRow .nav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu,
+  .HdrNavRow .nav-menu {
+    top: 2.75rem;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu {
+    margin: 0.25rem;
+  }
+  .HdrCheckoutRow--down .logo,
+  .HdrNavRow--down .logo {
+    top: 2.75rem;
+  }
+  .HdrCheckoutRow--down .logo svg,
+  .HdrCheckoutRow--down .logo img,
+  .HdrNavRow--down .logo svg,
+  .HdrNavRow--down .logo img {
+    width: 14rem;
+  }
+  .HdrCheckoutRow--down .nav,
+  .HdrNavRow--down .nav {
+    top: 0.75rem;
+  }
+  .HdrCheckoutRow--down .nav-menu,
+  .HdrNavRow--down .nav-menu {
+    top: 2.5rem;
+  }
+}
+
+.CheckOutHeader {
+  background-color: #e9e8e4;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease-out 0s;
+  /*
+  	@media (min-width: 550px) {
+  		>div {
+  			padding: 0 2rem;
+  		}
+  	}
+  */
+}
+.CheckOutHeader > div {
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+.CheckOutHeader div.branding {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  height: 4rem;
+}
+.CheckOutHeader div.branding .title,
+.CheckOutHeader div.branding .logo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 50%;
+}
+.CheckOutHeader div.branding .title h2, .CheckOutHeader div.branding .title .compenent-title,
+.CheckOutHeader div.branding .logo h2,
+.CheckOutHeader div.branding .logo .compenent-title {
+  margin: 0;
+}
+.CheckOutHeader div.branding .title img,
+.CheckOutHeader div.branding .logo img {
+  position: relative;
+  width: 10rem;
+}
+.CheckOutHeader div.branding .title {
+  text-align: right;
+  text-transform: uppercase;
+}
+.CheckOutHeader div.status {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: #111;
+}
+.CheckOutHeader div.status div {
+  margin: 0;
+}
+.CheckOutHeader div.status .progress {
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+.CheckOutHeader div.status .labels {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.CheckOutHeader div.status .labels span {
+  width: 20%;
+  margin: 0;
+  color: white;
+  font-size: 0.75rem;
+}
+.CheckOutHeader div.status .track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #444;
+  border-radius: 0.25rem;
+  position: relative;
+}
+.CheckOutHeader div.status .track .state {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0.5rem;
+  background-color: #601008;
+  border-radius: 0.25rem;
+}
+.CheckOutHeader div.status .track .state.s0 {
+  width: 0%;
+}
+.CheckOutHeader div.status .track .state.s1 {
+  width: 16.67%;
+}
+.CheckOutHeader div.status .track .state.s2 {
+  width: 33.34%;
+}
+.CheckOutHeader div.status .track .state.s3 {
+  width: 50%;
+}
+.CheckOutHeader div.status .track .state.s4 {
+  width: 66.68%;
+}
+.CheckOutHeader div.status .track .state.s5 {
+  width: 83.35%;
+}
+.CheckOutHeader div.status .track .state.s6 {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .CheckOutHeader > div {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .CheckOutHeader > div {
+    padding: 0 5rem;
+  }
+}
+
+.LevelTwoHeader {
+  background-color: #e9e8e4;
+  background-color: #601008;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease-out 0s;
+}
+.LevelTwoHeader > div {
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+.LevelTwoHeader .LevelTwoWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.LevelTwoHeader div.branding {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  height: 4rem;
+  width: 40%;
+}
+.LevelTwoHeader div.branding .title,
+.LevelTwoHeader div.branding .logo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.LevelTwoHeader div.branding .title h2, .LevelTwoHeader div.branding .title .compenent-title,
+.LevelTwoHeader div.branding .logo h2,
+.LevelTwoHeader div.branding .logo .compenent-title {
+  margin: 0;
+}
+.LevelTwoHeader div.branding .title svg,
+.LevelTwoHeader div.branding .title img,
+.LevelTwoHeader div.branding .logo svg,
+.LevelTwoHeader div.branding .logo img {
+  fill: white;
+  position: relative;
+  width: 18rem;
+}
+.LevelTwoHeader div.branding .title {
+  text-align: right;
+  text-transform: uppercase;
+}
+.LevelTwoHeader div.l2nav-wrapper {
+  width: 60%;
+}
+.LevelTwoHeader div.status {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: #111;
+}
+.LevelTwoHeader div.status div {
+  margin: 0;
+}
+.LevelTwoHeader div.status .progress {
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+.LevelTwoHeader div.status .labels {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.LevelTwoHeader div.status .labels span {
+  width: 20%;
+  margin: 0;
+  color: white;
+  font-size: 0.75rem;
+}
+.LevelTwoHeader div.status .track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #444;
+  border-radius: 0.25rem;
+  position: relative;
+}
+.LevelTwoHeader div.status .track .state {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0.5rem;
+  background-color: #601008;
+  border-radius: 0.25rem;
+}
+.LevelTwoHeader div.status .track .state.s0 {
+  width: 0%;
+}
+.LevelTwoHeader div.status .track .state.s1 {
+  width: 16.67%;
+}
+.LevelTwoHeader div.status .track .state.s2 {
+  width: 33.34%;
+}
+.LevelTwoHeader div.status .track .state.s3 {
+  width: 50%;
+}
+.LevelTwoHeader div.status .track .state.s4 {
+  width: 66.68%;
+}
+.LevelTwoHeader div.status .track .state.s5 {
+  width: 83.35%;
+}
+.LevelTwoHeader div.status .track .state.s6 {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .LevelTwoHeader > div {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .LevelTwoHeader > div {
+    padding: 0 5rem;
+  }
+}
+
+.mobile-panel {
+  position: fixed;
+  top: 0;
+  right: -45%;
+  margin: 0;
+  padding: 1rem 2rem;
+  height: 100vh;
+  width: 45%;
+  background: #333333;
+  color: #eee;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.5s all ease;
+  z-index: 200;
+}
+.mobile-panel.open {
+  right: 0;
+}
+.mobile-panel h2, .mobile-panel .compenent-title, .mobile-panel p {
+  color: #aaa;
+}
+.mobile-panel .xmenu {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobile-toggle {
+  position: absolute;
+  right: 2rem;
+  top: 0rem;
+  width: 4rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
+
+/*
+ * main page intro
+ */
+.Intro {
+  position: relative;
+  margin: 0 0 6rem 0;
+  margin: 0;
+  /* Larger than phablet */
+  /* Larger than iPad */
+  /* Larger than standard desktop */
+}
+.Intro h1, .Intro p, .Intro-title {
+  width: 100%;
+}
+.Intro img {
+  width: 100%;
+}
+.Intro-title {
+  position: absolute;
+  top: 2.25rem;
+  left: 0;
+  text-align: center;
+  animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.Intro-title h1, .Intro-title p {
+  color: rgba(255, 255, 255, 0.8);
+  color: #601008;
+  color: #333;
+}
+.Intro h1 {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+.Intro p {
+  display: none;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+.Intro-heading {
+  text-align: center;
+  margin: 2rem;
+}
+.Intro-heading h2, .Intro-heading .compenent-title {
+  color: #601008;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.25em;
+  font-weight: 400;
+}
+.Intro-heading p {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.25em;
+}
+@media (min-width: 550px) {
+  .Intro h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  .Intro p {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+  .Intro-title {
+    top: 4.5rem;
+  }
+  .Intro-heading {
+    margin-top: 3rem;
+  }
+  .Intro-heading h2, .Intro-heading .compenent-title {
+    font-size: 2.5rem;
+  }
+  .Intro-heading p {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 750px) {
+  .Intro h1 {
+    margin: 0.5rem 0;
+    font-size: 3rem;
+  }
+  .Intro p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  .Intro-title {
+    top: 8.25rem;
+  }
+  .Intro-heading {
+    margin-top: 4.5rem;
+  }
+  .Intro-heading h2, .Intro-heading .compenent-title {
+    font-size: 2.5rem;
+  }
+  .Intro-heading p {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .Intro h1 {
+    margin: 0.75rem 0;
+    font-size: 4rem;
+  }
+  .Intro p {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  .Intro-title {
+    top: 12rem;
+  }
+  .Intro-heading h2, .Intro-heading .compenent-title {
+    font-size: 2.5rem;
+  }
+  .Intro-heading p {
+    font-size: 1.25rem;
+  }
+}
+
+/*
+ * main page intro
+ */
+.PageIntro {
+  padding: 3rem 6rem 0 6rem;
+}
+.PageIntro h2, .PageIntro .compenent-title {
+  font-size: 2.5rem;
+  font-family: "Crimson Text", serif;
+  color: #601008;
+}
+.PageIntro .pageImg {
+  margin: 0 auto;
+  width: 90%;
+  border: 1rem solid rgba(255, 255, 255, 0.5);
+}
+.PageIntro .pageText {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ContactUs {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 6rem 0;
+  margin: 0;
+  padding: 0;
+}
+.ContactUs div, .ContactUs p {
+  margin: 0;
+  line-height: 1.75rem;
+}
+.ContactUs-info {
+  width: 100%;
+  background-size: cover;
+  min-height: 16rem;
+}
+.ContactUs-contact {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #e9e8e4;
+  color: #ffffff;
+}
+.ContactUs-feature {
+  text-align: center;
+}
+.ContactUs-feature a {
+  color: #ffffff;
+}
+.ContactUs-feature a:hover {
+  color: #b3d146;
+}
+.ContactUs-logo {
+  width: 35%;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 750px) {
+  .ContactUs-contact {
+    width: 40%;
+  }
+  .ContactUs-info {
+    width: 60%;
+    min-height: auto;
+  }
+}
+
+/*
+ * User Login
+ */
+h1.userLoginTitle {
+  width: 44%;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+@media (min-width: 750px) {
+  h1.userLoginTitle {
+    width: 44%;
+  }
+}
+@media (min-width: 550px) {
+  h1.userLoginTitle {
+    width: 44%;
+  }
+}
+
+.UserLogin {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.UserLogin h3 {
+  margin-top: 0;
+  display: none;
+}
+.UserLogin p {
+  margin-top: 0;
+}
+.UserLogin > div {
+  margin: 0 1rem 2rem 1rem;
+  padding: 0.5rem;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  min-height: 20rem;
+  width: 95%;
+}
+.UserLogin-login {
+  display: block;
+}
+.UserLogin-guest {
+  display: none;
+}
+@media (min-width: 750px) {
+  .UserLogin > div {
+    margin: 0 1rem;
+    padding: 1.5rem;
+    width: 40%;
+  }
+}
+@media (min-width: 550px) {
+  .UserLogin > div {
+    width: 45%;
+    margin: 0 0.5rem;
+  }
+}
+
+/*
+ * User Checkout
+ */
+h1.checkoutTitle {
+  width: 95%;
+  margin: 0rem auto;
+}
+@media (min-width: 800px) {
+  h1.checkoutTitle {
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+}
+
+.UserCheckout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.UserCheckout hr {
+  color: #e9e8e4;
+  margin: 2rem 0;
+}
+.UserCheckout h5, .UserCheckout .title {
+  margin: 0 0 1rem 0;
+}
+.UserCheckout .button {
+  margin-top: 2rem;
+}
+.UserCheckout-review, .UserCheckout-payment, .UserCheckout-info {
+  margin: 0 0.5rem 2rem 0.5rem;
+  padding: 1.5rem;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  min-height: 20rem;
+  width: 95%;
+}
+.UserCheckout-review span.w90, .UserCheckout-payment span.w90, .UserCheckout-info span.w90 {
+  width: 90%;
+}
+.UserCheckout-review span.w45, .UserCheckout-payment span.w45, .UserCheckout-info span.w45 {
+  width: 45%;
+}
+.UserCheckout-review span.w30, .UserCheckout-payment span.w30, .UserCheckout-info span.w30 {
+  width: 30%;
+}
+.UserCheckout-review span.w25, .UserCheckout-payment span.w25, .UserCheckout-info span.w25 {
+  width: 25%;
+}
+.UserCheckout-review span.w20, .UserCheckout-payment span.w20, .UserCheckout-info span.w20 {
+  width: 20%;
+}
+.UserCheckout-review form span {
+  display: inline-grid;
+}
+.UserCheckout-review .qty {
+  width: 10%;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+.UserCheckout-review input.qty {
+  padding: 0.2rem;
+  width: 10%;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 0;
+  font-size: 0.75rem;
+}
+.UserCheckout-review .name {
+  width: 55%;
+  margin-right: 0.5rem;
+}
+.UserCheckout-review .remove {
+  width: 12%;
+  text-align: right;
+}
+.UserCheckout-review .price {
+  width: 16%;
+  text-align: right;
+  margin-right: 0.25rem;
+}
+.UserCheckout-review .price span {
+  text-align: right;
+}
+.UserCheckout-review .price.discounted {
+  color: inherit;
+}
+.UserCheckout-review div.itemRow {
+  margin-bottom: 0.5rem;
+}
+.UserCheckout-review div.itemRow hr {
+  margin: 0;
+}
+.UserCheckout-review div.itemRow span {
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+.UserCheckout-review div.itemRow span.hdr {
+  font-weight: bold;
+  text-align: left;
+}
+.UserCheckout-review div.itemRow span.hdr.remove,
+.UserCheckout-review div.itemRow span.hdr.price {
+  text-align: right;
+}
+@media (min-width: 800px) {
+  .UserCheckout-info {
+    width: 50%;
+  }
+  .UserCheckout-review {
+    width: 35%;
+  }
+  .UserCheckout-payment {
+    width: 30%;
+  }
+}
+
+.heavy {
+  font-weight: bold;
+}
+
+/*
+ * User Order
+ */
+.UserOrder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.UserOrder h3 {
+  margin: 0 0 0.5rem 0;
+}
+.UserOrder .btnRow a {
+  margin-right: 2rem;
+}
+.UserOrder-history, .UserOrder-info {
+  margin: 0 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  min-height: 20rem;
+  width: 95%;
+}
+.UserOrder-history h5, .UserOrder-history .title,
+.UserOrder-history p, .UserOrder-info h5, .UserOrder-info .title,
+.UserOrder-info p {
+  margin: 0;
+}
+.UserOrder-history .selections, .UserOrder-info .selections {
+  margin: 2rem 0;
+}
+.UserOrder-history .details, .UserOrder-info .details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.UserOrder-history .details span, .UserOrder-info .details span {
+  width: 95%;
+  margin-bottom: 2rem;
+}
+.UserOrder-history .history,
+.UserOrder-history .lineItem, .UserOrder-info .history,
+.UserOrder-info .lineItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+.UserOrder-history .history span.hdr,
+.UserOrder-history .lineItem span.hdr, .UserOrder-info .history span.hdr,
+.UserOrder-info .lineItem span.hdr {
+  font-weight: bold;
+}
+.UserOrder-history .history span.itemQty,
+.UserOrder-history .lineItem span.itemQty, .UserOrder-info .history span.itemQty,
+.UserOrder-info .lineItem span.itemQty {
+  width: 10%;
+}
+.UserOrder-history .history span.itemDesc,
+.UserOrder-history .lineItem span.itemDesc, .UserOrder-info .history span.itemDesc,
+.UserOrder-info .lineItem span.itemDesc {
+  width: 40%;
+}
+.UserOrder-history .history span.itemPrice,
+.UserOrder-history .lineItem span.itemPrice, .UserOrder-info .history span.itemPrice,
+.UserOrder-info .lineItem span.itemPrice {
+  width: 12%;
+}
+.UserOrder-history .history span.itemTotal,
+.UserOrder-history .lineItem span.itemTotal, .UserOrder-info .history span.itemTotal,
+.UserOrder-info .lineItem span.itemTotal {
+  width: 12%;
+}
+.UserOrder-history .history span.orderNum,
+.UserOrder-history .lineItem span.orderNum, .UserOrder-info .history span.orderNum,
+.UserOrder-info .lineItem span.orderNum {
+  width: 22.5%;
+}
+.UserOrder-history .history span.orderDate,
+.UserOrder-history .lineItem span.orderDate, .UserOrder-info .history span.orderDate,
+.UserOrder-info .lineItem span.orderDate {
+  width: 22.5%;
+}
+.UserOrder-history .history span.orderQty,
+.UserOrder-history .lineItem span.orderQty, .UserOrder-info .history span.orderQty,
+.UserOrder-info .lineItem span.orderQty {
+  width: 0%;
+  display: none;
+}
+.UserOrder-history .history span.orderTotal,
+.UserOrder-history .lineItem span.orderTotal, .UserOrder-info .history span.orderTotal,
+.UserOrder-info .lineItem span.orderTotal {
+  width: 22.5%;
+}
+.UserOrder-history .history span.orderStatus,
+.UserOrder-history .lineItem span.orderStatus, .UserOrder-info .history span.orderStatus,
+.UserOrder-info .lineItem span.orderStatus {
+  width: 22.5%;
+}
+.UserOrder-history .history span.itemQty,
+.UserOrder-history .lineItem span.itemQty, .UserOrder-info .history span.itemQty,
+.UserOrder-info .lineItem span.itemQty {
+  text-align: center;
+}
+.UserOrder-history .history span.orderTotal,
+.UserOrder-history .history span.itemPrice,
+.UserOrder-history .history span.itemTotal,
+.UserOrder-history .lineItem span.orderTotal,
+.UserOrder-history .lineItem span.itemPrice,
+.UserOrder-history .lineItem span.itemTotal, .UserOrder-info .history span.orderTotal,
+.UserOrder-info .history span.itemPrice,
+.UserOrder-info .history span.itemTotal,
+.UserOrder-info .lineItem span.orderTotal,
+.UserOrder-info .lineItem span.itemPrice,
+.UserOrder-info .lineItem span.itemTotal {
+  text-align: right;
+}
+.UserOrder-history .history.oddRow,
+.UserOrder-history .lineItem.oddRow, .UserOrder-info .history.oddRow,
+.UserOrder-info .lineItem.oddRow {
+  background-color: #eee;
+}
+.UserOrder-history .history.hdr,
+.UserOrder-history .lineItem.hdr, .UserOrder-info .history.hdr,
+.UserOrder-info .lineItem.hdr {
+  margin-top: 0.5rem;
+  background-color: #eee;
+}
+.UserOrder-history .history.total,
+.UserOrder-history .lineItem.total, .UserOrder-info .history.total,
+.UserOrder-info .lineItem.total {
+  margin: 1rem 0 2rem 0;
+}
+@media (min-width: 800px) {
+  .UserOrder-history, .UserOrder-info {
+    width: 75%;
+    padding: 1.5rem;
+  }
+  .UserOrder-history .details span, .UserOrder-info .details span {
+    width: 45%;
+  }
+  .UserOrder-history .lineItem span.orderNum, .UserOrder-info .lineItem span.orderNum {
+    width: 18%;
+  }
+  .UserOrder-history .lineItem span.orderDate, .UserOrder-info .lineItem span.orderDate {
+    width: 18%;
+  }
+  .UserOrder-history .lineItem span.orderQty, .UserOrder-info .lineItem span.orderQty {
+    width: 18%;
+    display: inline;
+  }
+  .UserOrder-history .lineItem span.orderTotal, .UserOrder-info .lineItem span.orderTotal {
+    width: 18%;
+  }
+  .UserOrder-history .lineItem span.orderStatus, .UserOrder-info .lineItem span.orderStatus {
+    width: 18%;
+  }
+}
+
+.ConfirmOrder-header {
+  text-align: center;
+}
+.ConfirmOrder-header a {
+  display: inline-block;
+  width: 15rem;
+}
+
+/*
+ * structure for user account/checkout pages
+ */
+.UserForm {
+  width: 95%;
+  margin: 0 auto;
+}
+.UserForm h1 {
+  margin: 0.5rem 0.75rem;
+  margin: 0 0.75rem;
+  text-transform: uppercase;
+}
+.UserForm h5, .UserForm .title {
+  margin: 0 0 1rem 0;
+}
+.UserForm-block {
+  margin: 0 1rem 2rem 1rem;
+  margin: 0 0 2rem 0;
+  padding: 0.5rem;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  min-height: 20rem;
+}
+.UserForm-block p {
+  margin-top: 0;
+}
+.UserForm-block .group {
+  margin: 0 0 2rem 0;
+}
+.UserForm-block > div {
+  margin: 0;
+}
+.UserForm .btnRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+.UserForm .btnRow .button, .UserForm .btnRow button, .UserForm .btnRow input[type=submit], .UserForm .btnRow input[type=reset], .UserForm .btnRow input[type=button] {
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+.UserForm .btnRow .button.off {
+  margin-right: 1rem;
+}
+.UserForm .btnRow.left {
+  justify-content: flex-start;
+}
+.UserForm .btnRow span.leftButton {
+  width: 90%;
+  display: inline-block;
+}
+@media (min-width: 750px) {
+  .UserForm {
+    width: 50%;
+  }
+  .UserForm-block {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 550px) {
+  .UserForm-block {
+    margin: 0 0.5rem;
+  }
+  .UserForm .btnRow .button, .UserForm .btnRow button, .UserForm .btnRow input[type=submit], .UserForm .btnRow input[type=reset], .UserForm .btnRow input[type=button] {
+    padding: 0 0.75rem;
+    font-size: 100%;
+  }
+}
+
+/*
+ * inner UserForm structures various page types
+ */
+.PaymentBlock,
+.DetailsBlock,
+.AddrBlock {
+  width: 95%;
+}
+.PaymentBlock .button.plus,
+.DetailsBlock .button.plus,
+.AddrBlock .button.plus {
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+}
+.PaymentBlock-static,
+.DetailsBlock-static,
+.AddrBlock-static {
+  margin-top: 1.5rem;
+}
+.PaymentBlock-static p,
+.DetailsBlock-static p,
+.AddrBlock-static p {
+  margin: 0;
+}
+.PaymentBlock-static p.addr,
+.DetailsBlock-static p.addr,
+.AddrBlock-static p.addr {
+  padding: 0;
+}
+@media (min-width: 750px) {
+  .PaymentBlock,
+  .DetailsBlock,
+  .AddrBlock {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .PaymentBlock,
+  .DetailsBlock,
+  .AddrBlock {
+    width: 65%;
+  }
+}
+
+.PaymentBlock {
+  width: 95%;
+}
+.PaymentBlock div {
+  margin: 0;
+}
+.PaymentBlock-wrapper {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.PaymentBlock-wrapper > div {
+  margin: 0;
+}
+.PaymentBlock-wrapper > div.seperator {
+  width: 5%;
+}
+.PaymentBlock-wrapper > div.seperator > div {
+  margin: 0 auto;
+  width: 3px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+}
+.PaymentBlock-wrapper > div.review {
+  width: 45%;
+}
+.PaymentBlock-wrapper > div.review div.Food .FoodMenu-choices {
+  width: 100%;
+}
+.PaymentBlock-wrapper > div.review div.Food .FoodMenu-choices p {
+  margin-bottom: 0rem;
+}
+.PaymentBlock-wrapper > div.review .Food .FoodMenu-total, .PaymentBlock-wrapper > div.review .Food .FoodMenu-item {
+  font-size: 1rem;
+}
+.PaymentBlock-wrapper > div.pay {
+  width: 50%;
+}
+@media (min-width: 750px) {
+  .PaymentBlock {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .PaymentBlock {
+    width: 65%;
+  }
+}
+
+.CartBlock {
+  width: 95%;
+}
+.CartBlock span {
+  display: inline-grid;
+}
+.CartBlock .cartError {
+  color: red;
+}
+.CartBlock .itemRow {
+  margin-bottom: 0.5rem;
+}
+.CartBlock .itemRow .qty {
+  width: 7%;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+.CartBlock .itemRow input.qty {
+  padding: 0.2rem;
+  width: 7%;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 0;
+  font-size: 0.75rem;
+}
+.CartBlock .itemRow .name {
+  width: 55%;
+  margin-right: 0.5rem;
+}
+.CartBlock .itemRow .remove {
+  width: 12%;
+  text-align: right;
+}
+.CartBlock .itemRow .price {
+  width: 16%;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+.CartBlock .itemRow .price.discounted {
+  color: inherit;
+}
+.CartBlock .itemRow .price span {
+  text-align: right;
+}
+.CartBlock .itemRow hr {
+  margin: 0;
+}
+.CartBlock .itemRow span {
+  line-height: 1.2rem;
+}
+.CartBlock .itemRow span.hdr {
+  font-weight: bold;
+  text-align: left;
+}
+.CartBlock .itemRow span.hdr.remove,
+.CartBlock .itemRow span.hdr.price {
+  text-align: right;
+}
+.CartBlock .couponRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.CartBlock .couponRow > div {
+  width: 16rem;
+}
+.CartBlock .couponRow > div > div {
+  margin: 0;
+}
+.CartBlock .couponRow > div .cartError {
+  margin-left: 0.2rem;
+}
+.CartBlock .couponRow > div .couponLabel {
+  font-weight: bold;
+}
+@media (min-width: 750px) {
+  .CartBlock {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .CartBlock {
+    width: 65%;
+  }
+}
+
+.CheckoutLogin .jsLoginMember {
+  display: none;
+}
+.CheckoutLogin .jsLoginGuest {
+  display: block;
+}
+
+.MemberLogin .jsLoginMember {
+  display: block;
+}
+.MemberLogin .jsLoginGuest {
+  display: none;
+}
+
+/*
+ * default form styles (should move)
+ */
+form {
+  margin: 0;
+}
+form .ccRow,
+form .formRow,
+form div {
+  margin: 0 0 0.5rem 0;
+}
+form div.freeform-form-has-errors,
+form div.ff-form-errors {
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #d02e2e;
+  border-radius: 6px;
+  background-color: #fff6f6;
+}
+form div.freeform-form-has-errors p,
+form div.ff-form-errors p {
+  margin: 0;
+  padding: 0.25rem 0;
+  color: #d02e2e;
+}
+form div.freeform-form-has-errors ul,
+form div.ff-form-errors ul {
+  margin: 0;
+  color: #d02e2e;
+}
+form div.freeform-form-has-errors ul li,
+form div.ff-form-errors ul li {
+  margin: 0;
+}
+form ul.formError,
+form ul.ff-errors {
+  margin: 0;
+  padding: 0.25rem 0 0;
+  list-style: none;
+  color: #d02e2e;
+}
+form ul.formError li,
+form ul.ff-errors li {
+  margin: 0;
+}
+form .formRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+form .formRow > div {
+  margin: 0;
+}
+form .formRow div.w100,
+form .formRow span.w100 {
+  width: 100%;
+}
+form .formRow div.w90,
+form .formRow span.w90 {
+  width: 90%;
+}
+form .formRow div.w50,
+form .formRow span.w50 {
+  width: 50%;
+}
+form .formRow div.w49,
+form .formRow span.w49 {
+  width: 49%;
+}
+form .formRow div.w45,
+form .formRow span.w45 {
+  width: 45%;
+}
+form .formRow div.w30,
+form .formRow span.w30 {
+  width: 30%;
+}
+form .formRow div.w25,
+form .formRow span.w25 {
+  width: 25%;
+}
+form .formRow div.w20,
+form .formRow span.w20 {
+  width: 20%;
+}
+form textarea,
+form select,
+form input {
+  margin: 0;
+}
+form span {
+  display: inline-block;
+}
+form .freeform-input.StripeElement,
+form span.pw-wrapper,
+form textarea,
+form select,
+form input[type=date],
+form input[type=time],
+form input[type=email],
+form input[type=number],
+form input[type=password],
+form input[type=text] {
+  padding: 0.333rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.333rem;
+}
+form .freeform-input.StripeElement {
+  background-color: white;
+}
+form .ElementsApp input {
+  font-size: 2rem;
+}
+form label {
+  display: block;
+  margin-left: 0.2rem;
+}
+form label.inline {
+  display: inline;
+}
+form label.cbLabel {
+  margin: 0 0.5rem;
+}
+form select.bm {
+  margin-bottom: 2rem;
+}
+form span.pw-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+form span.pw-wrapper input[type=text],
+form span.pw-wrapper input[type=password] {
+  padding: 0;
+  width: 90%;
+  border: none;
+  border-radius: none;
+}
+form span.pw-wrapper span.eyeball {
+  display: none;
+  width: 4%;
+  cursor: pointer;
+  background-image: url("/assets/img/icons/icon-eye-on.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+form span.pw-wrapper span.spacer {
+  width: 1%;
+}
+form.loose .formRow,
+form.loose > div {
+  margin: 0 0 1rem 0;
+}
+form.loose span.pw-wrapper,
+form.loose textarea,
+form.loose select,
+form.loose input[type=date],
+form.loose input[type=time],
+form.loose input[type=email],
+form.loose input[type=number],
+form.loose input[type=password],
+form.loose input[type=text] {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.stripe-payment-intents-form {
+  width: 100%;
+}
+.stripe-payment-intents-form fieldset {
+  border: none;
+  margin: 0;
+}
+.stripe-payment-intents-form fieldset input {
+  margin: 0;
+}
+.stripe-payment-intents-form fieldset.card-holder {
+  padding: 0 0 0.5rem 0;
+}
+.stripe-payment-intents-form fieldset.card-holder div.grid {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.stripe-payment-intents-form fieldset.card-holder div.grid div {
+  width: 49%;
+}
+.stripe-payment-intents-form fieldset.card-data {
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/*
+ * Video player
+ */
+.Video h2, .Video .compenent-title {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.Video-wrapper {
+  width: 70%;
+  padding: 2%;
+  background-color: #e9e8e4;
+  margin: 0 auto;
+}
+.Video-wrapper div {
+  margin: 0;
+}
+.Video-container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: #e9e8e4;
+  margin: 0 auto;
+}
+
+.userIcon {
+  margin-top: 4px;
+}
+.userIcon span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/img/icons/usericon-light.svg");
+}
+.userIcon span:hover {
+  background-image: url("/assets/img/icons/usericon-hot.svg");
+}
+.userIcon:focus {
+  outline: none;
+}
+
+/*
+ * Video Gallery
+ */
+.VidGallery {
+  background-color: #e9e8e4;
+  min-height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.VidGallery-image {
+  width: 17.5%;
+}
+
+.MobileMenu {
+  display: none;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #e9e8e4;
+  z-index: 1000;
+}
+.MobileMenu .closeMenu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+.MobileMenu-content {
+  margin-top: 8rem;
+}
+.MobileMenu-content ul {
+  padding: 0;
+}
+.MobileMenu-content ul li {
+  list-style: none;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+.MobileMenu-content ul li a {
+  color: #fff;
+}
+.MobileMenu-content ul li a:hover {
+  color: #601008;
+}
+
+.ErrorList {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+.ErrorList p {
+  margin: 0.5rem 0;
+}
+.ErrorList ul {
+  margin: 0;
+  list-style-type: "→";
+  list-style-position: outside;
+  color: red;
+  padding-left: 1rem;
+}
+
+.alert,
+.error {
+  color: red;
+}
+
+.checkout main {
+  margin-top: 10rem;
+}
+
+/*
+ * animation styles
+ */
+.nav--comin-in {
+  transform: translateY(-4.5rem);
+  animation: come-in 0.6s ease forwards;
+}
+
+.nav--goin-out {
+  transform: translateY(0);
+  animation: go-out 0.6s ease forwards;
+}
+
+.entrance-right {
+  animation: slide-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.entrance-left {
+  animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-left {
+  animation: slide-left 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.motionUpxxx {
+  animation: motionUp 1.5s both;
+}
+
+.motionUp {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+/***
+ Page Errors
+ ***/
+.PageError {
+  text-align: center;
+}
+.PageError-body {
+  width: 60%;
+  margin-top: 0;
+  text-align: center;
+  display: inline-block;
+}
+.PageError-body > h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.PageError-body > p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #888;
+}
+.PageError-options {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.PageError-options > div {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 49%;
+}
+.PageError-options > div div {
+  position: absolute;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  width: 90%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-bottom: 4px solid #ddd;
+  bottom: 40px;
+  left: 5%;
+}
+
+/***
+ Freeform fixups
+ ***/
+div.flatpickr-calendar {
+  margin: 0;
+}
+div.flatpickr-calendar div {
+  margin: 0;
+}
+
+/**
+	//-- Larger than phablet --//
+	@media (min-width: 550px) {
+	}
+
+	//-- Larger than iPad --//
+	@media (min-width: 750px) {
+	}
+
+	//-- Larger than standard desktop --//
+	@media (min-width: 1200px) {
+	}
+
+
+<div class="main-intro">
+<h1>Fine Dining,<br>At Home</h1>
+<img src="./assets/img/hero-primary-sm.jpg" srcset="
+										./assets/img/hero-primary-sm.jpg 750w,
+										./assets/img/hero-primary-med.jpg 1500w,
+										./assets/img/hero-primary-lg.jpg 2000w,
+										./assets/img/hero-primary-xl.jpg 2400w" alt="A Lovely Evening with Friends"/>
+
+										<div class="intro-heading">
+											<h2>Choose Your Home Dining Experience</h2>
+											<p>Select a customized menu from our chef's following choices:</p>
+										</div>
+										</div>
+**/
+/*
+ * default boilerplate styles
+ */
+#page-container,
+#content-container {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  * some basic stuff for demo page
+
+body {
+	background-color: #fff;
+}
+
+.page {
+	margin: 2rem auto;
+	padding: 5rem;
+	width: 100%;
+	max-width: 960px;
+	background-color: #fff;
+	border-radius: 1rem;
+}
+
+.docs-content {
+	margin-bottom: 4rem;
+}
+
+.page-intro {
+	text-align: center;
+}
+
+.page-intro p {
+	text-align: left;
+}
+
+.page-title {
+	text-transform: uppercase;
+}
+
+.topic-header,
+.docs-header {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+	color: $color-headings-highlight;
+}
+
+.button-wrapper {
+	margin-bottom: 2rem;
+}
+
+.side-by-side {
+	display: flex;
+}
+.side-by-side > div,
+.side-by-side > ul {
+	width: 50%;
+}
+
+*//*# sourceMappingURL=styles.css.map */

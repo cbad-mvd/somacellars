@@ -1,0 +1,3 @@
+{% for block in matrix %}
+    {% include ["site/matrix/" ~ block.type, "site/matrix/default"] %}
+{% endfor %}

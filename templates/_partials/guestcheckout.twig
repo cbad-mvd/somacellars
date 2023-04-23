@@ -1,0 +1,36 @@
+{% if cart is not null %}
+    <form method="post" accept-charset="UTF-8">
+        <input type="hidden" name="action" value="commerce/cart/update-cart">
+        {{ csrfInput() }}
+        {% if landingPage|default %}
+            {{ redirectInput(landingPage) }}
+        {% endif %}
+
+        {% set requiredFields = {   "errorId" : "#guestErrors", 
+                                    "#guestEmail" : "→ Email is required" } | json_encode() %}
+        
+        {# error handling goes here #}
+        {% if errorMessage is defined %}
+            <p class="error jsErrorMsg">→ {{ errorMessage }}</p>
+        {% else %}
+            <p id="guestErrors" class="error jsErrorMsg"></p>
+        {% endif %}
+
+        <div class="formRow">
+            <span class="w100">
+                <label for="">Email</label>
+                <input class="" type="email" value="{{ cart.email }}"
+                    id="guestEmail" 
+                    name="email"
+                    placeholder="email@site.com"/>
+            </span>
+        </div>
+        
+        <div class="btnRow left">
+            <button class="jsCheckRequired" type="submit" data-required='{{ requiredFields }}' >Continue as Guest</button>
+        </div>
+    </form>
+{% endif %}
+
+
+

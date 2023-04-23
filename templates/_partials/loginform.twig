@@ -1,0 +1,48 @@
+<form method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    {{ actionInput('users/login') }}
+    {% if landingPage|default %}
+        {{ redirectInput(landingPage) }}
+    {% endif %}
+
+    {% set requiredFields = {   "errorId" : "#myError", 
+                                "#loginName" : "→ Email is required",
+                                "#password" : "→ Password is required" } | json_encode() %}
+
+    {# error handling goes here #}
+    {% if errorMessage is defined %}
+        <p class="error jsErrorMsg">→ {{ errorMessage }}</p>
+    {% else %}
+        <p id="myError" class="error jsErrorMsg"></p>
+    {% endif %}
+
+    <div class="formRow">
+        <span class="w100">
+            <label for="loginName">Email Address</label>
+            {{ input('email', 'loginName', craft.app.user.rememberedUsername, { id: 'loginName', }) }}
+        </span>
+    </div>
+
+    <div class="loginPassword">
+        <label for="password">Password</label>
+        <span class="pw-wrapper">
+            {{ input('password', 'password', null, { id: 'password', class: 'jsPWField' }) }}
+            <span class="jsShowPW eyeball" title="Show Password"></span>
+            <span class="spacer">&nbsp;</span>
+        </span>
+    </div>
+
+    <div class="formRow">
+        <span class="w100">
+            <label>
+            {{ input('checkbox', 'rememberMe', '1') }}
+            Remember me
+            </label>
+        </span>
+    </div>
+
+    <div class="btnRow left">
+        <button class="jsCheckRequired" type="submit" data-required='{{ requiredFields }}' >Login</button>
+    </div>
+    <p><a href="{{ url('customer/reset-password') }}">Forgot your password?</a></p>
+</form>

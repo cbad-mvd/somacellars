@@ -1,0 +1,46 @@
+field: bacc9914-340e-463e-8d19-5345afda9138 # Body
+fieldLayouts:
+  0966f10f-8762-4a32-87f9-9010c92edced:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 949a4cea-4e29-4d73-a731-7a68775274d4 # Body Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ffbde06d-41e8-4a95-b4ee-f0dd87550b27
+            userCondition: null
+            warning: null
+            width: 75
+        name: Content
+        uid: 697aac42-1536-4047-a6a0-ad7e5b1d72cd
+        userCondition: null
+fields:
+  949a4cea-4e29-4d73-a731-7a68775274d4: # Body Text
+    columnSuffix: eanxxfep
+    contentColumnType: text
+    fieldGroup: null
+    handle: bodyText
+    instructions: null
+    name: 'Body Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: text
+name: Text
+sortOrder: 3

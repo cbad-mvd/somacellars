@@ -1,0 +1,154 @@
+dateModified: 1682261321
+email:
+  fromEmail: jmayall@surething.com
+  fromName: 'Soma Cellars'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  siteHeros:
+    hasUrls: true
+    name: 'Site Heros'
+    settings:
+      path: '@assetPath/img/heros'
+    type: craft\fs\Local
+    url: '@assetUrl/img/heros/'
+  siteIcons:
+    hasUrls: true
+    name: 'Site Icons'
+    settings:
+      path: '@assetPath/img'
+    type: craft\fs\Local
+    url: '@assetUrl/img/icons'
+  siteImages:
+    hasUrls: true
+    name: 'Site Images'
+    settings:
+      path: '@assetPath/img/images'
+    type: craft\fs\Local
+    url: '@assetUrl/img/images'
+  siteLogos:
+    hasUrls: true
+    name: 'Site Logos'
+    settings:
+      path: '@assetPath/img/logos'
+    type: craft\fs\Local
+    url: '@assetUrl/img/logos/'
+  vineyards:
+    hasUrls: true
+    name: Vineyards
+    settings:
+      path: '@assetPath/img/vineyards'
+    type: craft\fs\Local
+    url: '@assetUrl/img/vineyards'
+  wines:
+    hasUrls: true
+    name: 'Wine Bottles'
+    settings:
+      path: '@assetPath/img/wines'
+    type: craft\fs\Local
+    url: '@assetUrl/img/wines'
+meta:
+  __names__:
+    0a51479e-2934-4445-b8aa-779dc4f43299: 'Company City' # Company City
+    0b9622bd-967e-4c41-8bc0-38a79d56c3c6: 'Display Url' # Display Url
+    0c10fa2a-4adf-44b9-b6c6-40c42b421fc1: Subtitle # Subtitle
+    0e89c019-82d4-41f8-81f4-1f1f2d72a328: 'Wine Items' # Wine Items
+    2f015bac-ca00-4129-9e30-45fc97b904fa: Common # Common
+    3ae3c238-06e6-4e13-a49a-de1dbff1d4ff: 'Topic RichText' # Topic RichText
+    3d7b9ad6-60ed-437b-89e3-6a696cf736ed: Subtitle # Subtitle
+    4e67ca40-b001-4a5e-b820-0843dca449a5: 'Topic Intro' # Topic Intro
+    5d795099-4e5b-4b16-a44a-9379e1ebdfd1: Blockquote # Blockquote
+    5f3fdd63-04df-4e36-9eb5-bdc1a77ca793: Default # Default
+    6bfa764f-e6e3-4ea3-a769-0507cfbbc88f: Default # Default
+    8c51f1b8-451f-41d5-b139-f9d030efcf45: 'Topic Title' # Topic Title
+    9e18e062-4615-46d0-8cb5-ea397563810a: 'Site Logos' # Site Logos
+    9f873772-0bd5-4a73-ac81-1e87058d57b0: Intro # Intro
+    012e2658-c745-4e8f-a389-441590b2a56d: Quote # Quote
+    024cc291-626a-44bd-8733-7aa26557b87d: Team # Team
+    41a6aa51-edc8-447c-88af-bb4088b8a2c8: Specs # Specs
+    59f07717-3303-4e4e-9601-50490246953b: 'Page Title Base' # Page Title Base
+    62d7bcb0-16d2-42a9-831e-9cc80bab4b5b: 'Topic Link' # Topic Link
+    63e5acce-34c9-455e-8914-3b92a6b87c5b: 'Global Header' # Global Header
+    69e40dcf-ec92-4a65-8a58-1730aa7eaf14: 'Intro Subheading' # Intro Subheading
+    75b10c33-7c59-49c8-b37b-7f0308f9a1be: Citation # Citation
+    80b80671-d017-40ca-a01e-0ee664241336: Vineyards # Vineyards
+    81b9cbeb-e8ef-4345-ab79-c179edeb8ec9: 'Block Quote' # Block Quote
+    82f95698-31c1-45a9-b953-e7d8c4eea07c: 'Site Logo Dark BG' # Site Logo Dark BG
+    88b07f04-8ede-4f0c-81e1-707bfd88b65a: 'Site Info' # Site Info
+    92ac7dfa-f6f9-4c2b-aac9-a0dd838236c1: Footer # Footer
+    108c941f-7436-463f-a324-c094d32fa06d: 'Site Heros' # Site Heros
+    249bc4ae-d94e-454b-95df-7e56c57eff08: 'Home Page' # Home Page
+    267b7dc3-d22c-440e-9a1b-112af034daeb: 'Global Vars' # Global Vars
+    431a6ea3-1169-41fd-b7dd-c2ab845ebe65: Site # Site
+    540bd81a-c924-4c92-817d-4b5977b926ab: 'Site Icons' # Site Icons
+    580df5a8-303c-40f7-912a-97daffa71ea1: Default # Default
+    858f3bb6-7cf5-4474-b1e4-de9c33c1a234: Default # Default
+    949a4cea-4e29-4d73-a731-7a68775274d4: 'Body Text' # Body Text
+    988b989a-a7d1-466a-9689-70f9dc57a7c6: 'Site Images' # Site Images
+    2694eaad-966f-429f-be1b-02ae779300b8: 'Alt Text' # Alt Text
+    5156b851-a0fb-40b6-aae0-30410a513a0b: 'Company Postal Code' # Company Postal Code
+    5265c1ef-5790-4cfd-bd23-13996ad3d0ee: Default # Default
+    05418c21-53f8-4f73-9b54-63dff2e49d7d: Club # Club
+    6014ea73-e0f0-4cd4-a2ac-eff43e74101f: Copyright # Copyright
+    8890c4af-24db-46a4-bdba-7c9733d4e525: Blog # Blog
+    33306d0a-6b4b-425a-9a1b-2460ab24d2ac: 'Company State' # Company State
+    88201cae-dd20-461e-9eeb-e00723531e55: 'Company Phone' # Company Phone
+    204814ff-b311-4af1-bd72-7baf41b2319b: 'Body Text' # Body Text
+    744293fd-8b7f-4c64-ab78-602c09d5b4ce: TextPic # TextPic
+    920134a8-c4e4-444b-b1ca-38a95d0a7b43: Return # Return
+    2640767f-64a9-46f2-aeb7-37c8f4b7c19d: Image # Image
+    5913033f-7b45-4065-bcd2-5188d9764973: 'Contact Info' # Contact Info
+    55425038-9ff5-4dec-9006-d4aef7b84b74: Nav # Nav
+    a55f6ea0-9629-47e8-a329-1adaffcda25c: 'Global Nav' # Global Nav
+    adbfca1b-9d0f-40d3-8339-9076f117fb92: Specs # Specs
+    adfa3f60-5907-4783-88eb-599be0d471eb: 'Mobile Menu Close' # Mobile Menu Close
+    b12cc8fc-8f00-4737-8ad0-2f9b55f7c789: 'Company Name' # Company Name
+    b92b198b-8053-4363-a3cd-224ad4867fed: Vineyards # Vineyards
+    b210e6df-b6ce-436e-8b65-10f838522fff: 'Global Nav' # Global Nav
+    ba700213-75f7-4cac-90d0-83101e67f7db: 'Soma Cellars' # Soma Cellars
+    bacc9914-340e-463e-8d19-5345afda9138: Body # Body
+    bcf3c121-6266-4e1c-be33-ae74d4c28d83: Image # Image
+    bfc48201-3ef2-4750-9269-167f90da381f: globalVars # globalVars
+    c073a991-8eeb-4c72-9f93-c9d390d1d922: 'Company Address Two' # Company Address Two
+    c9c255f8-fc50-429f-8dbf-a15827828e42: 'Wine Bottles' # Wine Bottles
+    c6129f19-ddaa-411b-9987-3b43c1a7ee3d: Default # Default
+    c8511db1-6c85-4a7b-883b-eb8283f3660d: Footer # Footer
+    c463785e-e4a5-4ff8-b55a-ef45370e727a: 'Sold Out' # Sold Out
+    ca1c4ea1-3384-4601-87d5-bbd4103dd286: Wines # Wines
+    d6ba5db9-db16-4dc9-85d9-d6f37cf9a759: 'Text Pic' # Text Pic
+    d6fcde0d-7cc8-4640-bc3e-01ff7fdcc14a: 'Mobile Menu Open' # Mobile Menu Open
+    d8ce2279-af7e-4faa-b51d-ef27da4de5e0: 'Global Header' # Global Header
+    d757e6b1-163c-497f-8356-5d82e49d796b: Intro # Intro
+    d908aebd-1cc2-4651-9ffd-8fbccd972be3: Image # Image
+    da11c769-1dfb-4d6d-82cf-b7ddb30f3f1e: 'Soma Cellars' # Soma Cellars
+    de98e50f-db7f-4753-b6f3-258c6bf7fef5: Company # Company
+    dea523e9-68d6-4216-866b-28848edc405f: Text # Text
+    df010c7c-174a-4ae6-87ad-8eebdaa837da: 'Company Address One' # Company Address One
+    e4b31730-a5a6-4618-b001-f950e3f8a351: 'Text Pic' # Text Pic
+    e8ca7518-ae2e-484c-9ceb-09b6ca6c4379: Banner # Banner
+    e38ee93c-6ae1-447f-8913-bc5d8a542ff5: 'Topic Image' # Topic Image
+    e88b6eff-e6b3-4a5f-8db7-fcf54a8e9c57: 'Site Logo' # Site Logo
+    e435e90b-5ebd-4ba8-81d3-7516cac588b7: Headline # Headline
+    e524f9fc-7285-428c-b0f0-71307175c157: 'Intro Heading' # Intro Heading
+    f008995e-d896-4b98-bde5-082ddb9d8bcc: 'Sold Out Toggle' # Sold Out Toggle
+    f03b5a17-9cda-4969-809d-7e2c36b10bd3: Headline # Headline
+    f4a94d92-5d30-4d64-a724-74b89a78743c: 'Text Pic' # Text Pic
+    f9bb85d0-926f-4d90-be7d-e623f12398f2: 'Topic Description' # Topic Description
+    ffdcc74b-97d2-41a6-91bf-4459dbbad872: 'Intro Hero' # Intro Hero
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: $IS_SYSTEM_LIVE
+  name: $SYSTEM_NAME
+  retryDuration: null
+  schemaVersion: 4.4.0.4
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

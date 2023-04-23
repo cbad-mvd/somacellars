@@ -1,0 +1,372 @@
+{# public macros for managing users #}
+
+{# create the password field #}
+{% macro passwordField(fieldId="password") %}
+{% import _self as self %}
+
+    <div class="loginPassword">
+        <label for="password">Password</label>
+        <span class="pw-wrapper">
+            {{ input('password', 'password', null, { id: fieldId, class: 'jsPWField' }) }}
+            <span class="jsShowPW eyeball" title="Show Password"></span>
+            <span class="spacer">&nbsp;</span>
+        </span>
+    </div>
+
+{% endmacro passwordField %}
+
+{% macro loginForm(landing='/') %}
+<form method="post" accept-charset="UTF-8">
+  {{ csrfInput() }}
+  {{ actionInput('users/login') }}
+
+  <label for="loginName">Username or email</label>
+  {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+    id: 'loginName',
+  }) }}
+
+  <label for="password">Password</label>
+  {{ input('password', 'password', null, {
+    id: 'password',
+  }) }}
+
+  <label>
+    {{ input('checkbox', 'rememberMe', '1') }}
+    Remember me
+  </label>
+
+  <button type="submit">Login</button>
+
+  {% if errorMessage is defined %}
+    <p>{{ errorMessage }}</p>
+  {% endif %}
+</form>
+{% endmacro loginForm %}
+
+{# form for customer login #}
+{% macro loginFormxxx(landing='/') %}
+
+<form method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    {{ actionInput('users/login') }}
+    {{ redirectInput(landing) }}
+
+    <div class="">
+    <label for="loginName">Email Address</label>
+    {{ input('email', 'loginName', craft.app.user.rememberedUsername, { id: 'loginName', }) }}
+    </div>
+
+    {{ _self.passwordField("password") }}
+
+    <div class="checkbox-group">
+        <span>
+            {{ input('checkbox', 'rememberMe', '1') }}
+            <label class="inline" for="rememberMe">Remember Me</label>
+        </span>
+    </div>
+
+    {% set requiredFields = {   "errorId" : "#myError", 
+                                "#loginName" : "&bull; Email is required",
+                                "#password" : "&bull; Password is required" } | json_encode() %}
+
+    <p id="myError" class="error"></p>
+
+    <div class="btnRow left">
+        <button class="jsCheckRequired" type="submit" data-required='{{ requiredFields }}' >Login</button>
+    </div>
+
+    {% set errors = [] %}
+    {%if user is defined %}
+    {% for attributeKey in ['password', 'loginName' ] %}
+        {% set errors = errors|merge(user.getErrors(attributeKey)) %}
+    {% endfor %}
+    {% endif %}
+
+ {#
+    {% if errors|length > 0 %}
+    <div class="ErrorList">
+        <p>Please fix the following errors:</p>
+        <ul>
+            {% for error in errors %}
+                <li>&nbsp;{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+#}
+    {% if errorMessage is defined %}
+        <p>{{ errorMessage }}</p>
+    {% endif %}
+
+</form>
+
+<p><a href="{{ url('reset-password') }}">Forgot your password?</a></p>
+{% endmacro loginFormxxx %}
+
+
+{# form for customer registration #}
+{% macro regForm(landing='/') %}
+{% import _self as self %}
+
+{% macro errorList(errors) %}
+  {% if errors %}
+    {{ ul(errors, {class: 'errors'}) }}
+  {% endif %}
+{% endmacro %}
+
+<form method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    {{ actionInput('users/save-user') }}
+    {{ redirectInput(landing) }}
+
+{#
+    <div class="">
+        <label for="username">Username</label>
+        {{ input('text', 'username', user.username ?? null, { id: 'username', }) }}
+        {% if user is defined %}
+            {{ _self.errorList(user.getErrors('username')) }}
+        {% endif %}
+    </div>
+#}
+    <div class="formRow">
+        <span class="w49">
+            <label for="firstName">First Name</label>
+            {{ input('text', 'firstName', user.firstName ?? null, { id: 'regFirstName', }) }}
+            {% if user is defined %}
+                {{ _self.errorList(user.getErrors('firstName')) }}
+            {% endif %}
+        </span>
+        <span class="w49">
+            <label for="lastName">Last Name</label>
+            {{ input('text', 'lastName', user.lastName ?? null, { id: 'reglastName', }) }}
+            {% if user is defined %}
+                {{ _self.errorList(user.getErrors('lastName')) }}
+            {% endif %}
+        </span>
+    </div>
+    <div class="formRow">
+        <span class="w100">
+            <label for="email">Email</label>
+            {{ input('email', 'email', user.email ?? null, { id: 'regEmail', }) }}
+            {% if user is defined %}
+                {{ _self.errorList(user.getErrors('email')) }}
+            {% endif %}
+        </span>
+    </div>
+
+    {{ _self.passwordField("regPassword") }}
+
+    {% if user is defined %}
+    <div>
+        {{ _self.errorList(user.getErrors('password')) }}
+    </div>
+    {% endif %}
+
+    {% set requiredFields = {   "errorId" : "#regError", 
+                                "#regFirstName" : "&bull; First Name is required",
+                                "#email" : "&bull; Email is required",
+                                "#regPassword" : "&bull; Password is required" } | json_encode() %}
+
+    <p id="regError" class="error"></p>
+
+    <div class="btnRow left">
+        <button class="jsCheckRequired" data-required='{{ requiredFields }}' type="submit">Create Account</button>
+    </div>
+</form>
+
+{% endmacro regForm %}
+
+
+{# form for customer registration #}
+{% macro forgotPassword() %}
+{% import _self as self %}
+
+<form method="post" accept-charset="UTF-8">
+  {{ csrfInput() }}
+  {{ actionInput('users/send-password-reset-email') }}
+  {{ redirectInput('/') }}
+
+  <label for="loginName">Username or email</label>
+  {{ input('text', 'loginName', loginName ?? craft.app.user.rememberedUsername, {
+    id: 'loginName',
+  }) }}
+
+  {% if errors ?? false %}
+    {{ ul(errors, {class: 'errors'}) }}
+  {% endif %}
+
+  <button type="submit">Submit</button>
+</form>
+
+{% endmacro forgotPassword %}
+
+{% macro guestCheckoutForm(cart=null, landing='/checkout/order') %}
+    {% if cart is not null %}
+        <form method="post" accept-charset="UTF-8">
+            <input type="hidden" name="action" value="commerce/cart/update-cart">
+            {{ redirectInput(landing) }}
+            {{ hiddenInput('gatewayId', globalVars.stripeGatewayId) }}            
+            {{ csrfInput() }}
+            <div class="">
+                <label for="">Email</label>
+                <input class="" type="text" value="{{ cart.email }}"
+                    name="email"
+                    placeholder="myemail@site.com"/>
+            </div>
+            <input type="submit" value="Continue as Guest" class="button"/>
+        </form>
+    {% endif %}
+{% endmacro guestCheckoutForm %}
+
+{% macro getLoginLink() %}
+    {% if not craft.app.user.isGuest %}
+        {{ logoutUrl }}
+    {% else %}
+        {{ loginUrl }}"
+    {% endif %}
+{% endmacro getLoginLink %}
+
+{% macro getLoginLinkTitle() %}
+    {% if not craft.app.user.isGuest %}
+        Logout
+    {% else %}
+        Login
+    {% endif %}
+{% endmacro getLoginLinkTitle %}
+
+ 
+{% macro addressForm(cart = null, addrType="", address=null, eventAddress = false) %}
+    {% set address = address is defined ? address : null %}
+    {% set addrType = addrType is defined ? addrType : 'address' %}
+    {% set address = address is defined ? address : null %}
+
+    {# <input type="hidden" name="billingAddressSameAsShipping" value="1"> #}
+    <input id="{{ addrType }}-countryId" type="hidden" name="{{ addrType }}[countryId]" value="{{ globalVars.usCountryId }}">{# {{ USCountryId }} #}
+
+    <div class="formRow">
+        <span class="w49">
+            <label for="{{ addrType }}-firstName">{{ addr.fname }}*</label>
+            <input type="text" id="{{ addrType }}-firstName"
+                    class=""
+                    name="{{ addrType }}[firstName]" value="{{ address ? address.firstName : '' }}" >
+        </span>
+        <span class="w49">
+            <label for="{{ addrType }}-lastName">{{ addr.lname }}*</label>
+            <input type="text" id="{{ addrType }}-lastName"
+                    class=""
+                    name="{{ addrType }}[lastName]" value="{{ address ? address.lastName : '' }}" >
+        </span>
+        {# {{ hiddenInput('{{ addrType }}[fullName]', "") }} #}
+    </div>
+
+    {% if eventAddress %}
+        <div class="formRow">
+            <span class="w49">
+                <label for="{{ addrType }}-phone">{{ addr.phone }}</label>
+                <input type="text" id="{{ addrType }}-phone"
+                        class=""
+                        name="{{ addrType }}[phone]" value="{{ address ? address.phone : '' }}" >
+            </span>
+            <span class="w49">
+                {% set theEmail = (cart is defined and cart.eventEmail)
+                    ? cart.eventEmail
+                    : cart.email ? cart.email : "" %}
+
+                <label for="eventEmail">{{ events.emailHdr }}</label>
+                {{ input('text', 'fields[eventEmail]', theEmail, { id: 'eventEmail'}) }}
+            </span>
+        </div>
+    {% endif %}
+
+    <div class="formRow">
+        <span class="w100">
+            <label for="{{ addrType }}-address1">{{ addr.addr1 }}</label>
+            <input type="text" id="{{ addrType }}-address1"
+                    class=""
+                    name="{{ addrType }}[address1]" value="{{ address ? address.address1 : '' }}" >
+        </span>
+    </div>
+    <div class="formRow">
+        <span class="w100">
+            <label for="{{ addrType }}-address2">{{ addr.addr2 }}</label>
+            <input type="text" id="{{ addrType }}-address2"
+                    class=""
+                    name="{{ addrType }}[address2]" value="{{ address ? address.address2 : '' }}" >
+        </span>
+    </div>
+    <div class="formRow">
+        <span class="w45">
+            <label for="{{ addrType }}-city">{{ addr.city }}</label>
+            <input type="text" id="{{ addrType }}-city"
+                    class=""
+                    name="{{ addrType }}[city]" value="{{ address ? address.city : '' }}" >
+        </span>
+        <span class="w30">
+            {% set state = address ? address.stateId : '' %}
+            <label for="{{ addrType }}-stateId">{{ addr.state }}</label>
+            <select id="{{ addrType }}-stateId" name="{{ addrType }}[stateValue]">
+                {% if state == "" %}
+                    {# <option value="" selected disabled hidden>{{ addr.selectState }}</option> #}
+                    {% set state = globalVars.caStateId %}
+                {% endif %}
+                {% for countryId, states in craft.commerce.states.allEnabledStatesAsListGroupedByCountryId %}
+                    {% if countryId == globalVars.usCountryId %}  {# USCountryId #}
+                        {% for stateId, stateName in states %}
+                            {% if state == stateId %}
+                                <option value="{{ stateId }}" selected >{{ stateName }}</option>
+                            {% else %}
+                                <option value="{{ stateId }}">{{ stateName }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+        </span>
+        <span class="w20">
+            <label for="{{ addrType }}-zipCode">{{ addr.zip }}</label>
+            <input type="text" id="{{ addrType }}-zipCode"
+                    class=""
+                    name="{{ addrType }}[zipCode]" value="{{ address ? address.zipCode : '' }}" >
+        </span>
+    </div>
+    {% if not eventAddress %}
+        <div class="formRow">
+            <span class="w50">
+                <label for="{{ addrType }}-phone">{{ addr.phone }}</label>
+                <input type="text" id="{{ addrType }}-phone"
+                        class=""
+                        name="{{ addrType }}[phone]" value="{{ address ? address.phone : '' }}" >
+            </span>
+        </div>
+    {% endif %}
+{% endmacro addressForm %}
+ 
+{% macro deleteAddressForm(addresses = null) %}
+
+    <form method="POST">
+    <input type="hidden" name="action" value="commerce/customer-addresses/delete">
+    {{ redirectInput('checkout/review') }}
+        {{ csrfInput() }}
+        <section row>
+            {% if addresses %}
+                <div id="setAddr" class="UserForm AddrBlock">
+                    <h1 class="jsLoginTitle">Delete Address</h1>
+                    <div class="jsAddrSet">
+                        <label for="addresses">Select the address to delete:</label>
+                        <select class="jsSetAddressIdx" name="id" id="addresses">
+                            {% for addr in addresses %}                            
+                                <option value="{{ addr.id }}">({{ addr.id }}){{ addr.address1 }} {{ addr.address2 }} {{ addr.city }}, {{ addr.stateName }}</option>
+                            {% endfor %}
+                        </select> 
+                        {# <input type="hidden" name="id" value="63"/> #}
+                        <input class="button" style="margin-top: 2rem" type="submit" value="delete"/>
+                    </div>
+                </div>
+            {% endif %}
+       </section>
+    </form>
+
+{% endmacro deleteAddressForm %}
+
+

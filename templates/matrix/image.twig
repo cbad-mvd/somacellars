@@ -1,0 +1,16 @@
+{% extends "matrix/default" %}
+
+{% set image block.image.one() %}
+
+{% block blockContent %}
+    <div class="blogImage">
+        <figure>
+            <img src="{{ image.url }}" alt="{{ image.altText }}">
+            {% if block.caption %}
+                <figcaption>
+                    {{ block.caption }}
+                </figcaption>
+            {% endif %}
+        </figure>
+    </div>
+{% endblock %}

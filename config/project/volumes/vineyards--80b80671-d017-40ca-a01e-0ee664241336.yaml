@@ -1,0 +1,55 @@
+fieldLayouts:
+  ca34c8cf-e4e6-4f36-9295-5645b4bf90dc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: e088dd2e-77cd-4aa2-87ea-d908359e1d63
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2694eaad-966f-429f-be1b-02ae779300b8 # Alt Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65ac7e37-662c-441a-811d-6a9cc7640edc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d4b70c5a-3dea-4eb3-87cf-80029863b9fd
+        userCondition: null
+fs: vineyards
+handle: vineyards
+name: Vineyards
+sortOrder: 5
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

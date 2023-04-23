@@ -1,0 +1,103 @@
+fieldLayouts:
+  3d9a803f-d110-49e6-85e6-d502b3a10ced:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c79665bd-5680-40cb-b994-c96dc6d49a6e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c51f1b8-451f-41d5-b139-f9d030efcf45 # Topic Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af13acec-10a7-449a-a2d6-334650180b4d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9bb85d0-926f-4d90-be7d-e623f12398f2 # Topic Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 758c477b-c254-41e4-b6f3-29db49042890
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4e67ca40-b001-4a5e-b820-0843dca449a5 # Topic Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 359d0afa-8fda-4e4e-b073-1bd578f6a697
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1631ee44-fb01-4fa0-9c73-98c81f3bfd83
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 62d7bcb0-16d2-42a9-831e-9cc80bab4b5b # Topic Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c139c3b2-046d-44a3-ab8b-b73aff371311
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ca8639a7-d6ab-406f-8c4e-979f54761718
+        userCondition: null
+handle: textPic
+hasTitleField: true
+name: 'Text Pic'
+section: 05418c21-53f8-4f73-9b54-63dff2e49d7d # Club
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,13 @@
+/**
+ * ----------------------------------------
+ * animation come-in go-out
+ * ----------------------------------------
+ */
+ @keyframes come-in {
+    to { transform: translateY(0); }
+}
+  
+@keyframes go-out {
+    to { transform: translateY(-4.5rem); }
+}
+  

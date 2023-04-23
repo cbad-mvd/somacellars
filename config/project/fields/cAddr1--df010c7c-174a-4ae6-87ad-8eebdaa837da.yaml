@@ -1,0 +1,19 @@
+columnSuffix: gaiojcxy
+contentColumnType: text
+fieldGroup: de98e50f-db7f-4753-b6f3-258c6bf7fef5 # Company
+handle: cAddr1
+instructions: null
+name: 'Company Address One'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

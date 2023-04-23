@@ -1,0 +1,139 @@
+fieldLayouts:
+  5bbbf53b-e955-41a6-9ca4-f2c15dcd25f1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 95ddec87-c218-4fcb-80d4-c18bb2dd4f96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c51f1b8-451f-41d5-b139-f9d030efcf45 # Topic Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 640b35ac-cfff-4c88-a791-6f42381cb3da
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9bb85d0-926f-4d90-be7d-e623f12398f2 # Topic Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0952a5a6-1d00-4fbc-a39d-8cd85e21f6b7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4e67ca40-b001-4a5e-b820-0843dca449a5 # Topic Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31e59ac2-241b-44a8-ad4c-ef9adf0ab17b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f008995e-d896-4b98-bde5-082ddb9d8bcc # Sold Out Toggle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7d4a6857-c2b1-4d77-83c6-aaa06fd8b36e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f78bfbf-5670-4c7a-939e-84c0133ec718
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21f83e81-c8bf-45d4-aa60-cadd99ad6298
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 864734ff-1ad6-49ba-a6be-dcfa8ccb52d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 62d7bcb0-16d2-42a9-831e-9cc80bab4b5b # Topic Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c7d1af7-6c77-4b5a-a28f-f8a829f9cbb0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bacc9914-340e-463e-8d19-5345afda9138 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c050bbd-56b1-405d-9e27-a40f7310138c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 18168526-06bd-44c6-9d2f-3baa19b0f011
+        userCondition: null
+handle: wineItems
+hasTitleField: true
+name: 'Wine Items'
+section: ca1c4ea1-3384-4601-87d5-bbd4103dd286 # Wines
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

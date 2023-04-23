@@ -1,0 +1,43 @@
+{% extends "_layouts/site-layout-base.twig" %}
+
+{# -- Primary content block --
+{% block content %}
+<div class="maincontent">
+    <h2>{{ entry.title }}</h2>
+</div>
+ #}
+
+ {% block titleTag %}
+ <title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
+ {% endblock titleTag %}
+ 
+ {% block bodyTag %}
+     <body id="{{ entry.slug }}" class="{{ entry.slug }}">
+ {% endblock bodyTag %}
+ 
+ {% block pageIntro %}
+     <section class="row PageIntro">
+         {#
+         <div class="pageImg">
+             {{ m_srcset.srcset(entry.topicImage.one(), 'hero') }}      
+         </div>
+         #}
+         <div class="pageText">
+             <h2>{{ entry.topicTitle }}</h2>
+         </div>
+         <div class="pageText">
+             <p></p>{{ entry.topicIntro }}</p>
+         </div>
+     </section>
+ {% endblock %}
+
+{% block content %}
+    {% block entryContent %}
+    {% endblock %}      
+{% endblock %}
+
+{% block pageJs %}
+<script>
+    setPageTop('pageHeader', "{{ entry.slug }}");
+</script>
+{% endblock pageJs %}

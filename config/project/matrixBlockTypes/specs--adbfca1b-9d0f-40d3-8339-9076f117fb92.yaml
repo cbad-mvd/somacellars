@@ -1,0 +1,85 @@
+field: bacc9914-340e-463e-8d19-5345afda9138 # Body
+fieldLayouts:
+  6aae7989-c1bc-4be3-aaf2-bd586de58a94:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 41a6aa51-edc8-447c-88af-bb4088b8a2c8 # Specs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bab41aac-57f2-4d03-b424-253c3e75afdc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c7c36978-348d-4226-82a3-b3d9f09974af
+        userCondition: null
+fields:
+  41a6aa51-edc8-447c-88af-bb4088b8a2c8: # Specs
+    columnSuffix: qysykfka
+    contentColumnType: text
+    fieldGroup: null
+    handle: specs
+    instructions: null
+    name: Specs
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Value
+                -
+                  - handle
+                  - value
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: specs
+name: Specs
+sortOrder: 6

@@ -1,0 +1,23 @@
+{% block itemContent %}
+    <section class="row TextPic">
+        <div class="TextBlock {{ swapClass }}">
+            <div class="topBorder"></div>
+            <div>
+                <h3>{{ item.topicTitle }}</h3>
+                <h5>{{ item.topicDesc }}</h5>
+                <p>{{ item.topicRichText }}</p>
+            </div>
+            <div class="buttons">
+                {% for link in item.topicLink %}
+                <span class="button buttonLink">
+                    <a href="{{ link.uri }}">{{ link.label }}</a>
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="PicBlock">
+            {% set image = item.topicImage.one() %}
+            <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+        </div>
+    </section>
+{% endblock %}

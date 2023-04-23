@@ -1,0 +1,104 @@
+$font-stack: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-title: "Georgia", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-title: 'EB Garamond', serif;
+$font-stack-title: 'Crimson Text', serif;
+
+$font-size-base: 1rem;          // 16px
+$font-weight-base: 400;         // normal
+
+$line-height-base: 1.5em;       // 24px
+$line-height-small: 1.2em;
+
+$font-size-small: $font-size-base * 0.75;
+$font-size-body: $font-size-base * 1;
+$font-size-large: $font-size-base * 1.25;
+
+
+/*
+ * Responsive: since everything is rem/em based, control document font-size
+ *             with media queries setting the base size in html
+ */
+html {
+    font-size: 87.5%;            // 14px
+    
+    /* Larger than phablet */
+    @media (min-width: 550px) {
+        font-size: 100%;          // 16px
+    }
+    /* Larger than standard desktop */
+    @media (min-width: 1200px) {
+        font-size: 112.5%;        // 18px
+    }
+}
+
+body {
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	font-family: $font-stack;
+	line-height: $line-height-base;
+	color: $color-bodytext;
+}
+
+//
+// heading font sizes
+//
+.headerDefaults {
+    // margin: $vspace-base 0;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    padding: 0;
+}
+
+h1 {
+    @extend .headerDefaults;
+    font-family: $font-stack-title;
+    font-size: $font-size-base * 2;
+}
+h2 {
+    font-family: $font-stack-title;
+    font-size: $font-size-base * 1.5;
+    @extend .headerDefaults;
+}
+h3 {
+    @extend .headerDefaults;
+    font-family: $font-stack-title;
+    font-size: $font-size-base * 1.25;
+}
+h4 {
+    @extend .headerDefaults;
+    font-size: $font-size-base * 1.25;
+    font-weight: normal;
+    font-style: italic;
+}
+h5 {
+    @extend .headerDefaults;
+}
+h6 {
+    @extend .headerDefaults;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.smallText {
+    font-size: $font-size-small;
+}
+
+.bodyText {
+    font-size: $font-size-body;
+}
+
+.largeText {
+    font-size: $font-size-large;
+}
+//
+// generic title class based on h5
+//
+.title {
+	@extend h5;
+}
+
+.compenent-title {
+    @extend h2;
+    font-size: $font-size-base * 3;
+    color: red;
+}

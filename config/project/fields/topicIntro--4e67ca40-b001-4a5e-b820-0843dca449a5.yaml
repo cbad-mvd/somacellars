@@ -1,0 +1,19 @@
+columnSuffix: auzcykzk
+contentColumnType: text
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: topicIntro
+instructions: 'Short text description of topic, used in listings'
+name: 'Topic Intro'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

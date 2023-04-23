@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: body
+instructions: 'Multi-purpose field for matrix fields everywhere'
+name: Body
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_body}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

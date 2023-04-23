@@ -1,0 +1,24 @@
+fieldLayouts:
+  65228fbd-acd8-417d-b760-e5e3d4afd9bd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6014ea73-e0f0-4cd4-a2ac-eff43e74101f # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b98db77-0ea3-448a-b781-7d68e35373a0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Fields
+        uid: e367d795-140c-4ad3-a31b-3d89acf88099
+        userCondition: null
+handle: footer
+name: Footer
+sortOrder: 2

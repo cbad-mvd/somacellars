@@ -1,0 +1,55 @@
+fieldLayouts:
+  342bad7b-aa34-4520-933e-82dc9478ddbd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 1e429d8b-bf19-4dde-86fe-87d2f07ef9ef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2694eaad-966f-429f-be1b-02ae779300b8 # Alt Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ba99bb0-e3d0-4559-943c-324727949652
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ff85cd4a-8276-4eb3-877a-7665229bf218
+        userCondition: null
+fs: wines
+handle: wineBottles
+name: 'Wine Bottles'
+sortOrder: 6
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

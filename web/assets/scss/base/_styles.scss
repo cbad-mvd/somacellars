@@ -1,0 +1,75 @@
+/****************************************
+ Core Styles
+*****************************************/
+
+
+/* NOTE html is set to 62.5% so that all the 
+ *      REM measurements are based on 10px sizing. 
+ *      So basically 1.5rem = 15px 
+ */
+ html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: $font-size;
+	font-weight: $font-weight;
+	font-family: $font-stack;
+	line-height: $font-line-height;
+	color: $color-bodytext;
+}
+
+/*
+ * set box-sizing to use border-box by default
+ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.lazyimg {
+	@include aspect-ratio(1635,720);
+}
+
+.itemGrid-imgWrap {
+	@include aspect-ratio(500,300);
+}
+
+.itemGrid-imgWrap .image img {
+	width: 100%;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a:link {
+	color: $color-link;
+	text-decoration: none;
+}
+a:visited {
+	color: $color-link;
+	text-decoration: none;
+}
+a:hover {
+	color: $color-link-hover;
+	text-decoration: none;
+}
+a:active {
+	color: $color-link;
+	text-decoration: none;
+}

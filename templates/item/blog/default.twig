@@ -1,0 +1,27 @@
+{% extends "item/default" %}
+
+{% block itemContent %}
+    <div class="matrixStuff">
+        <p>{{ entry.title }} - {{ entry.cName }}</p>
+    </div>
+
+    <p>in item/blog/default</p>
+{% if entry.body %}
+{% include "matrix" with {"matrix": entry.body} %}
+{% endif %}
+
+{% endblock %}
+
+{# 
+{% block blockContent %}
+    {{ parent() }}
+{% endblock %}
+
+{% block itemContent %}
+<p>in item/blog/default</p>
+{% if entry.body %}
+{% include "matrix" with {"matrix": entry.body} %}
+{% endif %}
+
+{% endblock %}
+#}

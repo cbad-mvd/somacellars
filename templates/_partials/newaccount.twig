@@ -1,0 +1,65 @@
+{% macro errorList(errors) %}
+  {% if errors %}
+    {{ ul(errors, {class: 'error jsErrorMsg'}) }}
+  {% endif %}
+{% endmacro %}
+
+<form method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    {{ actionInput('users/save-user') }}
+    {{ redirectInput(url('login')) }}
+    
+    {% set requiredFields = {   "errorId" : "#regError", 
+                                "#regFirstName" : "→ First Name is required",
+                                "#regEmail" : "→ Email is required",
+                                "#regPassword" : "→ Password is required" } | json_encode() %}
+
+    {% set errors = [] %}
+    {%if user is defined %}
+    {% for attributeKey in ['firstName', 'lastName', 'email', 'password'] %}
+        {% set errors = errors|merge(user.getErrors(attributeKey)) %}
+    {% endfor %}
+    {% endif %}
+
+    {% if errors|length > 0 %}
+    <div class="ErrorList">
+        <ul>
+            {% for error in errors %}
+                <li>&nbsp;{{ error }}</li>
+            {% endfor %}
+        </ul>
+        <p id="regError" class="error"></p>
+    </div>
+    {% else %}
+        <p id="regError" class="error"></p>
+    {% endif %}
+
+    <div class="formRow">
+        <span class="w49">
+            <label for="firstName">First Name</label>
+            {{ input('text', 'firstName', user.firstName ?? null, { id: 'regFirstName', }) }}
+        </span>
+        <span class="w49">
+            <label for="lastName">Last Name</label>
+            {{ input('text', 'lastName', user.lastName ?? null, { id: 'reglastName', }) }}
+        </span>
+    </div>
+    <div class="formRow">
+        <span class="w100">
+            <label for="email">Email</label>
+            {{ input('email', 'email', user.email ?? null, { id: 'regEmail', }) }}
+        </span>
+    </div>
+    <div class="loginPassword">
+        <label for="password">Password</label>
+        <span class="pw-wrapper">
+            {{ input('password', 'password', null, { id: 'regPassword', class: 'jsPWField' }) }}
+            <span class="jsShowPW eyeball" title="Show Password"></span>
+            <span class="spacer">&nbsp;</span>
+        </span>
+    </div>
+
+    <div class="btnRow left">
+        <button class="jsCheckRequired" data-required='{{ requiredFields }}' type="submit">Create Account</button>
+    </div>
+</form>

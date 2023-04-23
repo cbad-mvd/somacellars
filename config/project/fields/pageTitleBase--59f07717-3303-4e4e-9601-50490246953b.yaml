@@ -1,0 +1,19 @@
+columnSuffix: ltoakbyl
+contentColumnType: text
+fieldGroup: bfc48201-3ef2-4750-9269-167f90da381f # globalVars
+handle: pageTitleBase
+instructions: null
+name: 'Page Title Base'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

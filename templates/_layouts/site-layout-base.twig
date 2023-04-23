@@ -1,0 +1,136 @@
+{# --                                                  -- #}
+{# -- Base layout template for all Site HTML pages     -- #}
+{# -- Usage: extends "_layouts/site-layout-base.twig"  -- #}
+{# --                                                  -- #}
+{# -- extends generic layout and includes site         -- #}
+{# -- specific markup for header, nav, footers, etc.   -- #}   
+{# --                                                  -- #}
+{% extends "_layouts/site-layout-generic.twig" %}
+
+{% import '_macros/_srcset'  as m_srcset %}
+
+{# -- Page body -- #}
+{% block bodyHtml %}
+    {% block mobileMenu %}
+        {# -- Mobile Menu Overlay block -- #}
+        {% include "_partials/mobile-menu.twig" %}
+    {% endblock mobileMenu %}
+
+
+    <div id="page-container" class="overflow-hidden leading-tight">
+        <div id="content-container">
+            {% block header %}
+                {% include "_partials/info-header.twig" %}
+            {% endblock %}
+            <main>
+                {# -- Primary content block -- #}
+                {##
+                {% block pageHeader %}
+                    <div class="row  nomargins">
+                        {% include "_partials/info-header.twig" %}
+                    </div>
+                {% endblock pageHeader %}
+                ##}
+                {% block pageIntro %}
+                    {% set item = craft.entries().section('siteInfo').type('intro').one() %}
+                    {% if item|length > 0 %}
+                        <div class="Intro">
+                            <div class="Intro-title">
+                                <h1>{{ item.introHeading }}</h1>
+                                <p>
+                                    {{ item.introSubheading }}
+                                </p>
+                            </div>
+                
+                            {# set top hero image with srcset tags #}
+                            {{ m_srcset.srcset(item.introHero.one(), 'hero') }} 
+                            
+
+
+                        </div>
+                    {% else %}
+                        <p>No intro items in DB!!!</p>
+                    {% endif %}
+                {% endblock %}
+    
+                {# -- Primary content block -- #}
+                {% block content %}
+                {% endblock %}                
+            </main>
+        </div>
+
+        {# -- Content that appears below the primary content block -- #}
+        {% block subcontent %}
+        {% endblock %}
+
+        {% block footer %}
+            {# -- HTML Footer -- #}
+            {% include "_partials/footer-main.twig" %}
+        {% endblock %}
+
+    </div>
+
+{% endblock bodyHtml %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+		<!-- javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+		<script src="/assets/js/jquery.zoom.js"></script>
+		<script src="/assets/js/main.js"></script>
+        <script src="/assets/js/slidemenu.js"></script>
+		<script src="/assets/js/jquery.slicknav.js"></script>
+
+        <script>
+/**
+          var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+          });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            slideout.toggle();
+        });
+**/
+function addMobileEventListeners(menuID, menuButton, menuToggle, menuClose) {
+    
+    return;
+    menuButton.addEventListener('click', () => {
+        menuToggle();
+    });
+
+    // closes menu if clicked outside
+    document.body.addEventListener('click', function( event ){
+        //if( this.menuPanel.contains( event.target ) ){
+            // do nothing, click was inside container
+        //} else {
+            // hide autocomplete, click was outside container.
+        //    this.menuClose();
+        //}
+        // alert( event.target.id + ' - ' + event.target.parentElement.id + ' <--- id' );
+        if ( (event.target.id != menuID) ) {
+            // menuClose();
+            alert(event.target.id + ' - ' + menuID );
+        }
+        //this.menuToggle();
+    });        
+}
+
+        const mobileMenu = new SlideMenu('mobile-button', 'mobile-panel')
+
+        addMobileEventListeners(    mobileMenu.menuID, 
+                                    mobileMenu.menuButton, 
+                                    mobileMenu.menuToggle, 
+                                    mobileMenu.menuClose);
+
+        </script>            
+
+        {% block pageJs %}
+        {% endblock pageJs %}
+{% endblock bodyJs %}
+

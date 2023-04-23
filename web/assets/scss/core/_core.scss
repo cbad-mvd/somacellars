@@ -1,0 +1,42 @@
+/****************************************
+ Core Global Styles
+*****************************************/
+
+/*
+ * set box-sizing to use border-box by default
+ */
+html {
+	box-sizing: border-box;
+}
+
+/*
+ * provide smooth scrolling to #hash links
+ */
+html {
+	scroll-behavior: smooth;
+}
+
+[id] {
+	scroll-margin-top: 2ex;			// adds a little space above the target
+}
+  
+
+
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+

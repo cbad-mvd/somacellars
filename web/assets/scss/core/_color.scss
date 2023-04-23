@@ -1,0 +1,122 @@
+/****************************************
+ Color Styles
+*****************************************/
+$color-bodytext: #333333;
+$color-bodytext: #5b574d;
+$color-bodytext__dark: #eeeeee;
+$color-headline: #601008;
+
+$color-bg: #ffffff;
+$color-bg__dark: rgba(33, 33, 37, 1);
+$color-bg__dark50: rgba(33, 33, 37, 0.5);
+$color-bg__dark25: rgba(33, 33, 37, 0.25);
+
+$color-bg: #e9e8e4;
+$color-bg__dark: #e9e8e4;
+$color-bg__dark50: #e9e8e4;
+$color-bg__dark25: rgba(33, 33, 37, 0.25);
+
+$color-rowbg: $color-bg;
+
+$color-rowbg__alt: #eee;
+$color-rowborder: #ddd;
+
+$color-main-accent: #b3d146;
+$color-main-accent: #601008;
+$color-second-accent: #b18956;
+$color-disabled-accent: #666666;
+
+$color-main-header-bg: $color-main-accent;
+$color-home-header-bg: transparent;
+
+$color-link: #465bd1;
+$color-link-hover: #601008;
+$color-nav-link: $color-bodytext;
+$color-link__dark: $color-main-accent;
+$color-link-hover__dark: #ffffff;
+
+$color-btn-text: $color-bodytext;
+$color-btn-hover: #cf0505;
+
+
+/* Backgrounds
+__________________________________________________ */
+body {
+    background-color: $color-bg;
+}
+
+.page {
+    color: $color-bg;
+}
+
+.dark {                             // use in any compent with a dark bg, text and links follow
+    background-color: $color-bg__dark;
+    &25 {
+        background-color: $color-bg__dark25;
+    }
+    &50 {
+        background-color: $color-bg__dark50;
+    }
+}
+
+/* Text
+__________________________________________________ */
+p, h1, h2, h3, h4, h5, h6 {
+    color: $color-bodytext;
+}
+
+.dark {
+    p, h1, h2, h3, h4, h5, h6, ol, ul, a, form {
+        color: $color-bodytext__dark;
+    }
+}
+
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+    color: $color-link;
+	text-decoration: none;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+	color: $color-link-hover;
+}
+a:active {
+}
+
+.dark {
+    a {
+        color: $color-link__dark;
+    }
+    a:hover {
+        color: $color-link__dark;
+        text-decoration: underline;
+    }
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    color: $color-btn-text;
+    background-color: $color-main-accent;
+    
+    > a {
+        color: inherit;
+    }
+    > a:hover {
+        color: inherit;
+    }
+    &:hover {
+        color: $color-btn-hover;
+    }
+    &.off {
+        background-color: #ccc;
+    }
+}

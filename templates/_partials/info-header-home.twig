@@ -1,0 +1,83 @@
+{% import '_macros/_user' as m_user %}
+{% set myEntryQuery = craft.entries().section('siteInfo').limit(1) %}
+{% set thisEntry = myEntryQuery.one() %}
+
+{% set thisSlug = entry is defined ? entry.slug : "" %}
+
+<div class="row  nomargins">
+    <header id="homeHeader" class="MainHdr nav--comin-in">
+
+        <div class="TopContactRow">
+            <div>
+                {% for item in thisEntry.contactInfo %}
+
+                    {# needs sprout email encoder to work
+                    {% set email = "<a href='mailto:#{item.email}'>#{item.email}</a>" %}
+                    {% set phone = "<a href='tel:#{item.phone}'>#{item.phone}</a>" %}
+
+                    {{ email }}
+                    {{ phone }}
+                    #}
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="HdrNavRow">
+            <div class="logo">
+                {% set image = thisEntry.siteLogo.one() %}
+                {% if image and image.extension == 'svg' %}
+                    <a href="{{ alias('@web') }}">
+                        {{ svg(image) }}
+                    </a>
+                {% endif %}
+                
+            </div>
+            <div class="nav">
+                <ul class="nav-menu">
+                    {% for item in thisEntry.globalNav %}
+                        <li>
+                            {% if thisSlug == item.menuUrl %}
+                                {% set linkClass = "active" %}
+                            {% elseif (thisSlug == "home") and (item.menuUrl == "/") %}
+                                {% set linkClass = "active" %}
+                        {% else %}
+                                {% set linkClass = thisSlug %}
+                            {% endif %}
+                        {#
+                                {% set linkClass = thisSlug ~ item.menuUrl %}
+                        #}
+                            <a href="{{ alias('@web') }}/{{ item.menuUrl }}" class="{{ linkClass }}" title="{{ item.menuTip }}">{{ item.menuText }}</a>
+                        </li>
+                    {% endfor %}
+                    {# if we need a login
+                        <li>
+                        <a href="{{ m_user.getLoginLink() }}" class="{{ thisSlug }}" title="{{ m_user.getLoginLinkTitle() }}">{{ m_user.getLoginLinkTitle() }}</a> 
+                        <a href="" class="jsShowUserMenu userIcon" title=""><span></span></a>                                
+                    </li>
+                    #}
+                </ul>
+
+                {### needed only if we have user accounts        
+                <div id="userMenu" class="usermenu">
+                    <ul>
+                        {% if currentUser %}
+                            <li><a href="/customer" class="">Order History</a></li>
+                        {% else %}
+                        {% endif %}
+                        <li class="last"><a href="{{ m_user.getLoginLink() }}">{{ m_user.getLoginLinkTitle() }}</a></li>
+                    </ul>
+                </div>
+                ### needed only if we have user accounts ###}       
+
+
+            </div>
+            <div class="mobile-nav">
+                {% set image = globalVars.mobileMenu.one() %}
+                <button class="mobile-toggle">
+                    <img id="mobile-button" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />            
+                </button> 
+            </div>
+        </div>
+        
+    </header>
+</div>

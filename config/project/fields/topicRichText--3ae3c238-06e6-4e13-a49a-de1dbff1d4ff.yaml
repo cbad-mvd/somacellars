@@ -1,0 +1,23 @@
+columnSuffix: sliyjejx
+contentColumnType: text
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: topicRichText
+instructions: 'When plain text isn''t enough'
+name: 'Topic RichText'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  defaultTransform: null
+  initJs: null
+  purifierConfig: null
+  purifyHtml: true
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

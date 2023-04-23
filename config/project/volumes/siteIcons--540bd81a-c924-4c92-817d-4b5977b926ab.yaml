@@ -1,0 +1,66 @@
+fieldLayouts:
+  812d4478-585e-47ee-a85a-9e16c80a93a9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 6802e15c-3ad3-4b77-8d97-34beb87eacad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 6d8e3452-0cfd-4544-a105-9fd329ceb2bf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d1554f2b-5f92-4705-9cd7-edec9b05c3d0
+        userCondition: null
+fs: siteIcons
+handle: siteIcons
+name: 'Site Icons'
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

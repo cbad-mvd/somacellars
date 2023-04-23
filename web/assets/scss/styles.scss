@@ -1,0 +1,80 @@
+/* Main CSS File for deMaggs Dining
+
+Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+ - Config
+ - Normalize
+ - Base Styles
+ - Typography
+ - Layout
+*/
+
+@import "normalize";
+@import "core";
+@import "keyframes";
+@import "layout";
+
+/*
+ * default boilerplate styles
+ */
+
+ #page-container,
+ #content-container {
+	 margin: 0;
+	 padding: 0;
+ }
+
+ /*
+  * some basic stuff for demo page
+ 
+body {
+	background-color: #fff;
+}
+
+.page {
+	margin: 2rem auto;
+	padding: 5rem;
+	width: 100%;
+	max-width: 960px;
+	background-color: #fff;
+	border-radius: 1rem;
+}
+
+.docs-content {
+	margin-bottom: 4rem;
+}
+
+.page-intro {
+	text-align: center;
+}
+
+.page-intro p {
+	text-align: left;
+}
+
+.page-title {
+	text-transform: uppercase;
+}
+
+.topic-header,
+.docs-header {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+	color: $color-headings-highlight;
+}
+
+.button-wrapper {
+	margin-bottom: 2rem;
+}
+
+.side-by-side {
+	display: flex;
+}
+.side-by-side > div,
+.side-by-side > ul {
+	width: 50%;
+}
+
+*/

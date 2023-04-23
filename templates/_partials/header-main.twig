@@ -1,0 +1,91 @@
+
+{% import '_macros/_user' as m_user %}
+
+    		{% set myEntryQuery = craft.entries().section('globalHeader').limit(1) %}
+            {% set thisEntry = myEntryQuery.one() %}
+
+            {% set thisSlug = entry is defined ? entry.slug : "uhoh" %}
+
+            <header class="MainHdr">
+                {# <button class="toggle-button" >☰</button> #}
+              
+                <div class="HdrRow">
+                    <div class="promo">
+                        <div>
+                            <p class="subhead">USA Orders Over $50</p>
+                            <p>FREE SHIPPING</p>
+                        </div>
+                    </div>
+
+                    <div class="logo">
+                        {% set image = globalVars.siteLogo.one() %}
+                        <a href="{{ alias('@web') }}">
+                            <img class="lazyloaded" src="{{ image.url }}" alt="{{ image.altText }}">
+                        </a>
+                    </div>
+
+                    <div class="user">
+                        <span>
+                            <a href="#">Jim Mayall</a>
+                        </span>
+                        <span class="hasicon">
+                            <a href="" class="jsShowUserMenu userIcon" title=""><span></span></a>                                
+                        </span>
+                    </div>
+                    <div class="minicart">
+                        <a class="cart" href="/cart/">
+                            <span class="items"><i class="icon-shopping_cart"></i><span class=" plural" data-js="cart-quantity">0 Items</span></span>
+                            <span class="total" data-js="cart-total">$0.00</span>
+                        </a>
+                        
+                        {####
+                        <div class="cartstatus">
+                            <span>
+                                <img class="carticon" src="" />
+                            </span>
+                            <span>0 items</span>
+                            <span class="amt">$0.00</span>
+                        </div>
+                        ####}
+                    </div>
+                    <div class="mobile-nav">
+                        {######
+                        {% set image = globalVars.mobileMenu.one() %}
+                        <img id="jsMobileShow" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />
+                        ######}
+                    </div>
+                </div>
+                <div class="NavRow">
+                    <div class="nav">
+                        <ul class="nav-menu">
+                            
+                            {% for item in globalVars.globalNav %}
+                                <li>
+                                    {% if thisSlug == item.menuUri %}
+                                        {% set linkClass = "active" %}
+                                    {% elseif (thisSlug == "home") and (item.menuUri == "/") %}
+                                         {% set linkClass = "active" %}
+                                   {% else %}
+                                        {% set linkClass = thisSlug %}
+                                    {% endif %}
+                                    {% set webHome = alias('@web')~'/'~item.menuUri %}
+                                    <a href="{{ alias('@web')~'/'~item.menuUri }}" class="{{ linkClass }}" title="{{ item.menuTip }}">{{ item.menuText }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {####
+                        <div id="userMenu" class="usermenu">
+                            <ul>
+                                {% if currentUser %}
+                                    <li><a href="/customer" class="">Order History</a></li>
+                                {% else %}
+                                {% endif %}
+                                <li class="last"><a href="login">login</a></li>
+                            </ul>
+                        </div>
+                        ####}
+                        
+                    </div>
+
+                </div>
+			</header>

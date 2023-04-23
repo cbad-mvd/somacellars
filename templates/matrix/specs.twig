@@ -1,0 +1,27 @@
+{% extends "matrix/default" %}
+
+{% block blockContent %}
+    <div class="specs">
+        {% set count = block.specs | length %}
+        {% set halves = count // 2 %}
+        {% set rows = block.specs %}
+        <div class="specBlock">
+            {% for row in rows|slice(0, halves) %}
+                <div class="specRow">
+                    <div class="label">{{ row.label }}</div>
+                    <div class="value">{{ row.value }}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="specBlock">
+            {% for row in rows|slice(halves, count) %}
+                <div class="specRow">
+                    <div class="label">{{ row.label }}</div>
+                    <div class="value">{{ row.value }}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

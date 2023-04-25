@@ -73,7 +73,7 @@ footer {
 	flex-flow: row;
 	margin-top: 1rem;
 	padding: 2rem 0.25rem;
-	height: 4rem;
+	height: 6rem;
 	background-color: rgba(33, 33, 37, 1);
 	background-color: darken($color-bg, 10%);
 	color: #ffffff;
@@ -94,6 +94,10 @@ footer {
 	.footerInfo {
 		width: 75%;
 		text-align: left;
+		svg {
+			fill: $color-main-accent;
+			width: 8rem;
+		}
 	}
 
 	.footerSocial {
@@ -513,14 +517,14 @@ footer {
 
 		.PicBlock {
 			position: relative;
-			width: 30%;
+			width: 35%;
 			order: 1;
 
 			// xxx
 		}
 
 		.TextBlock {
-			width: 70%;
+			width: 65%;
 			margin-top: 1rem;
 
 			position: relative;

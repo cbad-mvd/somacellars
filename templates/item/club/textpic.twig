@@ -17,7 +17,9 @@
         </div>
         <div class="PicBlock">
             {% set image = item.topicImage.one() %}
-            <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+            {% if image %}
+                <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+            {% endif %}
         </div>
     </section>
 {% endblock %}

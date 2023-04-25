@@ -838,7 +838,7 @@ footer {
   flex-flow: row;
   margin-top: 1rem;
   padding: 2rem 0.25rem;
-  height: 4rem;
+  height: 6rem;
   background-color: rgb(33, 33, 37);
   background-color: #d2d0c8;
   color: #ffffff;
@@ -857,6 +857,10 @@ footer {
 .FooterSections .footerInfo {
   width: 75%;
   text-align: left;
+}
+.FooterSections .footerInfo svg {
+  fill: #601008;
+  width: 8rem;
 }
 .FooterSections .footerSocial {
   width: 25%;
@@ -1198,11 +1202,11 @@ footer {
 }
 .WineInfo .wineItem .PicBlock {
   position: relative;
-  width: 30%;
+  width: 35%;
   order: 1;
 }
 .WineInfo .wineItem .TextBlock {
-  width: 70%;
+  width: 65%;
   margin-top: 1rem;
   position: relative;
   display: flex;

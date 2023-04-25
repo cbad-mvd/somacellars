@@ -13,8 +13,10 @@
     <div class="footerInfo">
         <span>
             {% set logo = globalVars.siteLogoDarkBg.one() %}
-            <a href="{{ alias('@web') }}"><img class="footerLogo" src="{{ logo.url }}" alt="{{ logo.altText }}" class="lazyloaded">
-            </a>
+            {% if logo and logo.extension == 'svg' %}     
+                {# <p>{{ logo.url }}</p>  #}         
+                <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>
+            {% endif %}
         </span>
         <span>
             {{ footer.copyright }}

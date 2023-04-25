@@ -1,50 +1,92 @@
-dateModified: 1682261321
+dateModified: 1682352070
 email:
   fromEmail: jmayall@surething.com
   fromName: 'Soma Cellars'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   siteHeros:
-    hasUrls: true
+    hasUrls: false
     name: 'Site Heros'
     settings:
-      path: '@assetPath/img/heros'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: heros
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/heros/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/heros/'
   siteIcons:
-    hasUrls: true
+    hasUrls: false
     name: 'Site Icons'
     settings:
-      path: '@assetPath/img'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: icons
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/icons/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/icons'
   siteImages:
-    hasUrls: true
+    hasUrls: false
     name: 'Site Images'
     settings:
-      path: '@assetPath/img/images'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: images
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/images/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/images'
   siteLogos:
-    hasUrls: true
+    hasUrls: false
     name: 'Site Logos'
     settings:
-      path: '@assetPath/img/logos'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: logos
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/logos/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/logos/'
   vineyards:
-    hasUrls: true
+    hasUrls: false
     name: Vineyards
     settings:
-      path: '@assetPath/img/vineyards'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: vineyards
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/vineyards/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/vineyards'
   wines:
-    hasUrls: true
+    hasUrls: false
     name: 'Wine Bottles'
     settings:
-      path: '@assetPath/img/wines'
-    type: craft\fs\Local
+      cdnUrlPattern: ''
+      customSubfolder: wines
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/wines/
+    type: servd\AssetStorage\AssetsPlatform\Fs
     url: '@assetUrl/img/wines'
 meta:
   __names__:
@@ -139,6 +181,45 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  servd-asset-storage:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      adjustFeedmeLogs: ''
+      assetsEnvironment: ''
+      assetsEnvironmentOverwrite: ''
+      cacheClearMode: full
+      clearCachesOnSave: always
+      disableDynamic: ''
+      disableTransforms: ''
+      fsMaps:
+        __assoc__:
+          -
+            - siteHeros
+            - none
+          -
+            - siteIcons
+            - none
+          -
+            - siteImages
+            - none
+          -
+            - siteLogos
+            - none
+          -
+            - vineyards
+            - none
+          -
+            - wines
+            - none
+      fsMapsEnabled: ''
+      imageAutoConversion: webp
+      injectCors: '1'
+      projectSlug: $SERVD_PROJECT_SLUG
+      securityKey: $SERVD_SECURITY_KEY
+      suppressWarnings: ''
+      useLocalVolumes: false
 system:
   edition: pro
   live: $IS_SYSTEM_LIVE

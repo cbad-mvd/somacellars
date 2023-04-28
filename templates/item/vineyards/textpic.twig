@@ -1,29 +1,5 @@
-{% block itemContent %}
-    <section class="row TextPic">
-        <div class="TextBlock {{ swapClass }}">
-            <div class="topBorder"></div>
-            <div>
-                <h3>{{ item.topicTitle }}</h3>
-                <h5>{{ item.topicDesc }}</h5>
-                <p>{{ item.topicIntro }}</p>
-            </div>
-        <div>
-        {% for link in item.topicLink %}
-        <span class="button buttonLink">
-            <a href="{{ link.uri }}">{{ link.label }}</a>
-        </span>
-        {% endfor %}
+{% import '_macros/_textpic' as m_textpic %}
 
-        {% if false %}
-                <span class="button buttonLink">
-                        <a href="#">Button</a>
-                    </span>
-            {% endif %}
-                </div>
-        </div>
-        <div class="PicBlock">
-            {% set image = item.topicImage.one() %}
-            <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
-        </div>
-    </section>
+{% block itemContent %}
+    {{ m_textpic.textpic( item, swapClass ) }}
 {% endblock %}

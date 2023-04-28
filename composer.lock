@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b097f4c09b42fe39e9365725d5b517fc",
+    "content-hash": "7b61cd07e5b3374e2a12d5fa173bfc5d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -626,11 +626,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.7.1",
+            "version": "4.4.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5035cee5c412e35c5b53943d777627c53f1dc9fe",
-                "reference": "5035cee5c412e35c5b53943d777627c53f1dc9fe",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/c2947a7633375432d23dbbf11c21b4b6cc415650",
+                "reference": "c2947a7633375432d23dbbf11c21b4b6cc415650",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +660,7 @@
                 "monolog/monolog": "^2.3",
                 "php": "^8.0.2",
                 "pixelandtonic/imagine": "~1.3.3.1",
-                "samdark/yii2-psr-log-target": "1.1.3",
+                "samdark/yii2-psr-log-target": "^1.1.3",
                 "seld/cli-prompt": "^1.0.4",
                 "symfony/http-client": "^6.0.3",
                 "symfony/var-dumper": "^5.0|^6.0",
@@ -721,7 +721,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-04-15T21:58:56+00:00"
+            "time": "2023-04-25T17:56:18+00:00"
         },
         {
             "name": "craftcms/flysystem",
@@ -1586,7 +1586,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/0168d0e44ea0c4fe5451fe08cde7049b9e9f9741",
@@ -1631,7 +1631,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/bea24daa0fa84b7e7b0d5b84f62c71b7e2dc3364",
@@ -1667,7 +1667,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/44f65d723b13823baa02ff69751a5948bde60c22",
@@ -1705,7 +1705,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/e3bfaf6401742a9c6abca61b9b10e998e5b6449a",
@@ -2414,11 +2414,11 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.2",
+            "version": "1.20.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/90490bd8fd8530a272043c4950c180b6d0cf5f81",
-                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6c04009f6cae6eda2f040745b6b846080ef069c2",
+                "reference": "6c04009f6cae6eda2f040745b6b846080ef069c2",
                 "shasum": ""
             },
             "require": {
@@ -2436,7 +2436,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2023-04-22T12:59:35+00:00"
+            "time": "2023-04-25T09:01:03+00:00"
         },
         {
             "name": "pixelandtonic/imagine",

@@ -45,7 +45,7 @@ fieldLayouts:
         name: Content
         uid: 28f160e6-c38f-4171-81ce-a78981e48881
         userCondition: null
-handle: blockQuote
+handle: blockquote
 hasTitleField: true
 name: 'Block Quote'
 section: 8890c4af-24db-46a4-bdba-7c9733d4e525 # Blog

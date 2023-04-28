@@ -105,7 +105,7 @@ fieldLayouts:
         name: Content
         uid: c847b54f-6186-466f-b80d-54f8fd4bee5c
         userCondition: null
-handle: textPic
+handle: textpic
 hasTitleField: true
 name: 'Text Pic'
 section: 024cc291-626a-44bd-8733-7aa26557b87d # Team

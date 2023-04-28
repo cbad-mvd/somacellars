@@ -1094,8 +1094,10 @@ footer {
   flex-flow: row wrap;
   max-width: 1400px;
   margin: 0 auto 4rem auto;
-  padding: 0 6rem;
-  width: 95%;
+  padding: 0 1rem;
+  width: 100%;
+  /* Larger than phablet */
+  /* Larger than standard desktop */
 }
 .WineInfo .wineEntry {
   display: flex;
@@ -1104,13 +1106,14 @@ footer {
   width: 100%;
 }
 .WineInfo .wineEntry .bottle {
-  width: 25%;
+  width: 100%;
 }
 .WineInfo .wineEntry .bottle img {
-  max-width: 150%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 .WineInfo .wineEntry .info {
-  width: 70%;
+  width: 100%;
 }
 .WineInfo .wineEntry h2, .WineInfo .wineEntry .compenent-title {
   font-family: "Crimson Text", serif;
@@ -1118,7 +1121,8 @@ footer {
   font-weight: normal;
   text-transform: uppercase;
   color: #601008;
-  text-align: left;
+  text-align: center;
+  margin-top: 0;
 }
 .WineInfo .wineEntry h3, .WineInfo .wineEntry p {
   margin: 0;
@@ -1176,7 +1180,7 @@ footer {
   padding: 0;
 }
 .WineInfo .wineItem {
-  width: 48%;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -1262,38 +1266,63 @@ footer {
 .WineInfo .wineItem .TextBlock.textOnTop {
   order: 0;
 }
-@media (min-width: 750px) {
+@media (min-width: 550px) {
   .WineInfo {
-    width: 100%;
+    padding: 0 2rem;
+  }
+  .WineInfo .wineEntry .bottle {
+    width: 25%;
+  }
+  .WineInfo .wineEntry .bottle img {
+    max-width: 150%;
+  }
+  .WineInfo .wineEntry .info {
+    width: 65%;
+  }
+  .WineInfo .wineEntry .info h2, .WineInfo .wineEntry .info .compenent-title {
+    text-align: left;
+  }
+}
+@media (min-width: 960px) {
+  .WineInfo {
+    padding: 0 4rem;
+  }
+  .WineInfo .wineItem {
+    width: 46%;
     margin-bottom: 6rem;
   }
-  .WineInfo .PicBlock {
-    width: 60%;
+  .WineInfo .wineItem .PicBlock {
+    width: 30%;
   }
-  .WineInfo .TextBlock {
-    width: 37%;
+  .WineInfo .wineItem .TextBlock {
+    width: 67%;
     margin-top: 0;
   }
-  .WineInfo .TextBlock h3, .WineInfo .TextBlock h5, .WineInfo .TextBlock .title, .WineInfo .TextBlock p {
+  .WineInfo .wineItem .TextBlock h3, .WineInfo .wineItem .TextBlock h5, .WineInfo .wineItem .TextBlock .title, .WineInfo .wineItem .TextBlock p {
     width: 100%;
   }
-  .WineInfo .TextBlock .topBorder::after {
+  .WineInfo .wineItem .TextBlock .topBorder::after {
     width: 10rem;
   }
-  .WineInfo .TextBlock.swapOrder {
+  .WineInfo .wineItem .TextBlock.swapOrder {
     order: 0;
     text-align: right;
   }
-  .WineInfo .TextBlock.swapOrder .topBorder::after {
+  .WineInfo .wineItem .TextBlock.swapOrder .topBorder::after {
     left: auto;
     right: 0;
   }
-  .WineInfo .TextBlock.swapOrder h3, .WineInfo .TextBlock.swapOrder h5, .WineInfo .TextBlock.swapOrder .title, .WineInfo .TextBlock.swapOrder p {
+  .WineInfo .wineItem .TextBlock.swapOrder h3, .WineInfo .wineItem .TextBlock.swapOrder h5, .WineInfo .wineItem .TextBlock.swapOrder .title, .WineInfo .wineItem .TextBlock.swapOrder p {
     padding-left: 1.5rem;
     padding-right: 0;
   }
-  .WineInfo .TextBlock.textOnTop {
+  .WineInfo .wineItem .TextBlock.textOnTop {
     order: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .WineInfo {
+    padding: 0 6rem;
   }
 }
 
@@ -2272,22 +2301,35 @@ footer {
  * main page intro
  */
 .PageIntro {
-  padding: 3rem 6rem 0 6rem;
+  padding: 0 1rem 0 1rem;
 }
 .PageIntro h2, .PageIntro .compenent-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Crimson Text", serif;
   color: #601008;
 }
 .PageIntro .pageImg {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   border: 1rem solid rgba(255, 255, 255, 0.5);
 }
 .PageIntro .pageText {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+@media (min-width: 550px) {
+  .PageIntro h2, .PageIntro .compenent-title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 750px) {
+  .PageIntro {
+    padding: 3rem 6rem 0 6rem;
+  }
+  .PageIntro h2, .PageIntro .compenent-title {
+    font-size: 2.5rem;
+  }
 }
 
 .ContactUs {

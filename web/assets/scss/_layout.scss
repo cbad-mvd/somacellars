@@ -377,14 +377,14 @@ footer {
 /*
  * wine choices flex grid
  */
- .WineInfo {
+.WineInfo {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row wrap;
 	max-width: 1400px;
 	margin: 0 auto 4rem auto;
-	padding: 0 6rem;
-	width: 95%;
+	padding: 0 1rem;
+	width: 100%;
 
 	.wineEntry {
 		display: flex;
@@ -393,15 +393,16 @@ footer {
 		width: 100%;
 
 		.bottle {
-			width: 25%;
+			width: 100%;
 
 			img {
-				max-width: 150%;
+				max-width: 100%;
+				margin: 0 auto;
 			}
 		}
 
 		.info {
-			width: 70%
+			width: 100%
 		}
 
 		h2 {
@@ -410,7 +411,8 @@ footer {
 			font-weight: normal;
 			text-transform: uppercase;
 			color: $color-main-accent;
-			text-align: left;
+			text-align: center;
+			margin-top: 0;
 		}
 
 		h3, p {
@@ -485,8 +487,9 @@ footer {
 
 	
 	}
+
 	.wineItem {
-		width: 48%;
+		width: 100% ;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -595,50 +598,83 @@ footer {
 	}
 	
 
+    /* Larger than phablet */
+    @media (min-width: 550px) {
+		padding: 0 2rem;	
+			
+		.wineEntry {
+			.bottle {
+				width: 25%;
+	
+				img {
+					max-width: 150%;
+				}
+			}
+	
+			.info {
+				width: 65%;
+
+				h2 {
+					text-align: left;
+				}
 		
-	@media (min-width: 750px) {
-		width: 100%;
-		margin-bottom: 6rem;
-
-		.PicBlock {
-			width: 60%;
+			}
 		}
-	
-		.TextBlock {
-			width: 37%;
-			margin-top: 0;
+				
+	}
+		
+	@media (min-width: 960px) {
+			padding: 0 4rem;
 
-			h3, h5, p {
-				width: 100%;
-			}
-	
-			.topBorder {
-				&::after {
-					width: 10rem;
+			.wineItem {
+				width: 46% ;
+				margin-bottom: 6rem;
+
+				.PicBlock {
+					width: 30%;
 				}
-			}
-	
-			&.swapOrder {
-				order: 0;
-				text-align: right;
-				.topBorder {
-					&::after {
-						left: auto;
-						right: 0;
+			
+				.TextBlock {
+					width: 67%;
+					margin-top: 0;
+
+					h3, h5, p {
+						width: 100%;
 					}
-				}
-				h3, h5, p {
-					padding-left: 1.5rem;
-					padding-right: 0;
-				}
-			}
+			
+					.topBorder {
+						&::after {
+							width: 10rem;
+						}
+					}
+			
+					&.swapOrder {
+						order: 0;
+						text-align: right;
+						.topBorder {
+							&::after {
+								left: auto;
+								right: 0;
+							}
+						}
+						h3, h5, p {
+							padding-left: 1.5rem;
+							padding-right: 0;
+						}
+					}
 
-			&.textOnTop {
-				order: 2;
+					&.textOnTop {
+						order: 2;
+					}
+			
+			
+				}
 			}
+	}
 	
-	
-		}
+    /* Larger than standard desktop */
+    @media (min-width: 1200px) {
+			padding: 0 6rem;
 	}
 }
 
@@ -1632,17 +1668,17 @@ footer {
  * main page intro
  */
 .PageIntro {
-	padding: 3rem 6rem 0 6rem;
+	padding: 0 1rem 0 1rem;
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-family: $font-stack-title;
     	color: $color-main-accent;
 	}
 
 	.pageImg {
 		margin: 0 auto;
-		width: 90%;
+		width: 100%;
 		border: 1rem solid rgba(255, 255, 255, 0.5);
 	}
 
@@ -1651,6 +1687,21 @@ footer {
 		margin: 0 auto;
 		text-align: center;
 	}
+
+	@media (min-width: 550px) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	@media (min-width: 750px) {
+		padding: 3rem 6rem 0 6rem;
+
+		h2 {
+			font-size: 2.5rem;
+		}
+	}
+
 }
 
 .ContactUs {

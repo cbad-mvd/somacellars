@@ -92,18 +92,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 21f83e81-c8bf-45d4-aa60-cadd99ad6298
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 864734ff-1ad6-49ba-a6be-dcfa8ccb52d8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 62d7bcb0-16d2-42a9-831e-9cc80bab4b5b # Topic Link
             instructions: null
             label: null
@@ -129,7 +117,7 @@ fieldLayouts:
         name: Content
         uid: 18168526-06bd-44c6-9d2f-3baa19b0f011
         userCondition: null
-handle: wineItems
+handle: wineitems
 hasTitleField: true
 name: 'Wine Items'
 section: ca1c4ea1-3384-4601-87d5-bbd4103dd286 # Wines

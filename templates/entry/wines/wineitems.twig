@@ -20,10 +20,10 @@
             <div class="buttons">
                 {% set target="target=_blank" %}
 
-                {# read more button #}
+                {# return to last page button #}
                 {% set link = entry.topicLink[0] %}
                 <span class="button buttonLink">
-                    <a href="/wines">{{ globalVars.return }}</a>
+                    <a onclick="history.back()">{{ globalVars.return }}</a>
                 </span>
 
                 {# buy now button #}

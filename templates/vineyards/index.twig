@@ -1,6 +1,6 @@
 
 {% extends "_layouts/site-layout-base.twig" %}
-{% import '_macros/_srcset'  as m_srcset %}
+{% import '_macros/_pageintro'  as m_pageintro %}
 {% set entry = craft.entries().section('vineyards').type('default').one() %}
 
 {% block titleTag %}
@@ -12,23 +12,8 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-{% set mytext = entry.slug %}
     {% set item = craft.entries().section(entry.slug).type('default').one() %}
-    {% if item %}
-        <section class="row PageIntro">
-            <div class="pageImg">
-                {{ m_srcset.srcset(item.topicImage.one(), 'hero') }}      
-            </div>
-            <div class="pageText">
-                <h2>{{ item.topicTitle }}</h2>
-            </div>
-            <div class="pageText">
-                <p>{{ item.topicIntro }}</p>
-            </div>
-        </section>
-    {% else %}
-        {{ mytext }}
-    {% endif %}
+    {{ m_pageintro.pageintro(item) }}
 {% endblock %}
 
 {% block content %}

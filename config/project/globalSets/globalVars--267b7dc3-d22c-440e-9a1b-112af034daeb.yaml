@@ -78,6 +78,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 907f3d95-de77-4dfb-a587-e072100f395c # User Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 620ad0bd-9aa6-466c-8139-9b6340685d1f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: c463785e-e4a5-4ff8-b55a-ef45370e727a # Sold Out
             instructions: null
             label: null

@@ -1,7 +1,7 @@
 
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_pageintro'  as m_pageintro %}
-{% set entry = craft.entries().section('team').type('default').one() %}
+{% set entry = craft.entries().section('blog').type('default').one() %}
 
 {% block titleTag %}
 <title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>

@@ -1662,6 +1662,15 @@ footer {
   right: 1rem;
   margin: 0;
 }
+.HdrCheckoutRow .mobile-nav .mobile-toggle,
+.HdrNavRow .mobile-nav .mobile-toggle {
+  position: absolute;
+  right: 0rem;
+  top: -1rem;
+  width: 5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
 .HdrCheckoutRow .mobile-nav img,
 .HdrNavRow .mobile-nav img {
   width: 4rem;
@@ -2167,15 +2176,6 @@ footer {
   height: 1.5rem;
 }
 
-.mobile-toggle {
-  position: absolute;
-  right: 2rem;
-  top: 0rem;
-  width: 4rem;
-  padding: 0.5rem 1rem;
-  background: transparent;
-}
-
 /*
  * main page intro
  */
@@ -2312,6 +2312,9 @@ footer {
   margin: 0 auto;
   width: 100%;
   border: 1rem solid rgba(255, 255, 255, 0.5);
+}
+.PageIntro .pageImg img {
+  width: 100%;
 }
 .PageIntro .pageText {
   width: 100%;
@@ -3225,10 +3228,12 @@ form.loose input[type=text] {
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url("/assets/img/icons/usericon-light.svg");
 }
-.userIcon span:hover {
-  background-image: url("/assets/img/icons/usericon-hot.svg");
+.userIcon span svg {
+  fill: #aaa;
+}
+.userIcon spansvg:hover {
+  fill: #eee;
 }
 .userIcon:focus {
   outline: none;

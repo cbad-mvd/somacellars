@@ -49,7 +49,7 @@
 				</div>
 				<div class="PicBlock">
 					{% set image = topic.topicImage.one() %}
-					<img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+					<img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
 				</div>
 			</section>
 		{% elseif topic.type.handle is same as 'banner' %}
@@ -57,7 +57,7 @@
 				<div class="BannerImg">
 					{% set image = topic.topicImage.one() %}
 					{% if image %}				
-						<img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+						<img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
 					{% endif %}
 					<div class="bannerText">
 						<h2>{{ topic.topicTitle }}</h2>

@@ -40,32 +40,39 @@
                             {% endfor %}
                             <li>
                                 {# <a href="{{ m_user.getLoginLink() }}" class="{{ thisSlug }}" title="{{ m_user.getLoginLinkTitle() }}">{{ m_user.getLoginLinkTitle() }}</a> #}
-                                <a href="" class="jsShowUserMenu userIcon" title=""><span></span></a>                                
+                                {% set image = globalVars.userIcon.one() %}
+                                <a href="" class="jsShowUserMenu userIcon" title="">
+                                    <span>
+                                        {{ svg(image) }}
+                                    </span>
+                                </a>                                                                                           
                             </li>
                         </ul>
                         <div id="userMenu" class="usermenu">
                             <ul>
                                 {% if currentUser %}
-                                    <li><a href="/customer" class="">Order History</a></li>
+                                    <li><a target="_blank" href="https://somacellars.securewinemerchant.com/signin" class="">Sign In</a></li>
                                 {% else %}
                                 {% endif %}
-                                <li class="last"><a href="{{ m_user.getLoginLink() }}">{{ m_user.getLoginLinkTitle() }}</a></li>
+                                <li class="last"><a target="_blank" href="https://somacellars.securewinemerchant.com/signup">Sign Up</a></li>
                             </ul>
                         </div>
 
                     </div>
-                    {##}
+                    {#
                     <div class="mobile-nav">
                         {% set image = globalVars.mobileMenu.one() %}
                         <img id="jsMobileShow" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />
                     </div>
+                    #}
+                    <div class="mobile-nav">
+                        {% set image = globalVars.mobileMenu.one() %}
+                        <button class="mobile-toggle">
+                            <img id="mobile-button" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />            
+                        </button> 
+                    </div>
+        
                 </div>
-            </div>
-            <div class="mobile-nav">
-                {% set image = globalVars.mobileMenu.one() %}
-                <button class="mobile-toggle">
-                    <img id="mobile-button" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />            
-                </button> 
             </div>
         </div>
 

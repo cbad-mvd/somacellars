@@ -32,25 +32,49 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b12cc8fc-8f00-4737-8ad0-2f9b55f7c789 # Company Name
+            fieldUid: 8c51f1b8-451f-41d5-b139-f9d030efcf45 # Topic Title
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 98065cfb-8cbf-4756-98a5-fc65639af4e3
+            uid: e5ff708a-620f-4be1-8944-4543e5dd7d84
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: bacc9914-340e-463e-8d19-5345afda9138 # Body
+            fieldUid: 4e67ca40-b001-4a5e-b820-0843dca449a5 # Topic Intro
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e846f87d-0119-46be-9ddc-9c4966938127
+            uid: 2cf910cc-d64c-42c7-b441-525c5ef5a6b7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9bb85d0-926f-4d90-be7d-e623f12398f2 # Topic Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5eeae338-0823-42ad-a639-22cb3f2354f6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f8c0f5f-3c3c-4d5d-963c-083734c7da68
             userCondition: null
             warning: null
             width: 100

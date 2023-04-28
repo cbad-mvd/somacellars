@@ -1,5 +1,5 @@
 {# public macro for creating a srcset image #}
-{% macro srcset(asset, type) %}
+{% macro srcset(asset, type, lazy="") %}
 {% import _self as self %}
 
     {% set imgSets = { 
@@ -7,15 +7,26 @@
             xform: {
                 small: { mode: 'stretch', width: 640, quality: 100 },
                 medium: { mode: 'stretch', width: 1200, quality: 100 },
-                large: { mode: 'stretch', width: 1800, quality: 100 }
+                large: { mode: 'stretch', width: 1800, quality: 100 },
+                xlarge: { mode: 'stretch', width: 1800, quality: 100 }
             },
             sizes: "(min-width: 1200px) 1200px, (min-width: 1800px) 1800px, 100vw"
+        },
+        fithero: {
+            xform: {
+                small: { mode: 'fit', width: 500, quality: 100 },
+                medium: { mode: 'fit', width: 750, quality: 100 },
+                large: { mode: 'fit', width: 1000, quality: 100 },
+                xlarge: { mode: 'fit', width: 2000, quality: 100 }
+            },
+            sizes: "(min-width: 1800px) 96vw, (min-width: 1200px) 90vw, 100vw"
         },
         default: {
             xform: {
                 small: { mode: 'stretch', width: 75, quality: 100 },
                 medium: { mode: 'stretch', width: 150, quality: 100 },
-                large: { mode: 'stretch', width: 240, quality: 100 }
+                large: { mode: 'stretch', width: 240, quality: 100 },
+                xlarge: { mode: 'stretch', width: 240, quality: 100 }
             },
             sizes: "(min-width: 1366px) 1366px, (min-width: 1536px) 1536px, 100vw"
         }
@@ -28,18 +39,22 @@
         {% endif %}
     {% endfor %}
 
+    {% set lazyClass = lazy %}
     {% if asset %}
-    
         {% if (aset.altText is not defined) and (asset.altText is empty) %}
             {% set altText = "" %}
         {% else %}
             {% set altText = asset.altText %}
         {% endif %}
-        <img class="" src="{{ asset.getUrl(srcSet.xform.medium) }}" 
-                    srcset="
+        <img class="{{ lazy }}" 
+                    src="{{ asset.getUrl(srcSet.xform.small) }}"
+                    data-src="{{ asset.getUrl(srcSet.xform.medium) }}" 
+                    data-srcset="
                             {{ asset.getUrl(srcSet.xform.small) }} {{ srcSet.xform.small.width }}w,
                             {{ asset.getUrl(srcSet.xform.medium) }} {{ srcSet.xform.medium.width }}w,
-                            {{ asset.getUrl(srcSet.xform.large) }} {{ srcSet.xform.large.width }}w"
+                            {{ asset.getUrl(srcSet.xform.large) }} {{ srcSet.xform.large.width }}w,
+                            {{ asset.getUrl(srcSet.xform.xlarge) }} {{ srcSet.xform.xlarge.width }}w"
+
                         sizes="{{ srcSet.sizes }}"
                         alt="{{ altText }}" />
 

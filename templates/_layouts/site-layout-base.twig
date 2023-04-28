@@ -43,7 +43,7 @@
                             </div>
                 
                             {# set top hero image with srcset tags #}
-                            {{ m_srcset.srcset(item.introHero.one(), 'hero') }} 
+                            {{ m_srcset.srcset(item.introHero.one(), 'fithero', '') }}
                             
 
 
@@ -77,27 +77,17 @@
 		<!-- javascript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-		<script src="/assets/js/jquery.zoom.js"></script>
+		{# <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script> #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.3/lazyload.min.js" integrity="sha512-PYqZh14FSExDb67jbM60M4ri5A/Bn/xOiM1ihfPx7c1d8XywMmn2M7+Z4i+v9RF9dlzRYzqk7sXamAHKZjfyFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="/assets/js/jquery.zoom.js"></script>
 		<script src="/assets/js/main.js"></script>
         <script src="/assets/js/slidemenu.js"></script>
 		<script src="/assets/js/jquery.slicknav.js"></script>
 
         <script>
-/**
-          var slideout = new Slideout({
-            'panel': document.getElementById('panel'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70
-          });
-
-        // Toggle button
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-            slideout.toggle();
-        });
-**/
-function addMobileEventListeners(menuID, menuButton, menuToggle, menuClose) {
+            
+    function addMobileEventListeners(menuID, menuButton, menuToggle, menuClose) {
     
     return;
     menuButton.addEventListener('click', () => {

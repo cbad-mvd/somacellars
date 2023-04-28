@@ -1,0 +1,18 @@
+
+{% macro pageintro(item) %}
+    {% import '_macros/_srcset' as m_srcset %}
+    {% if item %}
+        <section class="row PageIntro">
+            <div class="pageImg">
+                {{ m_srcset.srcset(item.topicImage.one(), 'fithero') }}      
+            </div>
+            <div class="pageText">
+                <h2>{{ item.topicTitle }}</h2>
+            </div>
+            <div class="pageText">
+                <p>{{ item.topicIntro }}</p>
+            </div>
+        </section>
+    {% endif %}
+{% endmacro %}
+

@@ -1,0 +1,40 @@
+{% extends "item/default" %}
+{% import '_macros/_srcset'  as m_srcset %}
+
+{% block itemContent %}
+        <div class="wineItem">
+            <div class="TextBlock">
+                <div class="topBorder"></div>
+                <div>
+                    <h3>{{ item.topicTitle }}</h3>
+                    <h5>{{ item.topicDesc }}</h5>
+                    <p>{{ item.topicIntro }}</p>
+                </div>
+                <div class="buttons">
+                    {% set target="target=_blank" %}
+
+                    {# read more button #}
+                    {% set link = item.topicLink[0] %}
+                    <span class="button buttonLink">
+                        <a href="{{ item.url }}">{{ link.label }}</a>
+                    </span>
+
+                    {# buy now button #}
+                    {% if item.soldOutToggle %}
+                        <span class="button buttonLink disabled">
+                            <a>{{ globalVars.soldOut }}</a>
+                        </span>
+                    {% else %}
+                        {% set link = item.topicLink[1] %}
+                        <span class="button buttonLink">
+                            <a href="{{ link.uri }}" {{ target }}>{{ link.label }}</a>
+                        </span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="PicBlock">
+                {% set image = item.topicImage.one() %}
+                <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
+            </div>
+        </div>
+{% endblock %}

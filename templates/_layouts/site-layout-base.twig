@@ -42,8 +42,20 @@
                                 </p>
                             </div>
                 
-                            {# set top hero image with srcset tags #}
+                            {# set top hero image with srcset tags 
                             {{ m_srcset.srcset(item.introHero.one(), 'fithero', '') }}
+                            #}
+                            
+                            {% set image = item.introHero.one() %}
+                            {% if image %}                       
+                                <img src="{{ image.url }}"
+                                    width="{{ image.width }}"
+                                    srcSet="{{ image.getSrcset(['414w', '768w', '1024w', '1600w', '1920w']) }}"
+                                    sizes="100vw"
+                                    alt="{{ image.title }}"
+                                />  
+                            {% endif %}
+                          
                             
 
 

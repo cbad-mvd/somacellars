@@ -13,7 +13,7 @@
              
                     
                     <header class="MainHdr mobile">
-                        {% set logo = globalVars.siteLogoDarkBg.one() %}
+                        {% set logo = globalVars.simpleLogo.one() %}
                         {% if logo and logo.extension == 'svg' %}     
                             <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>
                         {% endif %}

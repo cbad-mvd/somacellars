@@ -12,7 +12,7 @@
 <footer class="FooterSections">
     <div class="footerInfo">
         <span>
-            {% set logo = globalVars.siteLogoDarkBg.one() %}
+            {% set logo = globalVars.simpleLogo.one() %}
             {% if logo and logo.extension == 'svg' %}     
                 {# <p>{{ logo.url }}</p>  #}         
                 <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>

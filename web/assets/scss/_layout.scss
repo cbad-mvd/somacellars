@@ -773,7 +773,7 @@ footer {
 
 	&.mobile {
 		position: absolute;
-		top: 1rem;
+		top: 0;
 		left: 1rem;
 		margin: 0;	
 		width: 40%;	
@@ -2705,13 +2705,17 @@ form {
  .MobileMenu {
 	display: none;
 	display:block;
-	position: fixed;
 	top: 0;
 	left: 0;
 	margin: 0;
     height: 100vh; 
-	background-color: $color-bg__dark;
+	background-color: #333;
+	color: #aaa;
 	z-index: 1000;
+
+	svg{ 
+		fill: #bbb;
+	}
 
 	.closeMenu {
 		position: absolute;
@@ -2723,7 +2727,7 @@ form {
 	}
 
 	&-content {
-		margin-top: 8rem;
+		margin-top: 6rem;
 
 		ul {
 			padding: 0;
@@ -2731,18 +2735,19 @@ form {
 
 		ul li {
 			list-style: none;
-			font-size: 2rem;
-			line-height: 3rem;
-			text-align: center;
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+			text-align: left;
 		}
 
 		ul li a {
-			color: #fff;
+			color: #bbb;
 		}
 
 		ul li a:hover {
-			color: $color-main-accent;
+			color: #fff;
 		}
+
 	}
  }
 

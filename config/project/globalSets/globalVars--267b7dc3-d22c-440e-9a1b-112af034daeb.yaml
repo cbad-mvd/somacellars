@@ -42,13 +42,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 82f95698-31c1-45a9-b953-e7d8c4eea07c # Site Logo Dark BG
+            fieldUid: 6906d71b-e35c-4406-8644-0197c79a10c6 # Simple Logo
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6a246ddd-2d12-4d2b-9198-91e77a721564
+            uid: 8c5dd6ff-0905-45db-bd03-3a57e737279d
             userCondition: null
             warning: null
             width: 100

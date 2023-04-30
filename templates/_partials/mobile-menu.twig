@@ -1,4 +1,4 @@
-    		{% set myEntryQuery = craft.entries().section('globalHeader').limit(1) %}
+    		{% set myEntryQuery = craft.entries().section('siteInfo').limit(1) %}
             {% set thisEntry = myEntryQuery.one() %}
 
             <div id="mobile-panel" class="mobile-panel">
@@ -6,30 +6,37 @@
                     {% set image = globalVars.mobileClose.one() %}
                     <img id="" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />        
                 </span>
-                <h2>Slideout Header</h2>
+
+                {# moved into mobile-panel #}
+                <section class="MobileMenu">
+                    {# <button id="mobile-button" class="mobile-toggle">☰</button> #}
+             
+                    
+                    <header class="MainHdr mobile">
+                        {% set logo = globalVars.siteLogoDarkBg.one() %}
+                        {% if logo and logo.extension == 'svg' %}     
+                            <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>
+                        {% endif %}
+                        </header>
+
+                    {# 
+                    <div class="closeMenu">
+                        {% set image = globalVars.closeMenu.one() %}
+                        <img id="jsMobileClose" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />
+                    </div>
+                    #}
+
+                    <div class="MobileMenu-content">
+                            <ul>
+                                {% for item in thisEntry.globalNav %}
+                                    <li>
+                                        <a href="{{ item.menuUrl }}" title="{{ item.menuTip }}">{{ item.menuText }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                    </div>
+                    
+                    
+                </section>
+                    
             </div>
-           <section class="MobileMenu">
-                {# <button id="mobile-button" class="mobile-toggle">☰</button> #}
-         
-                {###
-                <header class="MainHdr mobile">
-                    {% set image = thisEntry.siteLogo.one() %}
-                    <a href="{{ alias('@web') }}">
-                        <img class="lazyloaded" src="{{ image.url }}" alt="{{ image.altText }}">
-                    </a>
-                </header>
-                <div class="closeMenu">
-                    {% set image = globalVars.closeMenu.one() %}
-                    <img id="jsMobileClose" src="{{ image.url }}" alt="{{ globalVars.pageTitleBase }}" />
-                </div>
-                <div class="MobileMenu-content">
-                        <ul>
-                            {% for item in thisEntry.globalNav %}
-                                <li>
-                                    <a href="{{ item.menuUrl }}" title="{{ item.menuTip }}">{{ item.menuText }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                </div>
-                ###}
-            </section>

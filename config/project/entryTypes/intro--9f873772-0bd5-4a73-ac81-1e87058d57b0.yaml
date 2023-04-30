@@ -92,6 +92,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 6906d71b-e35c-4406-8644-0197c79a10c6 # Simple Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22a3476c-81a8-4be2-82f6-dd1765d74b98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: b210e6df-b6ce-436e-8b65-10f838522fff # Global Nav
             instructions: null
             label: null

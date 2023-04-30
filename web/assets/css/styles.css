@@ -1415,7 +1415,7 @@ footer {
 }
 .MainHdr.mobile {
   position: absolute;
-  top: 1rem;
+  top: 0;
   left: 1rem;
   margin: 0;
   width: 40%;
@@ -3256,13 +3256,16 @@ form.loose input[type=text] {
 .MobileMenu {
   display: none;
   display: block;
-  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
   height: 100vh;
-  background-color: #e9e8e4;
+  background-color: #333;
+  color: #aaa;
   z-index: 1000;
+}
+.MobileMenu svg {
+  fill: #bbb;
 }
 .MobileMenu .closeMenu {
   position: absolute;
@@ -3273,22 +3276,22 @@ form.loose input[type=text] {
   height: 24px;
 }
 .MobileMenu-content {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 .MobileMenu-content ul {
   padding: 0;
 }
 .MobileMenu-content ul li {
   list-style: none;
-  font-size: 2rem;
-  line-height: 3rem;
-  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: left;
 }
 .MobileMenu-content ul li a {
-  color: #fff;
+  color: #bbb;
 }
 .MobileMenu-content ul li a:hover {
-  color: #601008;
+  color: #fff;
 }
 
 .ErrorList {

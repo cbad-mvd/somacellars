@@ -2312,9 +2312,11 @@ footer {
   margin: 0 auto;
   width: 100%;
   border: 1rem solid rgba(255, 255, 255, 0.5);
+  border: none;
 }
 .PageIntro .pageImg img {
   width: 100%;
+  border-radius: 0.75rem;
 }
 .PageIntro .pageText {
   width: 100%;

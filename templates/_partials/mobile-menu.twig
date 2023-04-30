@@ -12,12 +12,12 @@
                     {# <button id="mobile-button" class="mobile-toggle">☰</button> #}
              
                     
-                    <header class="MainHdr mobile">
+                    <header class="mobile">
                         {% set logo = globalVars.simpleLogo.one() %}
                         {% if logo and logo.extension == 'svg' %}     
                             <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>
                         {% endif %}
-                        </header>
+                    </header>
 
                     {# 
                     <div class="closeMenu">

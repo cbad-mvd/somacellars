@@ -3267,6 +3267,9 @@ form.loose input[type=text] {
 .MobileMenu svg {
   fill: #bbb;
 }
+.MobileMenu header {
+  width: 60%;
+}
 .MobileMenu .closeMenu {
   position: absolute;
   top: 2rem;
@@ -3276,7 +3279,7 @@ form.loose input[type=text] {
   height: 24px;
 }
 .MobileMenu-content {
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .MobileMenu-content ul {
   padding: 0;

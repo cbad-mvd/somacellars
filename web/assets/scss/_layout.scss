@@ -2717,6 +2717,10 @@ form {
 		fill: #bbb;
 	}
 
+	header {
+		width: 60%;
+	}
+
 	.closeMenu {
 		position: absolute;
 		top: 2rem;
@@ -2727,7 +2731,7 @@ form {
 	}
 
 	&-content {
-		margin-top: 6rem;
+		margin-top: 2rem;
 
 		ul {
 			padding: 0;

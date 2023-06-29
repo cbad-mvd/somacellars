@@ -108,7 +108,7 @@ fieldLayouts:
 handle: textpic
 hasTitleField: true
 name: 'Text Pic'
-section: 024cc291-626a-44bd-8733-7aa26557b87d # Team
+section: 024cc291-626a-44bd-8733-7aa26557b87d # About Us
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

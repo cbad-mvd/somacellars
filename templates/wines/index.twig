@@ -12,8 +12,7 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {% set item = craft.entries().section(entry.slug).type('default').one() %}
-    {{ m_pageintro.pageintro(item) }}
+    {{ m_pageintro.pageintro(entry) }}
 {% endblock %}
 
 {% block content %}
@@ -39,7 +38,6 @@
 
 {% block pageJs %}
 <script>
-    {% set handle = entry.section.handle %}
-    setPageTop('pageHeader', "{{ handle }}");
+    setPageTop('pageHeader');
 </script>
 {% endblock pageJs %}

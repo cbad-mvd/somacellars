@@ -96,7 +96,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 024cc291-626a-44bd-8733-7aa26557b87d # Team
+section: 024cc291-626a-44bd-8733-7aa26557b87d # About Us
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -1,4 +1,4 @@
-dateModified: 1682813484
+dateModified: 1686929742
 email:
   fromEmail: jmayall@surething.com
   fromName: 'Soma Cellars'
@@ -105,7 +105,7 @@ meta:
     9e18e062-4615-46d0-8cb5-ea397563810a: 'Site Logos' # Site Logos
     9f873772-0bd5-4a73-ac81-1e87058d57b0: Intro # Intro
     012e2658-c745-4e8f-a389-441590b2a56d: Quote # Quote
-    024cc291-626a-44bd-8733-7aa26557b87d: Team # Team
+    024cc291-626a-44bd-8733-7aa26557b87d: 'About Us' # About Us
     41a6aa51-edc8-447c-88af-bb4088b8a2c8: Specs # Specs
     59f07717-3303-4e4e-9601-50490246953b: 'Page Title Base' # Page Title Base
     62d7bcb0-16d2-42a9-831e-9cc80bab4b5b: 'Topic Link' # Topic Link
@@ -120,6 +120,7 @@ meta:
     108c941f-7436-463f-a324-c094d32fa06d: 'Site Heros' # Site Heros
     249bc4ae-d94e-454b-95df-7e56c57eff08: 'Home Page' # Home Page
     267b7dc3-d22c-440e-9a1b-112af034daeb: 'Global Vars' # Global Vars
+    0367c086-3bdf-4ea4-831d-a95b2f81d1d3: blankTarget # blankTarget
     431a6ea3-1169-41fd-b7dd-c2ab845ebe65: Site # Site
     540bd81a-c924-4c92-817d-4b5977b926ab: 'Site Icons' # Site Icons
     580df5a8-303c-40f7-912a-97daffa71ea1: Default # Default
@@ -130,7 +131,7 @@ meta:
     2694eaad-966f-429f-be1b-02ae779300b8: 'Alt Text' # Alt Text
     5156b851-a0fb-40b6-aae0-30410a513a0b: 'Company Postal Code' # Company Postal Code
     5265c1ef-5790-4cfd-bd23-13996ad3d0ee: Default # Default
-    05418c21-53f8-4f73-9b54-63dff2e49d7d: Club # Club
+    05418c21-53f8-4f73-9b54-63dff2e49d7d: 'Wine Club' # Wine Club
     6014ea73-e0f0-4cd4-a2ac-eff43e74101f: Copyright # Copyright
     6906d71b-e35c-4406-8644-0197c79a10c6: 'Simple Logo' # Simple Logo
     8890c4af-24db-46a4-bdba-7c9733d4e525: Blog # Blog
@@ -143,6 +144,7 @@ meta:
     5913033f-7b45-4065-bcd2-5188d9764973: 'Contact Info' # Contact Info
     55425038-9ff5-4dec-9006-d4aef7b84b74: Nav # Nav
     a55f6ea0-9629-47e8-a329-1adaffcda25c: 'Global Nav' # Global Nav
+    a527be69-82a9-462e-adaa-0b5958be9ce0: Links # Links
     adbfca1b-9d0f-40d3-8339-9076f117fb92: Specs # Specs
     adfa3f60-5907-4783-88eb-599be0d471eb: 'Mobile Menu Close' # Mobile Menu Close
     b12cc8fc-8f00-4737-8ad0-2f9b55f7c789: 'Company Name' # Company Name

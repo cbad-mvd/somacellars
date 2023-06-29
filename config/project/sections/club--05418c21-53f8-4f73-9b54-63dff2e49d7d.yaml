@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: club
-name: Club
+name: 'Wine Club'
 previewTargets:
   -
     __assoc__:

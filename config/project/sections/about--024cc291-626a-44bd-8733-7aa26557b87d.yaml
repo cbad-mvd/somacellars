@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: team
-name: Team
+handle: about
+name: 'About Us'
 previewTargets:
   -
     __assoc__:
@@ -20,7 +20,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: entry
-    uriFormat: 'team/{slug}'
+    uriFormat: 'about/{slug}'
 structure:
   maxLevels: null
   uid: f1406f7c-d539-4ce4-899c-f6060e58c1a7

@@ -841,7 +841,7 @@ footer {
   height: 6rem;
   background-color: rgb(33, 33, 37);
   background-color: #d2d0c8;
-  color: #ffffff;
+  color: #5b574d;
   /*
    * the two divs being controled by FooterSections flex
    */
@@ -873,7 +873,8 @@ footer {
   line-height: 1.2em;
 }
 .FooterSections .footerLinks {
-  display: none;
+  display: flex;
+  flex-flow: column wrap;
 }
 .FooterSections .footerLogo {
   width: 4rem;
@@ -911,7 +912,7 @@ footer {
     display: block;
   }
   .FooterSections .footerSocial {
-    width: 75%;
+    width: 25%;
   }
 }
 
@@ -1550,6 +1551,9 @@ footer {
 .HdrNavRow .checkoutNav-menu li a:hover,
 .HdrNavRow .nav-menu li a:hover {
   color: #601008;
+  border-top: 1px solid #601008;
+  border-bottom: 1px solid #601008;
+  xfont-weight: bold;
 }
 .HdrCheckoutRow .l2Nav-menu li a.active,
 .HdrCheckoutRow .checkoutNav-menu li a.active,

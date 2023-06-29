@@ -76,7 +76,7 @@ footer {
 	height: 6rem;
 	background-color: rgba(33, 33, 37, 1);
 	background-color: darken($color-bg, 10%);
-	color: #ffffff;
+	color: $color-bodytext;
 
 	/*
 	 * the two divs being controled by FooterSections flex
@@ -87,7 +87,6 @@ footer {
 		display: flex;
 		flex-flow: row;
 		align-items: center;
-
 		min-height: 10px;
 	}
 
@@ -114,7 +113,8 @@ footer {
 	}
 
 	.footerLinks {
-		display: none;
+		display: flex;
+		flex-flow: column wrap;
 	}
 
 	.footerLogo {
@@ -161,7 +161,7 @@ footer {
 		}
 	
 		.footerSocial {
-			width: 75%;
+			width: 25%;
 		}
 	}
 
@@ -893,6 +893,9 @@ footer {
 			}
 			li a:hover {
 				color: $color-main-accent;
+				border-top: 1px solid $color-main-accent;
+				border-bottom: 1px solid $color-main-accent;
+				xfont-weight: bold;
 			}
             li a.active {
 				color: $color-main-accent;

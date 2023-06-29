@@ -96,7 +96,7 @@ fieldLayouts:
 handle: textpic
 hasTitleField: true
 name: 'Text Pic'
-section: 05418c21-53f8-4f73-9b54-63dff2e49d7d # Club
+section: 05418c21-53f8-4f73-9b54-63dff2e49d7d # Wine Club
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

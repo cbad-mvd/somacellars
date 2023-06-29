@@ -1,0 +1,58 @@
+columnSuffix: bshugxbp
+contentColumnType: text
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: links
+instructions: null
+name: Links
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Label
+            -
+              - handle
+              - label
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Uri
+            -
+              - handle
+              - uri
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col2
+          - ''
+        -
+          - col1
+          - ''
+  maxRows: null
+  minRows: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

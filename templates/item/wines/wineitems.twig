@@ -10,8 +10,7 @@
                     <h5>{{ item.topicDesc }}</h5>
                     <p>{{ item.topicIntro }}</p>
                 </div>
-                <div class="buttons">
-                    {% set target="target=_blank" %}
+                <div class="buttons"" %}
 
                     {# read more button #}
                     {% set link = item.topicLink[0] %}
@@ -27,7 +26,7 @@
                     {% else %}
                         {% set link = item.topicLink[1] %}
                         <span class="button buttonLink">
-                            <a href="{{ link.uri }}" {{ target }}>{{ link.label }}</a>
+                            <a href="{{ link.uri }}" {{ blankTarget }}>{{ link.label }}</a>
                         </span>
                     {% endif %}
                 </div>

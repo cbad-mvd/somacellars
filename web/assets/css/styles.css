@@ -831,40 +831,60 @@ label[for=textarea] {
 
 footer {
   margin: 0;
-  padding: 0;
+  padding: 1rem 3rem;
+  background-color: rgb(33, 33, 37);
+  background-color: #d2d0c8;
+  color: #5b574d;
+}
+footer .copyright {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
 }
 .FooterSections {
   display: flex;
   flex-flow: row;
-  margin-top: 1rem;
-  padding: 2rem 0.25rem;
-  height: 6rem;
-  background-color: rgb(33, 33, 37);
-  background-color: #d2d0c8;
-  color: #5b574d;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0rem;
+  padding: 0;
+  min-height: 6rem;
   /*
    * the two divs being controled by FooterSections flex
    */
 }
+.FooterSections .footerBrand,
 .FooterSections .footerInfo,
 .FooterSections .footerSocial {
+  width: 20%;
   margin: 0;
   display: flex;
   flex-flow: row;
   align-items: center;
   min-height: 10px;
 }
+.FooterSections .footerBrand svg {
+  fill: #601008;
+  width: 10rem;
+}
+.FooterSections .footerBrand .logo {
+  margin-top: 2rem;
+}
 .FooterSections .footerInfo {
-  width: 75%;
+  width: 40%;
   text-align: left;
 }
-.FooterSections .footerInfo svg {
-  fill: #601008;
-  width: 8rem;
-}
 .FooterSections .footerSocial {
-  width: 25%;
+  width: 30%;
   justify-content: flex-end;
+}
+.FooterSections .footerSocial > div {
+  width: 100%;
+}
+.FooterSections .footerSocial .iconBlock {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
 }
 .FooterSections .footerInfo span,
 .FooterSections .footerSocial span {
@@ -872,9 +892,34 @@ footer {
   font-size: 0.75rem;
   line-height: 1.2em;
 }
+.FooterSections .footerInfo .blockHeader,
+.FooterSections .footerSocial .blockHeader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #666;
+  margin-bottom: 0.5rem;
+}
 .FooterSections .footerLinks {
   display: flex;
   flex-flow: column wrap;
+  width: 100%;
+  margin: 0;
+}
+.FooterSections .footerLinks a {
+  color: #666;
+}
+.FooterSections .footerLinks a:hover {
+  color: #601008;
+  font-weight: bold;
+}
+.FooterSections .footerLinks .linksBlock {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+.FooterSections .footerLinks .linksBlock div {
+  width: 50%;
+  margin: 0;
 }
 .FooterSections .footerLogo {
   width: 4rem;
@@ -882,37 +927,30 @@ footer {
 .FooterSections .footerSocial {
   justify-content: flex-end;
 }
+.FooterSections .footerSocial div {
+  margin: 0;
+}
 .FooterSections .footerSocial-icons {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-size: cover;
+  fill: #666;
+  width: 4rem;
 }
-.FooterSections a.footerSocial-icons--fb {
-  background-image: url("../img/social-facebook.svg");
-}
-.FooterSections a.footerSocial-icons--twitter {
-  background-image: url("../img/social-twitter.svg");
-}
-.FooterSections a.footerSocial-icons--fb:hover {
-  background-image: url("../img/social-facebook-hot.svg");
-}
-.FooterSections a.footerSocial-icons--twitter:hover {
-  background-image: url("../img/social-twitter-hot.svg");
+.FooterSections .footerSocial-icons:hover {
+  fill: #601008;
 }
 @media (min-width: 750px) {
   .FooterSections {
-    margin-top: 2rem;
-    padding: 2rem;
+    margin: 0rem;
+    padding: 0rem;
   }
   .FooterSections .footerInfo {
-    width: 75%;
+    xwidth: 75%;
   }
   .FooterSections .footerInfo .footerLinks {
     display: block;
   }
   .FooterSections .footerSocial {
-    width: 25%;
+    xwidth: 25%;
   }
 }
 

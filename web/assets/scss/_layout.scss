@@ -63,7 +63,17 @@
 
 footer {
 	margin: 0;
-	padding: 0;
+	padding: 1rem 3rem;
+	background-color: rgba(33, 33, 37, 1);
+	background-color: darken($color-bg, 10%);
+	color: $color-bodytext;
+
+	.copyright {
+		text-align: center;
+		margin: 0.5rem 0;
+		font-size: $font-size-small;
+	}
+
 	@media (min-width: 750px) {
 	}
 }
@@ -71,18 +81,19 @@ footer {
 .FooterSections {	
 	display: flex;
 	flex-flow: row;
-	margin-top: 1rem;
-	padding: 2rem 0.25rem;
-	height: 6rem;
-	background-color: rgba(33, 33, 37, 1);
-	background-color: darken($color-bg, 10%);
-	color: $color-bodytext;
+	align-items: flex-start;
+	justify-content:space-between;
+	margin: 0rem;
+	padding: 0;
+	min-height: 6rem;
 
 	/*
 	 * the two divs being controled by FooterSections flex
 	 */
+	.footerBrand,
 	.footerInfo,
 	.footerSocial {
+		width: 20%;
 		margin: 0;
 		display: flex;
 		flex-flow: row;
@@ -90,31 +101,78 @@ footer {
 		min-height: 10px;
 	}
 
-	.footerInfo {
-		width: 75%;
-		text-align: left;
+	.footerBrand {
 		svg {
 			fill: $color-main-accent;
-			width: 8rem;
+			width: 10rem;
 		}
+
+		.logo {
+			margin-top: 2rem;
+		}
+	}
+	.footerInfo {
+		width: 40%;
+		text-align: left;
 	}
 
 	.footerSocial {
-		width: 25%;
+		width: 30%;
 		justify-content: flex-end;
+
+		>div {
+			width: 100%;
+		}
+
+		.iconBlock {
+			display: flex;
+			flex-flow: row;
+			text-align: center;
+		}
 	}
 
 
-	.footerInfo span,
-	.footerSocial span {
-		padding: 0.5rem 0.5rem 0;
-		font-size: $font-size-small;
-		line-height: $line-height-small;
+	.footerInfo,
+	.footerSocial {
+		span {
+			padding: 0.5rem 0.5rem 0;
+			font-size: $font-size-small;
+			line-height: $line-height-small;
+		}
+
+		.blockHeader {
+			font-size: 1.5rem;
+			font-weight: bold;
+			border-bottom: 1px solid #666;
+			margin-bottom: 0.5rem;;
+		}
 	}
 
 	.footerLinks {
 		display: flex;
 		flex-flow: column wrap;
+		width: 100%;
+		margin: 0;
+
+		a {
+			color: #666;
+		}
+
+		a:hover {
+			color: $color-main-accent;
+			font-weight: bold;
+		}
+
+		.linksBlock {
+			margin: 0;
+			display: flex;
+			flex-flow: row wrap;
+
+			div {
+				width: 50%;
+				margin: 0;
+			}
+		}
 	}
 
 	.footerLogo {
@@ -123,37 +181,28 @@ footer {
 
 	.footerSocial {
 		justify-content: flex-end;
+
+		div {
+			margin: 0;
+		}
 	}
 
 	.footerSocial-icons {
 		display: inline-block;
-		width: 2rem;
-		height: 2rem;
-		background-size: cover;
-	}
+		fill: #666;
+		width: 4rem;
 
-	a.footerSocial-icons--fb {
-		background-image: url('../img/social-facebook.svg');
-	}
-
-	a.footerSocial-icons--twitter {
-		background-image: url('../img/social-twitter.svg');
-	}
-
-	a.footerSocial-icons--fb:hover {
-		background-image: url('../img/social-facebook-hot.svg');
-	}
-
-	a.footerSocial-icons--twitter:hover {
-		background-image: url('../img/social-twitter-hot.svg');
+		&:hover {
+			fill: $color-main-accent;
+		}
 	}
 
 	@media (min-width: 750px) {
-		margin-top: 2rem;
-		padding: 2rem;
+		margin: 0rem;
+		padding: 0rem;
 
 		.footerInfo {
-			width: 75%;
+			xwidth: 75%;
 
 			.footerLinks {
 				display: block;
@@ -161,7 +210,7 @@ footer {
 		}
 	
 		.footerSocial {
-			width: 25%;
+			xwidth: 25%;
 		}
 	}
 

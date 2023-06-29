@@ -1,0 +1,16 @@
+columnSuffix: kqwyqufh
+contentColumnType: string
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: iconLinks
+instructions: null
+name: 'Icon Links'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_iconlinks}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -9,45 +9,77 @@
 {% set myEntryQuery = craft.entries().section('globalFooter').limit(1) %}
 {% set thisEntry = myEntryQuery.one() %}
 
-<footer class="FooterSections">
-    <div class="footerInfo">
-        <span>
+<footer>
+    <div class="FooterSections">
+        <div class="footerBrand">
             {% set logo = globalVars.simpleLogo.one() %}
             {% if logo and logo.extension == 'svg' %}     
-                {# <p>{{ logo.url }}</p>  #}         
-                <a href="{{ alias('@web') }}">{{ svg(logo) }}</a>
+                <a class="logo" href="{{ alias('@web') }}">{{ svg(logo) }}</a>
             {% endif %}
-        </span>
-        <span>
-            {{ footer.copyright }}
-        </span>
-        <div class="footerLinks">
-            {% for link in footer.links  %}
-                <span class="footerLinks">
-                    <a href="{{ alias('@web') }}/{{ link.uri }}">{{ link.label }}</a>
+        </div>
+        <div class="footerInfo">
+            <div class="footerLinks">
+                <h2 class="blockHeader">HELPFUL LINKS</h2>
+                <div class="linksBlock">
+                    <div>
+                        {% for link in footer.links  %}
+                            <span class="footerLinks">
+                                <a href="{{ alias('@web') }}/{{ link.uri }}">{{ link.label }}</a>
+                            </span>
+                            {% if loop.index == (loop.length / 2) %}
+                                </div>
+                                <div>
+                            {% endif %}
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerSocial">
+            <div>
+                <h2 class="blockHeader">STAY CONNECTED</h2>
+                <div class="iconBlock">
+                    {% for block in footer.iconLinks %}
+                        {% if block.type == "item" %}
+                            {% set icon = block.siteIcon.one() %}
+                            {% if icon and icon.extension == 'svg' %}     
+                                <a  class="footerSocial-icons" 
+                                    href="{{ block.siteUrl }}" 
+                                    alt="{{ block.siteName }}"
+                                    target="_blank" >
+                                    {{ svg(icon) }} 
+                                </a>
+                            {% endif %}
+                            
+                        {% endif %}                
+                    {% endfor %}
+                    </div>
+                </div>
+{#
+            {% for row in footer.iconLinks %}
+
+                {% set icon = globalVars.socialTwitter.one() %}
+                {% if icon and icon.extension == 'svg' %}     
+                    <a href="#">{{ svg(icon) }}</a>
+                {% endif %}
+            {% endfor %}
+#}
+            {# MUST FIX 
+            {% for row in footer.socialLinks %}
+                <span class="">
+                    <a class="footerSocial-icons footerSocial-icons--fb" href="{{ row.facebook }}"></a>
+                </span>
+                <span class="">
+                    <a class="footerSocial-icons footerSocial-icons--twitter" href="{{ row.twitter }}"></a>
                 </span>
             {% endfor %}
-        </div>
+            #}
             
-{#
-        <span class="footerLinks">
-            <a href="{{ alias('@web') }}/{{ footer.links[0].uri }}">{{ footer.links[0].label }}</a>
-        </span>
-#}        
+        </div>
     </div>
-    <div class="footerSocial">
-        <h2>footerSocial</h2>
-        {# MUST FIX 
-        {% for row in footer.socialLinks %}
-            <span class="">
-                <a class="footerSocial-icons footerSocial-icons--fb" href="{{ row.facebook }}"></a>
-            </span>
-            <span class="">
-                <a class="footerSocial-icons footerSocial-icons--twitter" href="{{ row.twitter }}"></a>
-            </span>
-        {% endfor %}
-        #}
-        
+    <div class="copyright">
+        {{ footer.copyright }}
     </div>
 </footer>
 

@@ -28,6 +28,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 48b6fa0b-00ba-40c4-8d81-7a4cd595e96e # Icon Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88e1b414-f9d1-475c-869c-3bdea867a7da
+            userCondition: null
+            warning: null
+            width: 100
         name: Fields
         uid: e367d795-140c-4ad3-a31b-3d89acf88099
         userCondition: null

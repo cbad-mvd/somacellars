@@ -90,6 +90,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: cdf9ec0d-9ae8-410a-a62e-eaba0a11884f # Social Twitter
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cdb963f-c332-4113-bb6f-020e1ffb2bce
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: c463785e-e4a5-4ff8-b55a-ef45370e727a # Sold Out
             instructions: null
             label: null

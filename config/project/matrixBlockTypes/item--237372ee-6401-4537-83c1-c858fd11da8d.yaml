@@ -1,0 +1,139 @@
+field: 48b6fa0b-00ba-40c4-8d81-7a4cd595e96e # Icon Links
+fieldLayouts:
+  834b6963-bab7-4c40-930e-0ae82454e451:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6822924f-0247-44c0-8bc5-90e4e23b31e2 # Site Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0504479d-1502-4ee6-84bc-4a6b889abbe7
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 89f18e20-9fff-4375-a69e-5fcc0e16a002 # Site Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f1103ba-f24c-410e-bac9-aa81398a09eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3c6b7593-bdbf-4411-8a75-358f7d16b08b # Site Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff5facf7-e3cf-4bf0-814a-ed7256cc4d84
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 341e4d2b-8890-416a-9cba-5a110c1cda0b
+        userCondition: null
+fields:
+  3c6b7593-bdbf-4411-8a75-358f7d16b08b: # Site Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: siteIcon
+    instructions: null
+    name: 'Site Icon'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:540bd81a-c924-4c92-817d-4b5977b926ab' # Site Icons
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:108c941f-7436-463f-a324-c094d32fa06d' # Site Heros
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:540bd81a-c924-4c92-817d-4b5977b926ab' # Site Icons
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  89f18e20-9fff-4375-a69e-5fcc0e16a002: # Site Url
+    columnSuffix: egizpuxd
+    contentColumnType: text
+    fieldGroup: null
+    handle: siteUrl
+    instructions: null
+    name: 'Site Url'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6822924f-0247-44c0-8bc5-90e4e23b31e2: # Site Name
+    columnSuffix: idimijcm
+    contentColumnType: text
+    fieldGroup: null
+    handle: siteName
+    instructions: null
+    name: 'Site Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: item
+name: Item
+sortOrder: 1

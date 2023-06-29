@@ -1,4 +1,4 @@
-dateModified: 1686929742
+dateModified: 1688066934
 email:
   fromEmail: jmayall@surething.com
   fromName: 'Soma Cellars'
@@ -96,7 +96,9 @@ meta:
     0e89c019-82d4-41f8-81f4-1f1f2d72a328: 'Wine Items' # Wine Items
     2f015bac-ca00-4129-9e30-45fc97b904fa: Common # Common
     3ae3c238-06e6-4e13-a49a-de1dbff1d4ff: 'Topic RichText' # Topic RichText
+    3c6b7593-bdbf-4411-8a75-358f7d16b08b: 'Site Icon' # Site Icon
     3d7b9ad6-60ed-437b-89e3-6a696cf736ed: Subtitle # Subtitle
+    4adafebe-ff6a-40eb-b51f-7c50f43cf30f: 'Social Facebook' # Social Facebook
     4e67ca40-b001-4a5e-b820-0843dca449a5: 'Topic Intro' # Topic Intro
     5d795099-4e5b-4b16-a44a-9379e1ebdfd1: Blockquote # Blockquote
     5f3fdd63-04df-4e36-9eb5-bdc1a77ca793: Default # Default
@@ -107,6 +109,7 @@ meta:
     012e2658-c745-4e8f-a389-441590b2a56d: Quote # Quote
     024cc291-626a-44bd-8733-7aa26557b87d: 'About Us' # About Us
     41a6aa51-edc8-447c-88af-bb4088b8a2c8: Specs # Specs
+    48b6fa0b-00ba-40c4-8d81-7a4cd595e96e: 'Icon Links' # Icon Links
     59f07717-3303-4e4e-9601-50490246953b: 'Page Title Base' # Page Title Base
     62d7bcb0-16d2-42a9-831e-9cc80bab4b5b: 'Topic Link' # Topic Link
     63e5acce-34c9-455e-8914-3b92a6b87c5b: 'Global Header' # Global Header
@@ -116,6 +119,7 @@ meta:
     81b9cbeb-e8ef-4345-ab79-c179edeb8ec9: 'Block Quote' # Block Quote
     82f95698-31c1-45a9-b953-e7d8c4eea07c: 'Site Logo Dark BG' # Site Logo Dark BG
     88b07f04-8ede-4f0c-81e1-707bfd88b65a: 'Site Info' # Site Info
+    89f18e20-9fff-4375-a69e-5fcc0e16a002: 'Site Url' # Site Url
     92ac7dfa-f6f9-4c2b-aac9-a0dd838236c1: Footer # Footer
     108c941f-7436-463f-a324-c094d32fa06d: 'Site Heros' # Site Heros
     249bc4ae-d94e-454b-95df-7e56c57eff08: 'Home Page' # Home Page
@@ -138,10 +142,12 @@ meta:
     33306d0a-6b4b-425a-9a1b-2460ab24d2ac: 'Company State' # Company State
     88201cae-dd20-461e-9eeb-e00723531e55: 'Company Phone' # Company Phone
     204814ff-b311-4af1-bd72-7baf41b2319b: 'Body Text' # Body Text
+    237372ee-6401-4537-83c1-c858fd11da8d: Item # Item
     744293fd-8b7f-4c64-ab78-602c09d5b4ce: TextPic # TextPic
     920134a8-c4e4-444b-b1ca-38a95d0a7b43: Return # Return
     2640767f-64a9-46f2-aeb7-37c8f4b7c19d: Image # Image
     5913033f-7b45-4065-bcd2-5188d9764973: 'Contact Info' # Contact Info
+    6822924f-0247-44c0-8bc5-90e4e23b31e2: 'Site Name' # Site Name
     55425038-9ff5-4dec-9006-d4aef7b84b74: Nav # Nav
     a55f6ea0-9629-47e8-a329-1adaffcda25c: 'Global Nav' # Global Nav
     a527be69-82a9-462e-adaa-0b5958be9ce0: Links # Links
@@ -160,11 +166,13 @@ meta:
     c8511db1-6c85-4a7b-883b-eb8283f3660d: Footer # Footer
     c463785e-e4a5-4ff8-b55a-ef45370e727a: 'Sold Out' # Sold Out
     ca1c4ea1-3384-4601-87d5-bbd4103dd286: Wines # Wines
+    cdf9ec0d-9ae8-410a-a62e-eaba0a11884f: 'Social Twitter' # Social Twitter
     d6ba5db9-db16-4dc9-85d9-d6f37cf9a759: 'Text Pic' # Text Pic
     d6fcde0d-7cc8-4640-bc3e-01ff7fdcc14a: 'Mobile Menu Open' # Mobile Menu Open
     d8ce2279-af7e-4faa-b51d-ef27da4de5e0: 'Global Header' # Global Header
     d757e6b1-163c-497f-8356-5d82e49d796b: Intro # Intro
     d908aebd-1cc2-4651-9ffd-8fbccd972be3: Image # Image
+    d9384ecd-eae2-4521-bfb3-8cbaedca5327: 'Social Instgram' # Social Instgram
     da11c769-1dfb-4d6d-82cf-b7ddb30f3f1e: 'Soma Cellars' # Soma Cellars
     de98e50f-db7f-4753-b6f3-258c6bf7fef5: Company # Company
     dea523e9-68d6-4216-866b-28848edc405f: Text # Text

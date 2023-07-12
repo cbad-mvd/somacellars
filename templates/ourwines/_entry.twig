@@ -1,7 +1,7 @@
 
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_pageintro'  as m_pageintro %}
-{% set entry = craft.entries().section('club').type('default').one() %}
+{% set entry = craft.entries().section('wineCategory').type('default').one() %}
 
 {% block titleTag %}
 <title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
@@ -12,31 +12,30 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {% set item = craft.entries().section(entry.slug).type('default').one() %}
-    {{ m_pageintro.pageintro(item, null, false) }}
+    {{ m_pageintro.pageintro(entry, null, false) }}
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="min-height: 21rem">
+    <section class="row pagePadding CatGrid">
+        {% set handle = 'wineCategory' %}
         {% set swapClass = '' %}
-        {% set entries = craft.entries.section([entry.slug]).type('textPic').limit(20) %}
-        {% for item in entries %}
+        {% set items = craft.entries.section([handle]).type('category').limit(20) %}
+        {% for item in items %}
             {% set entry = item %}
             {% include "item" %}
-
             {% if (swapClass == "swapOrder") %}
                 {% set swapClass = "" %}
             {% else %}
                 {% set swapClass = "swapOrder" %}
-            {% endif %}
-    
+            {% endif %}    
         {% endfor %}
-    </div>
+    </section>
+    
 {% endblock %}
-
 
 {% block pageJs %}
 <script>
     setPageTop('pageHeader');
+    initWineCats();
 </script>
 {% endblock pageJs %}

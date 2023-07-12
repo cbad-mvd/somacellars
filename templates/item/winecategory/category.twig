@@ -1,0 +1,16 @@
+{% import '_macros/_textpic' as m_textpic %}
+
+{% block itemContent %}
+    <div class="catItem">
+        {% set link = "wines"~"?cat="~item.id %}
+        <a href={{ link }}>
+            {% set img = item.topicImage.one() %}
+            {% if img %}
+                <img class="lazy" src="{{ img.url }}" alt="{{ img.altText }}" />        
+            {% endif %}
+            
+            <h2>{{ item.topicTitle }}</h2>
+            <p class="itemIntro">{{ item.topicIntro }}</p>
+        </a>
+    </div>
+{% endblock %}

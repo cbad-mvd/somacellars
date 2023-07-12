@@ -1,0 +1,35 @@
+{% extends "entry/default" %}
+{% import '_macros/_srcset'  as m_srcset %}
+
+{% block pageIntro %}
+{% endblock %}
+
+{% block entryContent %}
+    <section class="row pagePadding BlogInfo">
+        <h2>{{ entry.topicTitle }}</h2>
+        <figure class="blogImage">
+            {% set image = entry.topicImage.one() %}
+            {% if image %}
+                <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+            {% endif %}
+            <figcaption>Posted by: {{ entry.author }} - {{ entry.postDate | date("F d, Y") }}</figcaption>
+        </figure>
+
+        <div class="blogEntry">
+            {% if entry.body %}
+                {% include "matrix" with {matrix: entry.body} %}
+            {% else %}
+                <h2>no matrix field</h2>
+            {% endif %}
+            <div class="buttons">
+                {# return to last page button #}
+                {% set link = entry.topicLink[0] %}
+                <span class="button buttonLink">
+                    <a onclick="history.back()">{{ globalVars.return }}</a>
+                </span>
+            </div>
+        </div>
+
+    </section>
+    
+{% endblock %}

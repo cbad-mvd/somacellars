@@ -4,8 +4,8 @@
     		{% set myEntryQuery = craft.entries().section('globalHeader').limit(1) %}
             {% set thisEntry = myEntryQuery.one() %}
 
-            {% set thisSlug = entry is defined ? entry.slug : "uhoh" %}
-
+            {% set thisSlug = entry is defined ? entry.slug : "yikes" %}
+<h2>{{ thisSlug }}</h2>
             <header class="MainHdr">
                 {# <button class="toggle-button" >☰</button> #}
               
@@ -62,6 +62,8 @@
                             {% for item in globalVars.globalNav %}
                                 <li>
                                     {% if thisSlug == item.menuUri %}
+                                        {% set linkClass = "active" %}
+                                    {% elseif (thisSlug == "ourwines") and (item.menuUri == "wines") %}
                                         {% set linkClass = "active" %}
                                     {% elseif (thisSlug == "home") and (item.menuUri == "/") %}
                                          {% set linkClass = "active" %}

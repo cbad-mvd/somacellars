@@ -13,11 +13,11 @@
 
 {% block pageIntro %}
     {% set item = craft.entries().section(entry.slug).type('default').one() %}
-    {{ m_pageintro.pageintro(item) }}
+    {{ m_pageintro.pageintro(item, null, false) }}
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="min-height: 21rem">
+    <div class="row">
         {% set swapClass = '' %}
         {% set entries = craft.entries.section([entry.slug]).type('textPic').limit(20) %}
         {% for item in entries %}

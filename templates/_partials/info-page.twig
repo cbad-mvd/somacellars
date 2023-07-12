@@ -1,0 +1,27 @@
+{% extends "_layouts/site-layout-base.twig" %}
+{% import '_macros/_pageintro'  as m_pageintro %}
+
+{% block titleTag %}
+<title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
+{% endblock titleTag %}
+
+{% block bodyTag %}
+	<body id="{{ entry.slug }}" class="{{ entry.slug }}">
+{% endblock bodyTag %}
+
+{% block pageIntro %}
+    {% set item = craft.entries().section(entry.slug).one() %}
+    {{ m_pageintro.pageintro(item, null, false) }}
+{% endblock %}
+
+{% block content %}
+    <section class="row pagePadding">
+        {{ entry.topicRichText }}
+    </section>
+{% endblock %}
+
+{% block pageJs %}
+<script>
+    setPageTop('pageHeader');
+</script>
+{% endblock pageJs %}

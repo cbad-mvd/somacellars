@@ -3,7 +3,7 @@
 {# {% set entry = craft.entries().section('wines').type('default').one() %} #}
 
 {% block entryContent %}
-    <section class="row WineInfo">
+    <section class="row pagePadding WineInfo">
         <div class="bottle">
             {% set image = entry.topicImage.one() %}
             <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />

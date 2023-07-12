@@ -1,5 +1,5 @@
 fieldLayouts:
-  cc9283a8-3a0c-4647-9a16-40a55edaac1f:
+  6dabdead-741e-4497-82f6-5ca784159152:
     tabs:
       -
         elementCondition: null
@@ -26,30 +26,54 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 970f3e46-17a2-4a1b-a857-bc59e45a3d81
+            uid: 5212e492-42b7-4d63-84d1-83cd849cd90c
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: bacc9914-340e-463e-8d19-5345afda9138 # Body
+            fieldUid: 8c51f1b8-451f-41d5-b139-f9d030efcf45 # Topic Title
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7fc35c13-e49e-4fb8-9ec9-eb0f7d39cbc4
+            uid: b49416db-8b5d-421e-a505-6e759b0363d2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4e67ca40-b001-4a5e-b820-0843dca449a5 # Topic Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 200786b9-1f6b-4335-bdd0-e7b8facb7807
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67073150-6f06-44da-b21e-ee864be81dc7
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: d7754da5-7cf0-4f6e-9925-bff5046ab783
+        uid: 0bd0adc7-bfca-4561-8875-408011247ee5
         userCondition: null
-handle: bodytext
+handle: category
 hasTitleField: true
-name: 'Body Text'
-section: 8890c4af-24db-46a4-bdba-7c9733d4e525 # Blog
-sortOrder: 3
+name: Category
+section: 86243be3-8e67-464f-a760-6ee3eaebbb51 # Wine Category
+sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

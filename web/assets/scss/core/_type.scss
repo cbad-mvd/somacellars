@@ -9,6 +9,9 @@ $font-weight-base: 400;         // normal
 $line-height-base: 1.5em;       // 24px
 $line-height-small: 1.2em;
 
+$font-size-nav-normal: $font-size-base * 0.9;
+$font-size-nav-small: $font-size-base * 0.8;
+
 $font-size-small: $font-size-base * 0.75;
 $font-size-body: $font-size-base * 1;
 $font-size-large: $font-size-base * 1.25;

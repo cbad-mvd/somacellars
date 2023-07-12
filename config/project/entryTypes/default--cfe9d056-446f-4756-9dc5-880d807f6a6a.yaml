@@ -1,5 +1,5 @@
 fieldLayouts:
-  ef05465f-9490-46fc-92bc-9f72e38c02ef:
+  b86ba15f-e72b-4c1e-8811-49045df4d802:
     tabs:
       -
         elementCondition: null
@@ -26,7 +26,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e86ec9b0-8738-4923-a28f-e219411a978c
+            uid: 980d66c3-4523-48a3-9197-8fa749fc0e74
             userCondition: null
             warning: null
             width: 100
@@ -38,7 +38,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e5ff708a-620f-4be1-8944-4543e5dd7d84
+            uid: 87e1afdb-c19b-49ee-a422-c87c7d890a96
             userCondition: null
             warning: null
             width: 100
@@ -50,7 +50,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2cf910cc-d64c-42c7-b441-525c5ef5a6b7
+            uid: bdaa2334-e179-4ace-a7a5-7fb3ffa08c7f
             userCondition: null
             warning: null
             width: 100
@@ -62,7 +62,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5eeae338-0823-42ad-a639-22cb3f2354f6
+            uid: a5ea6869-66ca-4ee0-b089-7b05b8853719
             userCondition: null
             warning: null
             width: 100
@@ -74,30 +74,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7f8c0f5f-3c3c-4d5d-963c-083734c7da68
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 62d7bcb0-16d2-42a9-831e-9cc80bab4b5b # Topic Link
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 23e128e5-a5e2-4127-bc9e-ace3f1d68cd5
+            uid: 5eb3397c-4d2e-4869-b311-b84a70b549c9
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 75002c06-d308-4ce1-b01e-cc306a07ef7f
+        uid: 796d8277-c8a8-42e5-bc92-5487b6dc250b
         userCondition: null
 handle: default
 hasTitleField: true
 name: Default
-section: 8890c4af-24db-46a4-bdba-7c9733d4e525 # Blog
-sortOrder: 2
-titleFormat: null
+section: f91a7ce9-6474-47f2-9e70-2bbbe68f3273 # Our Wines
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

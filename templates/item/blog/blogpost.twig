@@ -1,0 +1,37 @@
+{% extends "item/default" %}
+{% import '_macros/_srcset'  as m_srcset %}
+
+{% block itemContent %}
+        <div class="blogItem">
+            <div class="PicBlock">
+                {% set image = item.topicImage.one() %}
+                {% if image %}
+                    <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
+                {% endif %}
+            </div>
+            <div class="TextBlock">
+                <div class="divider">
+                    {% set image = globalVars.pageDivider.one() %}
+                    {% if image %}
+                        {{ svg(image) }} 
+                    {% endif %}
+                </div>
+
+                <div>
+                    <h3>{{ item.topicTitle }}</h3>
+                    <h5>{{ item.topicDesc }}</h5>
+                    <p>{{ item.topicIntro }}</p>
+                </div>
+                <div class="buttons">
+
+                    {# read more button #}
+                    {% set link = item.topicLink[0] %}
+
+                    <span class="button buttonLink">
+                        <a href="{{ item.url }}">{{ link.label }}</a>
+                    </span>
+                </div>
+        
+            </div>
+        </div>
+{% endblock %}

@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: blog
-name: Blog
+handle: ourWines
+name: 'Our Wines'
 previewTargets:
   -
     __assoc__:
@@ -19,9 +19,9 @@ siteSettings:
   ba700213-75f7-4cac-90d0-83101e67f7db: # Soma Cellars
     enabledByDefault: true
     hasUrls: true
-    template: entry
-    uriFormat: 'blog/{slug}'
+    template: ourwines/_entry
+    uriFormat: ourwines
 structure:
   maxLevels: null
-  uid: 6155796a-28bc-4ac1-afcc-72494ac68190
+  uid: 1c239ee9-df20-4cfe-b646-1d8518988bb8
 type: structure

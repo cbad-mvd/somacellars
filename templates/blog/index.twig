@@ -12,13 +12,13 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {{ m_pageintro.pageintro(entry) }}
+    {{ m_pageintro.pageintro(entry, null, false) }}
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="min-height: 21rem">
+    <section class="row pagePadding BlogInfo">
         {% set swapClass = '' %}
-        {% set entries = craft.entries.section([entry.slug]).type('textPic').limit(20) %}
+        {% set entries = craft.entries.section([entry.slug]).type('blogPost').limit(20) %}
         {% for item in entries %}
             {% set entry = item %}
             {% include "item" %}
@@ -30,7 +30,7 @@
             {% endif %}
     
         {% endfor %}
-    </div>
+    </section>
 {% endblock %}
 
 

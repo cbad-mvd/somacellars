@@ -1,5 +1,5 @@
 fieldLayouts:
-  ef05465f-9490-46fc-92bc-9f72e38c02ef:
+  da01fdda-ed56-4f6f-944d-4cd0b3266b0e:
     tabs:
       -
         elementCondition: null
@@ -26,7 +26,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e86ec9b0-8738-4923-a28f-e219411a978c
+            uid: 10471a02-7308-40f1-8f85-a5a49cf0f58e
             userCondition: null
             warning: null
             width: 100
@@ -38,7 +38,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e5ff708a-620f-4be1-8944-4543e5dd7d84
+            uid: 8adebc44-c6a9-4ab0-a629-488d7258ae2b
             userCondition: null
             warning: null
             width: 100
@@ -50,31 +50,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2cf910cc-d64c-42c7-b441-525c5ef5a6b7
+            uid: 5bb8aae7-1e27-4424-b76a-6e6bbfd67117
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: f9bb85d0-926f-4d90-be7d-e623f12398f2 # Topic Description
+            fieldUid: 3ae3c238-06e6-4e13-a49a-de1dbff1d4ff # Topic RichText
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5eeae338-0823-42ad-a639-22cb3f2354f6
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7f8c0f5f-3c3c-4d5d-963c-083734c7da68
+            uid: 24138741-5ad0-49df-b5bb-f475530281d5
             userCondition: null
             warning: null
             width: 100
@@ -86,18 +74,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 23e128e5-a5e2-4127-bc9e-ace3f1d68cd5
+            uid: bfd07e0f-4f95-4b20-9d49-e2f2583914b3
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 75002c06-d308-4ce1-b01e-cc306a07ef7f
+        uid: b92d4bc2-e9f8-4af3-9ab3-3a4e384f6936
         userCondition: null
-handle: default
+handle: privacy
 hasTitleField: true
-name: Default
-section: 8890c4af-24db-46a4-bdba-7c9733d4e525 # Blog
-sortOrder: 2
-titleFormat: null
+name: Privacy
+section: b56d1d40-a257-42a1-a961-6805d1714165 # Privacy
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

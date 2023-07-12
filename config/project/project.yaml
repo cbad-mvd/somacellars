@@ -1,4 +1,55 @@
-dateModified: 1688066934
+dateModified: 1689098573
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:88b07f04-8ede-4f0c-81e1-707bfd88b65a' # Site Info
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      key: 'section:024cc291-626a-44bd-8733-7aa26557b87d' # About Us
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:8890c4af-24db-46a4-bdba-7c9733d4e525' # Blog
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+        - type
+      type: native
+    -
+      key: 'section:249bc4ae-d94e-454b-95df-7e56c57eff08' # Home Page
+      type: native
+    -
+      key: 'section:f91a7ce9-6474-47f2-9e70-2bbbe68f3273' # Our Wines
+      type: native
+    -
+      key: 'section:b92b198b-8053-4363-a3cd-224ad4867fed' # Vineyards
+      type: native
+    -
+      key: 'section:86243be3-8e67-464f-a760-6ee3eaebbb51' # Wine Category
+      type: native
+    -
+      key: 'section:05418c21-53f8-4f73-9b54-63dff2e49d7d' # Wine Club
+      type: native
+    -
+      key: 'section:ca1c4ea1-3384-4601-87d5-bbd4103dd286' # Wines
+      type: native
 email:
   fromEmail: jmayall@surething.com
   fromName: 'Soma Cellars'
@@ -94,34 +145,42 @@ meta:
     0b9622bd-967e-4c41-8bc0-38a79d56c3c6: 'Display Url' # Display Url
     0c10fa2a-4adf-44b9-b6c6-40c42b421fc1: Subtitle # Subtitle
     0e89c019-82d4-41f8-81f4-1f1f2d72a328: 'Wine Items' # Wine Items
+    2dfdcf51-6d59-41c7-8d01-f23a81e7b211: 'Contact Us' # Contact Us
     2f015bac-ca00-4129-9e30-45fc97b904fa: Common # Common
     3ae3c238-06e6-4e13-a49a-de1dbff1d4ff: 'Topic RichText' # Topic RichText
     3c6b7593-bdbf-4411-8a75-358f7d16b08b: 'Site Icon' # Site Icon
     3d7b9ad6-60ed-437b-89e3-6a696cf736ed: Subtitle # Subtitle
     4adafebe-ff6a-40eb-b51f-7c50f43cf30f: 'Social Facebook' # Social Facebook
     4e67ca40-b001-4a5e-b820-0843dca449a5: 'Topic Intro' # Topic Intro
+    5b945092-b448-483b-b427-58216f9f3a5b: 'Terms of Use' # Terms of Use
     5d795099-4e5b-4b16-a44a-9379e1ebdfd1: Blockquote # Blockquote
     5f3fdd63-04df-4e36-9eb5-bdc1a77ca793: Default # Default
     6bfa764f-e6e3-4ea3-a769-0507cfbbc88f: Default # Default
     8c51f1b8-451f-41d5-b139-f9d030efcf45: 'Topic Title' # Topic Title
+    9dcda578-d8ea-45b0-ba7c-1e15b0edcf5b: Shipping # Shipping
     9e18e062-4615-46d0-8cb5-ea397563810a: 'Site Logos' # Site Logos
     9f873772-0bd5-4a73-ac81-1e87058d57b0: Intro # Intro
     012e2658-c745-4e8f-a389-441590b2a56d: Quote # Quote
     024cc291-626a-44bd-8733-7aa26557b87d: 'About Us' # About Us
+    30f67bfd-c2a3-4070-99a1-243e2f6e97c5: 'Blog Post' # Blog Post
+    31a834bc-540a-4f09-a3ea-fe45aff2546f: Default # Default
     41a6aa51-edc8-447c-88af-bb4088b8a2c8: Specs # Specs
     48b6fa0b-00ba-40c4-8d81-7a4cd595e96e: 'Icon Links' # Icon Links
     59f07717-3303-4e4e-9601-50490246953b: 'Page Title Base' # Page Title Base
     62d7bcb0-16d2-42a9-831e-9cc80bab4b5b: 'Topic Link' # Topic Link
     63e5acce-34c9-455e-8914-3b92a6b87c5b: 'Global Header' # Global Header
+    067afa0d-6077-4156-89ca-7c1c47ee9073: 'Contact Us' # Contact Us
     69e40dcf-ec92-4a65-8a58-1730aa7eaf14: 'Intro Subheading' # Intro Subheading
     75b10c33-7c59-49c8-b37b-7f0308f9a1be: Citation # Citation
     80b80671-d017-40ca-a01e-0ee664241336: Vineyards # Vineyards
-    81b9cbeb-e8ef-4345-ab79-c179edeb8ec9: 'Block Quote' # Block Quote
+    80d329e7-62c4-4f24-b717-fbb1dc37342f: Shipping # Shipping
     82f95698-31c1-45a9-b953-e7d8c4eea07c: 'Site Logo Dark BG' # Site Logo Dark BG
+    084c395f-f2bf-4328-96f2-b5baf7c9fcbb: 'Terms of Use' # Terms of Use
     88b07f04-8ede-4f0c-81e1-707bfd88b65a: 'Site Info' # Site Info
     89f18e20-9fff-4375-a69e-5fcc0e16a002: 'Site Url' # Site Url
     92ac7dfa-f6f9-4c2b-aac9-a0dd838236c1: Footer # Footer
     108c941f-7436-463f-a324-c094d32fa06d: 'Site Heros' # Site Heros
+    213e76aa-a65d-4af9-8ebe-ca4be6ccbf79: Category # Category
     249bc4ae-d94e-454b-95df-7e56c57eff08: 'Home Page' # Home Page
     267b7dc3-d22c-440e-9a1b-112af034daeb: 'Global Vars' # Global Vars
     0367c086-3bdf-4ea4-831d-a95b2f81d1d3: blankTarget # blankTarget
@@ -140,8 +199,8 @@ meta:
     6906d71b-e35c-4406-8644-0197c79a10c6: 'Simple Logo' # Simple Logo
     8890c4af-24db-46a4-bdba-7c9733d4e525: Blog # Blog
     33306d0a-6b4b-425a-9a1b-2460ab24d2ac: 'Company State' # Company State
+    86243be3-8e67-464f-a760-6ee3eaebbb51: 'Wine Category' # Wine Category
     88201cae-dd20-461e-9eeb-e00723531e55: 'Company Phone' # Company Phone
-    204814ff-b311-4af1-bd72-7baf41b2319b: 'Body Text' # Body Text
     237372ee-6401-4537-83c1-c858fd11da8d: Item # Item
     744293fd-8b7f-4c64-ab78-602c09d5b4ce: TextPic # TextPic
     920134a8-c4e4-444b-b1ca-38a95d0a7b43: Return # Return
@@ -154,11 +213,11 @@ meta:
     adbfca1b-9d0f-40d3-8339-9076f117fb92: Specs # Specs
     adfa3f60-5907-4783-88eb-599be0d471eb: 'Mobile Menu Close' # Mobile Menu Close
     b12cc8fc-8f00-4737-8ad0-2f9b55f7c789: 'Company Name' # Company Name
+    b56d1d40-a257-42a1-a961-6805d1714165: Privacy # Privacy
     b92b198b-8053-4363-a3cd-224ad4867fed: Vineyards # Vineyards
     b210e6df-b6ce-436e-8b65-10f838522fff: 'Global Nav' # Global Nav
     ba700213-75f7-4cac-90d0-83101e67f7db: 'Soma Cellars' # Soma Cellars
     bacc9914-340e-463e-8d19-5345afda9138: Body # Body
-    bcf3c121-6266-4e1c-be33-ae74d4c28d83: Image # Image
     bfc48201-3ef2-4750-9269-167f90da381f: globalVars # globalVars
     c073a991-8eeb-4c72-9f93-c9d390d1d922: 'Company Address Two' # Company Address Two
     c9c255f8-fc50-429f-8dbf-a15827828e42: 'Wine Bottles' # Wine Bottles
@@ -167,6 +226,7 @@ meta:
     c463785e-e4a5-4ff8-b55a-ef45370e727a: 'Sold Out' # Sold Out
     ca1c4ea1-3384-4601-87d5-bbd4103dd286: Wines # Wines
     cdf9ec0d-9ae8-410a-a62e-eaba0a11884f: 'Social Twitter' # Social Twitter
+    cfe9d056-446f-4756-9dc5-880d807f6a6a: Default # Default
     d6ba5db9-db16-4dc9-85d9-d6f37cf9a759: 'Text Pic' # Text Pic
     d6fcde0d-7cc8-4640-bc3e-01ff7fdcc14a: 'Mobile Menu Open' # Mobile Menu Open
     d8ce2279-af7e-4faa-b51d-ef27da4de5e0: 'Global Header' # Global Header
@@ -179,14 +239,21 @@ meta:
     df010c7c-174a-4ae6-87ad-8eebdaa837da: 'Company Address One' # Company Address One
     e4b31730-a5a6-4618-b001-f950e3f8a351: 'Text Pic' # Text Pic
     e8ca7518-ae2e-484c-9ceb-09b6ca6c4379: Banner # Banner
+    e14ce76a-d04d-41b6-a091-5c4147e737ca: 'Page Divider' # Page Divider
     e38ee93c-6ae1-447f-8913-bc5d8a542ff5: 'Topic Image' # Topic Image
     e88b6eff-e6b3-4a5f-8db7-fcf54a8e9c57: 'Site Logo' # Site Logo
     e435e90b-5ebd-4ba8-81d3-7516cac588b7: Headline # Headline
     e524f9fc-7285-428c-b0f0-71307175c157: 'Intro Heading' # Intro Heading
+    eb03ba26-2494-4f8f-80d5-bd9880e5f97a: Privacy # Privacy
+    edc1f49a-35cc-438f-99df-287e33d6ced8: 'Bottle Size' # Bottle Size
     f008995e-d896-4b98-bde5-082ddb9d8bcc: 'Sold Out Toggle' # Sold Out Toggle
     f03b5a17-9cda-4969-809d-7e2c36b10bd3: Headline # Headline
     f4a94d92-5d30-4d64-a724-74b89a78743c: 'Text Pic' # Text Pic
+    f4f14855-ce55-4916-a2c7-7c94f5ce846a: 'Our Wines' # Our Wines
     f9bb85d0-926f-4d90-be7d-e623f12398f2: 'Topic Description' # Topic Description
+    f91a7ce9-6474-47f2-9e70-2bbbe68f3273: 'Our Wines' # Our Wines
+    f2104786-8558-412e-860d-2310117503d9: Caption # Caption
+    fb6507db-96e7-45af-bc5c-140e3c07d627: 'Wine Category' # Wine Category
     ffdcc74b-97d2-41a6-91bf-4459dbbad872: 'Intro Hero' # Intro Hero
 plugins:
   ckeditor:

@@ -2,6 +2,7 @@
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_pageintro'  as m_pageintro %}
 {% set entry = craft.entries().section('wines').type('default').one() %}
+{% set catID = '3321' %}
 
 {% block titleTag %}
 <title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
@@ -12,15 +13,22 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {{ m_pageintro.pageintro(entry) }}
+    {% set cats = craft.entries.section('wineCategory').type('category') %}
+    {{ m_pageintro.pageintro(entry, cats, true) }}
 {% endblock %}
 
 {% block content %}
 
-    <section class="row WineInfo">
+    <section class="row pagePadding WineInfo">
+        {% set catID = craft.app.request.getQueryParam('cat', null) %}
+    
         {% set handle = 'wines' %}
         {% set swapClass = '' %}
-        {% set entries = craft.entries.section([handle]).type('wineItems').limit(20) %}
+        {% if catID %}
+            {% set entries = craft.entries.section([handle]).type('wineItems').relatedTo(catID).limit(20) %}
+        {% else %}
+            {% set entries = craft.entries.section([handle]).type('wineItems').limit(20) %}
+        {% endif %}
         {% for item in entries %}
             {% set entry = item %}
             {% include "item" %}
@@ -39,5 +47,6 @@
 {% block pageJs %}
 <script>
     setPageTop('pageHeader');
+    initWineCats();
 </script>
 {% endblock pageJs %}

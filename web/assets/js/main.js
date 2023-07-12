@@ -18,6 +18,41 @@ const setPageTop = (headerID, pageID = "") => {
 	return(elementHeight);
 }
 
+const URL_add_parameter = (url, param, value) => {
+    var hash       = {};
+    var parser     = document.createElement('a');
+
+    parser.href    = url;
+
+    var parameters = parser.search.split(/\?|&/);
+
+    for(var i=0; i < parameters.length; i++) {
+        if(!parameters[i])
+            continue;
+
+        var ary      = parameters[i].split('=');
+        hash[ary[0]] = ary[1];
+    }
+
+    hash[param] = value;
+
+    var list = [];  
+    Object.keys(hash).forEach(function (key) {
+        list.push(key + '=' + hash[key]);
+    });
+
+    parser.search = '?' + list.join('&');
+    return parser.href;
+}
+
+const initWineCats = () => {
+	$(".jsSetWineCat").on("click", function () {
+		let catID = $(this).data('cat');
+		location.href = (URL_add_parameter(location.href, 'cat', catID));
+	});
+}
+
+
 // @ts-ignore
 $(document).ready(function () {
 

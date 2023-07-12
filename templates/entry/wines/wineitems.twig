@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block entryContent %}
-    <section class="row WineInfo">
+    <section class="row pagePadding WineInfo">
         <div class="wineEntry">
             <div class="bottle">
                 {% set image = entry.topicImage.one() %}
@@ -18,8 +18,6 @@
                     {% include "matrix" with {matrix: entry.body} %}
                 {% endif %}
             <div class="buttons">
-                {% set {{ blankTarget }} %}
-
                 {# return to last page button #}
                 {% set link = entry.topicLink[0] %}
                 <span class="button buttonLink">
@@ -34,7 +32,7 @@
                 {% else %}
                     {% set link = entry.topicLink[1] %}
                     <span class="button buttonLink">
-                        <a href="{{ link.uri }}" {{ target }}>{{ link.label }}</a>
+                        <a href="{{ link.uri }}" target="_blank">{{ link.label }}</a>
                     </span>
                 {% endif %}
             </div>

@@ -1,17 +1,47 @@
 
-{% macro pageintro(item) %}
+{% macro pageintro(item, cats = null, hasMenu = false) %}
     {% import '_macros/_srcset' as m_srcset %}
+    {% set pageCatID = craft.app.request.getQueryParam('cat', null) %}
+    {% set pageImgStyle = hasMenu ? 'topRound' : '' %}
+
     {% if item %}
-        <section class="row PageIntro">
-            <div class="pageImg">
-                {{ m_srcset.srcset(item.topicImage.one(), 'fithero') }}      
+        <section class="row pagePadding PageIntro">
+            <div class="pageImg {{ pageImgStyle }}">
+                <div class="topRound"></div>
+                {% if item.topicImage %}
+                    {% set img = item.topicImage.one() %}
+                    {{ m_srcset.srcset(img, 'fithero') }}  
+                {% endif %}
+                <div class="localMenu">
+                    {% if hasMenu %}
+                        {% if cats|length %}
+                            <ul>
+                                {% for cat  in cats %}
+                                    {% set catID = cat.id %}
+                                    {% set catStyle = (catID == pageCatID) ? 'selected' : '' %}
+                                    <li data-cat="{{ catID }}" class="jsSetWineCat wineCats {{ catStyle }}">{{ cat.title }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}    
+                    {% endif %}
+                </div>
             </div>
+
+            {% if hasMenu %}            
+                {% for cat  in cats %}
+                    {% if (cat.id == pageCatID) %}
+                        {% set item = cat %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
             <div class="pageText">
                 <h2>{{ item.topicTitle }}</h2>
             </div>
             <div class="pageText">
                 <p>{{ item.topicIntro }}</p>
             </div>
+
         </section>
     {% endif %}
 {% endmacro %}

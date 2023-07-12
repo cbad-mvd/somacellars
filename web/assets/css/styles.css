@@ -452,6 +452,8 @@ input[type=button].off {
 /****************************************
  Global Spacing Styles
 *****************************************/
+/* page padding
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Default Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
@@ -781,19 +783,38 @@ label[for=textarea] {
 .row.nomargins {
   margin: 0;
 }
+.row.pagePadding {
+  padding: 0 2rem;
+}
 @media (min-width: 550px) {
   .row {
     margin: 3rem 0;
+  }
+  .row.pagePadding {
+    padding: 0 4rem;
   }
 }
 @media (min-width: 750px) {
   .row {
     margin: 3rem 0;
   }
+  .row.pagePadding {
+    padding: 0 6rem;
+  }
 }
 @media (min-width: 1200px) {
-  .row {
-    margin: 3rem 0;
+  .row.pagePadding {
+    padding: 0 8rem;
+  }
+}
+@media (min-width: 1500px) {
+  .row.pagePadding {
+    padding: 0 12rem;
+  }
+}
+@media (min-width: 1800px) {
+  .row.pagePadding {
+    padding: 0 16rem;
   }
 }
 
@@ -830,17 +851,29 @@ label[for=textarea] {
 }
 
 footer {
+  width: 100%;
   margin: 0;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   background-color: rgb(33, 33, 37);
   background-color: #d2d0c8;
   color: #5b574d;
 }
 footer .copyright {
   text-align: center;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
   font-size: 0.75rem;
 }
+@media (min-width: 750px) {
+  footer {
+    padding: 3rem 4rem 0 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 3rem 8rem 0 8rem;
+  }
+}
+
 .FooterSections {
   display: flex;
   flex-flow: row;
@@ -865,7 +898,7 @@ footer .copyright {
 }
 .FooterSections .footerBrand svg {
   fill: #601008;
-  width: 10rem;
+  width: 6rem;
 }
 .FooterSections .footerBrand .logo {
   margin-top: 2rem;
@@ -943,6 +976,9 @@ footer .copyright {
     margin: 0rem;
     padding: 0rem;
   }
+  .FooterSections .footerBrand svg {
+    width: 6rem;
+  }
   .FooterSections .footerInfo {
     xwidth: 75%;
   }
@@ -951,6 +987,11 @@ footer .copyright {
   }
   .FooterSections .footerSocial {
     xwidth: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .FooterSections .footerBrand svg {
+    width: 8rem;
   }
 }
 
@@ -966,6 +1007,16 @@ footer .copyright {
   min-width: 20rem;
 }
 
+/* 
+ * probably want to move this to the right place at some point
+ */
+.wineCats {
+  cursor: pointer;
+}
+.wineCats:hover {
+  color: red;
+}
+
 /*
  * a row element with a side by side text block / image
  */
@@ -973,7 +1024,6 @@ footer .copyright {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  max-width: 1400px;
   margin: 0 auto 4rem auto;
   width: 100%;
   /*
@@ -1016,8 +1066,7 @@ footer .copyright {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  max-width: 1400px;
-  margin: 0 auto 4rem auto;
+  margin: 0 0 4rem 0;
   width: 95%;
   /*
    * PicBlock and TextBlock controlled by TextPic flex
@@ -1125,15 +1174,250 @@ footer .copyright {
 }
 
 /*
+ * category choices flex grid
+ */
+.CatGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 0 auto 4rem auto;
+  width: 100%;
+  /* Larger than phablet */
+  /* Larger than standard desktop */
+}
+.CatGrid .catItem {
+  width: 100%;
+  min-height: 10rem;
+}
+.CatGrid .catItem a {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.CatGrid .catItem a img {
+  border: 0.5rem #d2d0c8 solid;
+  border-radius: 0.75rem;
+}
+.CatGrid .catItem a:hover img {
+  border: 0.5rem white solid;
+}
+.CatGrid .catItem h2, .CatGrid .catItem .compenent-title {
+  font-family: "Crimson Text", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+.CatGrid .catItem .itemIntro {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+@media (min-width: 750px) {
+  .CatGrid .catItem {
+    width: 47.5%;
+  }
+}
+/*
+* wine choices flex grid
+*/
+.BlogInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 0 auto 4rem auto;
+  width: 100%;
+  /* Larger than phablet */
+  /* Larger than standard desktop */
+}
+.BlogInfo h2, .BlogInfo .compenent-title {
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+  text-align: center;
+  width: 100%;
+}
+.BlogInfo figure.blogImage {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.BlogInfo figure.blogImage figcaption {
+  font-size: 0.75rem;
+}
+.BlogInfo .blogEntry {
+  width: 100%;
+}
+.BlogInfo .blogEntry .info {
+  width: 100%;
+}
+.BlogInfo .blogEntry h2, .BlogInfo .blogEntry .compenent-title {
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+.BlogInfo .blogEntry h6 {
+  margin: 0 0 0.5rem 0;
+}
+.BlogInfo .blogEntry h3, .BlogInfo .blogEntry p {
+  margin: 0;
+}
+.BlogInfo .blogEntry h3 {
+  margin-top: 1rem;
+  color: #601008;
+}
+.BlogInfo .blogEntry p.bodytext {
+  margin-bottom: 1rem;
+}
+.BlogInfo .blogEntry figure {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.BlogInfo .blogEntry figure figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.BlogInfo .blogEntry .buttons {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  width: 50%;
+}
+.BlogInfo .blogEntry .buttons span {
+  width: 40%;
+  display: inline-block;
+}
+.BlogInfo .blogEntry .buttons p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.BlogInfo .blogItem {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 20rem;
+  margin: 1rem 0;
+}
+.BlogInfo .blogItem div {
+  margin: 0;
+}
+.BlogInfo .blogItem .buttons {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+}
+.BlogInfo .blogItem .buttons span {
+  width: 25%;
+  display: inline-block;
+}
+.BlogInfo .blogItem .buttons p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.BlogInfo .blogItem .PicBlock {
+  position: relative;
+  width: 100%;
+  order: 1;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+.BlogInfo .blogItem .PicBlock img {
+  border: 0.5rem #ccc solid;
+}
+.BlogInfo .blogItem .TextBlock {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  order: 2;
+}
+.BlogInfo .blogItem .TextBlock h3, .BlogInfo .blogItem .TextBlock h5, .BlogInfo .blogItem .TextBlock .title, .BlogInfo .blogItem .TextBlock p {
+  width: 94%;
+  margin: 1rem auto;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.BlogInfo .blogItem .TextBlock h3 {
+  margin-top: 0;
+  font-family: "Crimson Text", serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #601008;
+}
+.BlogInfo .blogItem .TextBlock h5, .BlogInfo .blogItem .TextBlock .title {
+  text-transform: uppercase;
+  color: #5b574d;
+}
+.BlogInfo .blogItem .TextBlock div.variants {
+  display: inline-block;
+  width: 50%;
+}
+.BlogInfo .blogItem .TextBlock div.variants label,
+.BlogInfo .blogItem .TextBlock div.variants select {
+  width: 100%;
+}
+.BlogInfo .blogItem .TextBlock div.variants label {
+  margin-left: 6px;
+  text-align: left;
+}
+.BlogInfo .blogItem .TextBlock.blockOrder {
+  order: 2;
+}
+.BlogInfo .blogItem .TextBlock .divider {
+  display: none;
+}
+@media (min-width: 750px) {
+  .BlogInfo .blogItem {
+    margin-bottom: 2rem;
+  }
+  .BlogInfo .blogItem .PicBlock {
+    width: 40%;
+  }
+  .BlogInfo .blogItem .TextBlock {
+    width: 55%;
+    margin-top: 0;
+  }
+  .BlogInfo .blogItem .TextBlock h3, .BlogInfo .blogItem .TextBlock h5, .BlogInfo .blogItem .TextBlock .title, .BlogInfo .blogItem .TextBlock p {
+    width: 100%;
+  }
+  .BlogInfo .blogItem .TextBlock.blockOrder {
+    order: 1;
+  }
+  .BlogInfo .blogItem .TextBlock .divider {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+  .BlogInfo .blogItem .TextBlock .divider svg {
+    fill: #b18956;
+    width: 80%;
+  }
+}
+/*
  * wine choices flex grid
  */
 .WineInfo {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  max-width: 1400px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
+  margin: 0 0 4rem 0;
   width: 100%;
   /* Larger than phablet */
   /* Larger than standard desktop */
@@ -1224,7 +1508,7 @@ footer .copyright {
   flex-flow: row wrap;
   justify-content: space-between;
   min-height: 20rem;
-  margin: 3rem 0;
+  margin: 0 0 6rem 0;
 }
 .WineInfo .wineItem div {
   margin: 0;
@@ -1248,6 +1532,11 @@ footer .copyright {
   width: 35%;
   order: 1;
 }
+.WineInfo .wineItem .PicBlock figcaption {
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
 .WineInfo .wineItem .TextBlock {
   width: 65%;
   margin-top: 1rem;
@@ -1265,7 +1554,7 @@ footer .copyright {
 }
 .WineInfo .wineItem .TextBlock h3 {
   font-family: "Crimson Text", serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: normal;
   text-transform: uppercase;
   color: #601008;
@@ -1306,9 +1595,6 @@ footer .copyright {
   order: 0;
 }
 @media (min-width: 550px) {
-  .WineInfo {
-    padding: 0 2rem;
-  }
   .WineInfo .wineEntry .bottle {
     width: 25%;
   }
@@ -1323,9 +1609,6 @@ footer .copyright {
   }
 }
 @media (min-width: 960px) {
-  .WineInfo {
-    padding: 0 4rem;
-  }
   .WineInfo .wineItem {
     width: 46%;
     margin-bottom: 6rem;
@@ -1359,12 +1642,6 @@ footer .copyright {
     order: 2;
   }
 }
-@media (min-width: 1200px) {
-  .WineInfo {
-    padding: 0 6rem;
-  }
-}
-
 .MenuChoices {
   margin: 0 2rem 6rem 2rem;
 }
@@ -1507,6 +1784,7 @@ footer .copyright {
   padding: 1.25rem 3rem;
   position: relative;
   /* Larger than phablet */
+  /* switch from mobile menu */
   /* Larger than iPad */
   /* Larger than standard desktop */
 }
@@ -1557,6 +1835,7 @@ footer .copyright {
   margin-top: 2rem;
   margin-top: 4.75rem;
   padding-right: 1.5rem;
+  font-size: 0.9rem;
 }
 .HdrCheckoutRow .l2Nav-menu li,
 .HdrCheckoutRow .checkoutNav-menu li,
@@ -1591,7 +1870,6 @@ footer .copyright {
   color: #601008;
   border-top: 1px solid #601008;
   border-bottom: 1px solid #601008;
-  xfont-weight: bold;
 }
 .HdrCheckoutRow .l2Nav-menu li a.active,
 .HdrCheckoutRow .checkoutNav-menu li a.active,
@@ -1823,17 +2101,7 @@ footer .copyright {
     top: 2.5rem;
   }
 }
-@media (min-width: 750px) {
-  .HdrCheckoutRow .logo,
-  .HdrNavRow .logo {
-    left: 4rem;
-  }
-  .HdrCheckoutRow .logo svg,
-  .HdrCheckoutRow .logo img,
-  .HdrNavRow .logo svg,
-  .HdrNavRow .logo img {
-    width: 20rem;
-  }
+@media (min-width: 1000px) {
   .HdrCheckoutRow .l2Nav,
   .HdrCheckoutRow .checkoutNav,
   .HdrCheckoutRow .nav,
@@ -1861,6 +2129,18 @@ footer .copyright {
   .HdrCheckoutRow .mobile-nav,
   .HdrNavRow .mobile-nav {
     display: none;
+  }
+}
+@media (min-width: 750px) {
+  .HdrCheckoutRow .logo,
+  .HdrNavRow .logo {
+    left: 4rem;
+  }
+  .HdrCheckoutRow .logo svg,
+  .HdrCheckoutRow .logo img,
+  .HdrNavRow .logo svg,
+  .HdrNavRow .logo img {
+    width: 20rem;
   }
   .HdrCheckoutRow .l2Nav-menu,
   .HdrCheckoutRow .checkoutNav-menu,
@@ -2072,7 +2352,7 @@ footer .copyright {
 }
 .LevelTwoHeader > div {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 2rem;
   width: 100%;
 }
 .LevelTwoHeader .LevelTwoWrapper {
@@ -2178,14 +2458,14 @@ footer .copyright {
 .LevelTwoHeader div.status .track .state.s6 {
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 750px) {
   .LevelTwoHeader > div {
     padding: 0 4rem;
   }
 }
 @media (min-width: 1200px) {
   .LevelTwoHeader > div {
-    padding: 0 5rem;
+    padding: 0 8rem;
   }
 }
 
@@ -2342,9 +2622,6 @@ footer .copyright {
 /*
  * main page intro
  */
-.PageIntro {
-  padding: 0 1rem 0 1rem;
-}
 .PageIntro h2, .PageIntro .compenent-title {
   font-size: 2rem;
   font-family: "Crimson Text", serif;
@@ -2353,17 +2630,43 @@ footer .copyright {
 .PageIntro .pageImg {
   margin: 0 auto;
   width: 100%;
-  border: 1rem solid rgba(255, 255, 255, 0.5);
   border: none;
 }
 .PageIntro .pageImg img {
   width: 100%;
-  border-radius: 0.75rem;
+}
+.PageIntro .pageImg .topRound {
+  margin: 0;
+  min-height: 0.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background-color: #d2d0c8;
 }
 .PageIntro .pageText {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+.PageIntro .localMenu {
+  margin: 0;
+  background-color: #d2d0c8;
+  border-radius: 0 0 0.75rem 0.75rem;
+  min-height: 0.5rem;
+}
+.PageIntro .localMenu ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+}
+.PageIntro .localMenu ul li {
+  display: inline-block;
+  width: 20%;
+  margin: 0;
+  padding: 0.5rem;
+}
+.PageIntro .localMenu ul li.selected, .PageIntro .localMenu ul li:active, .PageIntro .localMenu ul li:hover {
+  color: #601008;
 }
 @media (min-width: 550px) {
   .PageIntro h2, .PageIntro .compenent-title {
@@ -2371,8 +2674,8 @@ footer .copyright {
   }
 }
 @media (min-width: 750px) {
-  .PageIntro {
-    padding: 3rem 6rem 0 6rem;
+  .PageIntro .pageImg {
+    padding-top: 3rem;
   }
   .PageIntro h2, .PageIntro .compenent-title {
     font-size: 2.5rem;
@@ -3312,7 +3615,7 @@ form.loose input[type=text] {
   fill: #bbb;
 }
 .MobileMenu header {
-  width: 60%;
+  width: 7rem;
 }
 .MobileMenu .closeMenu {
   position: absolute;
@@ -3339,6 +3642,16 @@ form.loose input[type=text] {
 }
 .MobileMenu-content ul li a:hover {
   color: #fff;
+}
+@media (min-width: 550px) {
+  .MobileMenu header {
+    width: 7rem;
+  }
+}
+@media (min-width: 750px) {
+  .MobileMenu header {
+    width: 8rem;
+  }
 }
 
 .ErrorList {

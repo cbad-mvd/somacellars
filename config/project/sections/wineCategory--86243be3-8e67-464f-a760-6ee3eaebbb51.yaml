@@ -1,6 +1,6 @@
 defaultPlacement: end
 enableVersioning: true
-handle: wineCategory
+handle: winecategory
 name: 'Wine Category'
 previewTargets:
   -

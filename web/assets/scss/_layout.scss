@@ -138,7 +138,7 @@ footer {
 	.footerBrand {
 		svg {
 			fill: $color-main-accent;
-			width: 6rem;
+			width: 4.5rem;
 		}
 
 		.logo {
@@ -229,6 +229,22 @@ footer {
 		&:hover {
 			fill: $color-main-accent;
 		}
+	}
+
+	@media (min-width: 400px) {
+		.footerBrand {
+			svg {
+				width: 5rem;
+			}
+		}	
+	}
+
+	@media (min-width: 550px) {
+		.footerBrand {
+			svg {
+				width: 6rem;
+			}
+		}	
 	}
 
 	@media (min-width: 750px) {

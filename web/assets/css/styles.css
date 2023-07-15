@@ -898,7 +898,7 @@ footer .copyright {
 }
 .FooterSections .footerBrand svg {
   fill: #601008;
-  width: 6rem;
+  width: 4.5rem;
 }
 .FooterSections .footerBrand .logo {
   margin-top: 2rem;
@@ -970,6 +970,16 @@ footer .copyright {
 }
 .FooterSections .footerSocial-icons:hover {
   fill: #601008;
+}
+@media (min-width: 400px) {
+  .FooterSections .footerBrand svg {
+    width: 5rem;
+  }
+}
+@media (min-width: 550px) {
+  .FooterSections .footerBrand svg {
+    width: 6rem;
+  }
 }
 @media (min-width: 750px) {
   .FooterSections {

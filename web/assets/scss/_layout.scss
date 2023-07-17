@@ -11,7 +11,14 @@
 	}
 
 	&.pagePadding {
-		padding: 0 $padding-xs;
+		padding: 0 $padding-xxs;
+	}
+
+	/* Larger than narrow iPhone */
+	@media (min-width: 400px) {
+		&.pagePadding {
+			padding: 0 $padding-xs;
+		}
 	}
 
 	/* Larger than phablet */
@@ -364,7 +371,7 @@ footer {
 	justify-content: space-between;
 	flex-flow: row wrap;
 	margin: 0 0 4rem 0;
-	width: 95%;
+	width: 100%;
 
 	div {
 		margin: 0;
@@ -384,6 +391,8 @@ footer {
 	.TextBlock {
 		width: 100%;
 		margin-top: 2rem;
+		padding-left: $padding-xs;
+		padding-right: $padding-xs;
 
 		position: relative;
 		display: flex;
@@ -394,9 +403,7 @@ footer {
 	
 		h3, h5, p {
 			width: 94%;
-			margin: 1rem auto;
-			padding-left: 0;
-			padding-right: 1.5rem;
+			margin: 1rem 0;
 		}
 
 		h3 {
@@ -443,7 +450,7 @@ footer {
 
 		&.swapOrder {
 			order: 2;
-			align-items: flex-end;
+			align-items: flex-end;	
 		}
 
 		&.textOnTop {
@@ -463,6 +470,9 @@ footer {
 		.TextBlock {
 			width: 37%;
 			margin-top: 0;
+			padding-left: 0;
+			padding-right: $padding-xs;
+	
 
 			h3, h5, p {
 				width: 100%;
@@ -477,6 +487,9 @@ footer {
 			&.swapOrder {
 				order: 0;
 				text-align: right;
+				padding-left: $padding-xs;
+				padding-right: 0;
+
 				.topBorder {
 					&::after {
 						left: auto;
@@ -484,8 +497,6 @@ footer {
 					}
 				}
 				h3, h5, p {
-					padding-left: 1.5rem;
-					padding-right: 0;
 				}
 			}
 
@@ -1409,14 +1420,14 @@ footer {
 	.mobile-nav {
         position: absolute;
 		top: 0rem;
-		right: 1rem;
+		right: 2.5rem;
 		margin: 0;
 
 		// mobile menu 
 		.mobile-toggle {
 			position: absolute;
-			right: 0rem; 
 			top: -1rem;
+			right: -2rem;
 			width: 5rem;
 			padding: 0.5rem 1rem;
 			background: transparent;
@@ -1924,11 +1935,11 @@ footer {
 .mobile-panel {
     position: fixed;
     top: 0;
-    right: -45%;
+    right: -50%;
 	margin: 0;
     padding: 1rem 2rem;
     height: 100vh;
-    width: 45%;
+    width: 50%;
     background: #333333;
     color: #eee;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -1950,6 +1961,11 @@ footer {
 		right: 1rem;
 		width: 1.5rem;
 		height: 1.5rem;
+	}
+
+	@media (min-width: 550px) {
+		width: 45%;
+		right: -45%;
 	}
 }
 
@@ -1974,7 +1990,7 @@ footer {
 
 	&-title {
 		position: absolute;
-		top: $vspace-base * 1.5;
+		top: $vspace-base * 3;
 		left: 0;
 		text-align: center;
 		animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -2152,6 +2168,7 @@ footer {
 			justify-content: space-evenly;
 			list-style: none;
 			margin: 0;
+			padding: 0;
 		}
 		ul li {
 			display: inline-block;

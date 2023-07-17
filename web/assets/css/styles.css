@@ -776,6 +776,7 @@ label[for=textarea] {
   width: 100%;
   margin: 2rem 0;
   padding: 0;
+  /* Larger than narrow iPhone */
   /* Larger than phablet */
   /* Larger than iPad */
   /* Larger than standard desktop */
@@ -784,7 +785,12 @@ label[for=textarea] {
   margin: 0;
 }
 .row.pagePadding {
-  padding: 0 2rem;
+  padding: 0 1rem;
+}
+@media (min-width: 400px) {
+  .row.pagePadding {
+    padding: 0 2rem;
+  }
 }
 @media (min-width: 550px) {
   .row {
@@ -1077,7 +1083,7 @@ footer .copyright {
   justify-content: space-between;
   flex-flow: row wrap;
   margin: 0 0 4rem 0;
-  width: 95%;
+  width: 100%;
   /*
    * PicBlock and TextBlock controlled by TextPic flex
    */
@@ -1093,6 +1099,8 @@ footer .copyright {
 .TextPic .TextBlock {
   width: 100%;
   margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1102,9 +1110,7 @@ footer .copyright {
 }
 .TextPic .TextBlock h3, .TextPic .TextBlock h5, .TextPic .TextBlock .title, .TextPic .TextBlock p {
   width: 94%;
-  margin: 1rem auto;
-  padding-left: 0;
-  padding-right: 1.5rem;
+  margin: 1rem 0;
 }
 .TextPic .TextBlock h3 {
   font-family: "Crimson Text", serif;
@@ -1159,6 +1165,8 @@ footer .copyright {
   .TextPic .TextBlock {
     width: 37%;
     margin-top: 0;
+    padding-left: 0;
+    padding-right: 2rem;
   }
   .TextPic .TextBlock h3, .TextPic .TextBlock h5, .TextPic .TextBlock .title, .TextPic .TextBlock p {
     width: 100%;
@@ -1169,14 +1177,12 @@ footer .copyright {
   .TextPic .TextBlock.swapOrder {
     order: 0;
     text-align: right;
+    padding-left: 2rem;
+    padding-right: 0;
   }
   .TextPic .TextBlock.swapOrder .topBorder::after {
     left: auto;
     right: 0;
-  }
-  .TextPic .TextBlock.swapOrder h3, .TextPic .TextBlock.swapOrder h5, .TextPic .TextBlock.swapOrder .title, .TextPic .TextBlock.swapOrder p {
-    padding-left: 1.5rem;
-    padding-right: 0;
   }
   .TextPic .TextBlock.textOnTop {
     order: 2;
@@ -1989,14 +1995,14 @@ footer .copyright {
 .HdrNavRow .mobile-nav {
   position: absolute;
   top: 0rem;
-  right: 1rem;
+  right: 2.5rem;
   margin: 0;
 }
 .HdrCheckoutRow .mobile-nav .mobile-toggle,
 .HdrNavRow .mobile-nav .mobile-toggle {
   position: absolute;
-  right: 0rem;
   top: -1rem;
+  right: -2rem;
   width: 5rem;
   padding: 0.5rem 1rem;
   background: transparent;
@@ -2482,11 +2488,11 @@ footer .copyright {
 .mobile-panel {
   position: fixed;
   top: 0;
-  right: -45%;
+  right: -50%;
   margin: 0;
   padding: 1rem 2rem;
   height: 100vh;
-  width: 45%;
+  width: 50%;
   background: #333333;
   color: #eee;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -2506,6 +2512,12 @@ footer .copyright {
   right: 1rem;
   width: 1.5rem;
   height: 1.5rem;
+}
+@media (min-width: 550px) {
+  .mobile-panel {
+    width: 45%;
+    right: -45%;
+  }
 }
 
 /*
@@ -2527,7 +2539,7 @@ footer .copyright {
 }
 .Intro-title {
   position: absolute;
-  top: 2.25rem;
+  top: 4.5rem;
   left: 0;
   text-align: center;
   animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -2668,6 +2680,7 @@ footer .copyright {
   justify-content: space-evenly;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 .PageIntro .localMenu ul li {
   display: inline-block;

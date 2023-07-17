@@ -6,7 +6,9 @@
             <div class="PicBlock">
                 {% set image = item.topicImage.one() %}
                 {% if image %}
-                    <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
+                    <a href="{{ item.url }}">
+                        <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
+                    </a>
                 {% endif %}
             </div>
             <div class="TextBlock">

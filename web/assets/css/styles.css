@@ -2002,7 +2002,7 @@ footer .copyright {
 .HdrNavRow .mobile-nav .mobile-toggle {
   position: absolute;
   top: -1rem;
-  right: -2rem;
+  right: -5rem;
   width: 5rem;
   padding: 0.5rem 1rem;
   background: transparent;

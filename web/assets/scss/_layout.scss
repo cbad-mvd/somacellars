@@ -450,7 +450,6 @@ footer {
 
 		&.swapOrder {
 			order: 2;
-			align-items: flex-end;	
 		}
 
 		&.textOnTop {
@@ -489,6 +488,7 @@ footer {
 				text-align: right;
 				padding-left: $padding-xs;
 				padding-right: 0;
+				align-items: flex-end;	
 
 				.topBorder {
 					&::after {
@@ -1275,7 +1275,6 @@ footer {
 	min-height: 6.0rem;
 	margin: 0;
     padding: 1.25rem 3rem;
-    position: relative;
 
 	&.nav-wrapper {
 		min-height: 0;
@@ -1420,14 +1419,11 @@ footer {
 	.mobile-nav {
         position: absolute;
 		top: 0rem;
-		right: 2.5rem;
+		right: 1rem;
 		margin: 0;
 
 		// mobile menu 
 		.mobile-toggle {
-			position: absolute;
-			top: -1rem;
-			right: -5rem;
 			width: 5rem;
 			padding: 0.5rem 1rem;
 			background: transparent;
@@ -1497,6 +1493,10 @@ footer {
             }
 		}
 		
+		.mobile-nav {
+			top: 0.5rem;
+		}
+
 		.l2Nav,
 		.checkoutNav,
         .nav {
@@ -1567,6 +1567,9 @@ footer {
             }
 		}
 
+		.mobile-nav {
+			top: 1rem;
+		}
 
 		.l2Nav,
 		.checkoutNav {
@@ -1995,7 +1998,7 @@ footer {
 
 	&-title {
 		position: absolute;
-		top: $vspace-base * 3;
+		top: 4.5rem;
 		left: 0;
 		text-align: center;
 		animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -2042,6 +2045,12 @@ footer {
 		}
 	}
 
+	@media (min-width: 400px) {
+		&-title {
+			top: 5rem;
+		}
+	}
+
 	/* Larger than phablet */
 	@media (min-width: 550px) {
 		h1 {
@@ -2056,7 +2065,7 @@ footer {
 		}
 	
 		&-title {
-			top: $vspace-base * 3;
+			top: 6rem;
 		}
 
 		&-heading {
@@ -2083,7 +2092,7 @@ footer {
 		}
 	
 		&-title {
-			top: $vspace-base * 5.5;
+			top: 7rem;
 		}
 
 		&-heading {

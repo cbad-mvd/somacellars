@@ -1741,8 +1741,6 @@ footer .copyright {
 }
 .MainHdr--down {
   top: 4.5rem;
-  background-color: rgb(0, 0, 0);
-  background-color: #e9e8e4;
   background-color: #601008;
 }
 .MainHdr.mobile {
@@ -1799,8 +1797,8 @@ footer .copyright {
   margin: 0;
   padding: 1.25rem 3rem;
   /* Larger than phablet */
-  /* switch from mobile menu */
   /* Larger than iPad */
+  /* switch from mobile menu */
   /* Larger than standard desktop */
 }
 .HdrCheckoutRow.nav-wrapper,
@@ -1951,6 +1949,10 @@ footer .copyright {
 .HdrNavRow .nav div.usermenu > ul li a:hover {
   color: #601008;
 }
+.HdrCheckoutRow .nav,
+.HdrNavRow .nav {
+  top: 1.5rem;
+}
 .HdrCheckoutRow .l2Nav,
 .HdrNavRow .l2Nav {
   width: 100%;
@@ -2011,12 +2013,21 @@ footer .copyright {
 .HdrNavRow--down {
   margin: 1rem 0;
 }
+.HdrCheckoutRow--down .logo,
+.HdrNavRow--down .logo {
+  top: 2rem;
+}
 .HdrCheckoutRow--down .logo svg,
 .HdrCheckoutRow--down .logo img,
 .HdrNavRow--down .logo svg,
 .HdrNavRow--down .logo img {
   fill: white;
   width: 14rem;
+}
+.HdrCheckoutRow--down .mobile-nav,
+.HdrNavRow--down .mobile-nav {
+  position: absolute;
+  top: 1rem;
 }
 .HdrCheckoutRow--down .l2Nav-menu li a,
 .HdrCheckoutRow--down .checkoutNav-menu li a,
@@ -2039,21 +2050,6 @@ footer .copyright {
 .HdrNavRow--down .nav-menu li a:hover,
 .HdrNavRow--down .nav-menu li a:active {
   color: #fff;
-}
-.HdrCheckoutRow--downx,
-.HdrNavRow--downx {
-  margin: 1rem 0;
-}
-.HdrCheckoutRow--downx .logo,
-.HdrNavRow--downx .logo {
-  top: 3rem;
-}
-.HdrCheckoutRow--downx .logo svg,
-.HdrCheckoutRow--downx .logo img,
-.HdrNavRow--downx .logo svg,
-.HdrNavRow--downx .logo img {
-  fill: white;
-  width: 6rem;
 }
 @media (min-width: 550px) {
   .HdrCheckoutRow,
@@ -2103,18 +2099,62 @@ footer .copyright {
   }
   .HdrCheckoutRow--down .logo,
   .HdrNavRow--down .logo {
-    top: 2.75rem;
+    top: 5.5rem;
   }
   .HdrCheckoutRow--down .logo svg,
   .HdrCheckoutRow--down .logo img,
   .HdrNavRow--down .logo svg,
   .HdrNavRow--down .logo img {
-    fill: white;
     width: 14rem;
+  }
+  .HdrCheckoutRow--down .mobile-nav,
+  .HdrNavRow--down .mobile-nav {
+    top: 4.5rem;
   }
   .HdrCheckoutRow--down .nav,
   .HdrNavRow--down .nav {
     top: 2.5rem;
+  }
+}
+@media (min-width: 750px) {
+  .HdrCheckoutRow .logo,
+  .HdrNavRow .logo {
+    left: 4rem;
+    top: 2.25rem;
+  }
+  .HdrCheckoutRow .logo svg,
+  .HdrCheckoutRow .logo img,
+  .HdrNavRow .logo svg,
+  .HdrNavRow .logo img {
+    width: 20rem;
+  }
+  .HdrCheckoutRow .mobile-nav,
+  .HdrNavRow .mobile-nav {
+    top: 1rem;
+  }
+  .HdrCheckoutRow .l2Nav-menu,
+  .HdrCheckoutRow .checkoutNav-menu,
+  .HdrNavRow .l2Nav-menu,
+  .HdrNavRow .checkoutNav-menu {
+    margin: 0.25rem;
+  }
+  .HdrCheckoutRow--down .logo,
+  .HdrNavRow--down .logo {
+    top: 5.5rem;
+  }
+  .HdrCheckoutRow--down .logo svg,
+  .HdrCheckoutRow--down .logo img,
+  .HdrNavRow--down .logo svg,
+  .HdrNavRow--down .logo img {
+    width: 14rem;
+  }
+  .HdrCheckoutRow--down .mobile-nav,
+  .HdrNavRow--down .mobile-nav {
+    top: 4.5rem;
+  }
+  .HdrCheckoutRow--down .nav,
+  .HdrNavRow--down .nav {
+    top: 0.75rem;
   }
 }
 @media (min-width: 1000px) {
@@ -2146,42 +2186,9 @@ footer .copyright {
   .HdrNavRow .mobile-nav {
     display: none;
   }
-}
-@media (min-width: 750px) {
-  .HdrCheckoutRow .logo,
-  .HdrNavRow .logo {
-    left: 4rem;
-    top: 2.25rem;
-  }
-  .HdrCheckoutRow .logo svg,
-  .HdrCheckoutRow .logo img,
-  .HdrNavRow .logo svg,
-  .HdrNavRow .logo img {
-    width: 20rem;
-  }
-  .HdrCheckoutRow .mobile-nav,
-  .HdrNavRow .mobile-nav {
-    top: 1rem;
-  }
-  .HdrCheckoutRow .l2Nav-menu,
-  .HdrCheckoutRow .checkoutNav-menu,
-  .HdrNavRow .l2Nav-menu,
-  .HdrNavRow .checkoutNav-menu {
-    margin: 0.25rem;
-  }
-  .HdrCheckoutRow--down .logo,
-  .HdrNavRow--down .logo {
-    top: 2.75rem;
-  }
-  .HdrCheckoutRow--down .logo svg,
-  .HdrCheckoutRow--down .logo img,
-  .HdrNavRow--down .logo svg,
-  .HdrNavRow--down .logo img {
-    width: 14rem;
-  }
   .HdrCheckoutRow--down .nav,
   .HdrNavRow--down .nav {
-    top: 0.75rem;
+    top: 4rem;
   }
 }
 @media (min-width: 1200px) {
@@ -2218,10 +2225,6 @@ footer .copyright {
   .HdrNavRow .checkoutNav-menu {
     margin: 0.25rem;
   }
-  .HdrCheckoutRow--down .logo,
-  .HdrNavRow--down .logo {
-    top: 2.75rem;
-  }
   .HdrCheckoutRow--down .logo svg,
   .HdrCheckoutRow--down .logo img,
   .HdrNavRow--down .logo svg,
@@ -2230,7 +2233,7 @@ footer .copyright {
   }
   .HdrCheckoutRow--down .nav,
   .HdrNavRow--down .nav {
-    top: 0.75rem;
+    top: 4rem;
   }
   .HdrCheckoutRow--down .nav-menu,
   .HdrNavRow--down .nav-menu {

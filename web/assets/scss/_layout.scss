@@ -1207,11 +1207,7 @@ footer {
 
 	&--down {
 		top: 4.5rem;
-		background-color: rgba(0, 0, 0, 1);
-		background-color: $color-bg__dark;
 		background-color: $color-main-header-bg;
-
-
 	}
 
 	&.mobile {
@@ -1377,6 +1373,10 @@ footer {
 	
 	}
 
+	.nav {
+		top: 1.5rem;
+	}
+
 	.l2Nav {
 		width: 100%;
 
@@ -1438,7 +1438,7 @@ footer {
         margin: 1rem 0;
 
         .logo {
-            //top: 3rem;
+            top: 2rem;
 
 			svg,
             img {
@@ -1446,6 +1446,11 @@ footer {
                 width: 14.0rem;
             }
         }
+
+		.mobile-nav {
+			position: absolute;
+			top: 1rem;
+		}
 
 		.l2Nav,
 		.checkoutNav,
@@ -1462,20 +1467,6 @@ footer {
 			}
     	}	
 	}
-
-    &--downx {
-        margin: 1rem 0;
-
-        .logo {
-            top: 3rem;
-
-			svg,
-            img {
-				fill: white;
-                width: 6.0rem;
-            }
-        }
-    }
     
     // // // // // // 
 
@@ -1519,14 +1510,16 @@ footer {
 
         &--down {
             .logo {
-                top: 2.75rem;
-
+				top: 5.5rem;
 				svg,
                 img {
-					fill: white;
                     width: 14rem;
                 }
             }
+
+			.mobile-nav {
+				top: 4.5rem;
+			}
 
             .nav {
                 top: 2.5rem;
@@ -1535,6 +1528,52 @@ footer {
 		
     }
 
+	/* Larger than iPad */
+	@media (min-width: 750px) {
+		.logo {
+			left: 4rem;
+			top: 2.25rem;
+
+
+			svg,
+			img {
+				width: 20rem;
+			}
+		}
+
+		.mobile-nav {
+			top: 1rem;
+		}
+
+		.l2Nav,
+		.checkoutNav {
+			&-menu {
+				margin: 0.25rem;
+			}
+		}
+
+		&--down {
+			.logo {
+				top: 5.5rem;
+
+				svg,
+				img {
+					width: 14rem;
+				}
+			}
+
+			.mobile-nav {
+				top: 4.5rem;
+			}
+
+			.nav {
+				top: 0.75rem;
+			}
+		}
+		
+	}
+	
+	
     /* switch from mobile menu */
     @media (min-width: 1000px) {
 		.l2Nav,
@@ -1554,48 +1593,13 @@ footer {
 		.mobile-nav {
 			display: none;
 		}
-	}
 
-    /* Larger than iPad */
-    @media (min-width: 750px) {
-        .logo {
-            left: 4rem;
-			top: 2.25rem;
-
-
-			svg,
-            img {
-                width: 20rem;
-            }
-		}
-
-		.mobile-nav {
-			top: 1rem;
-		}
-
-		.l2Nav,
-		.checkoutNav {
-			&-menu {
-				margin: 0.25rem;
+		&--down {
+			.nav {
+				top: 4rem;
 			}
 		}
-
-        &--down {
-            .logo {
-                top: 2.75rem;
-
-                svg,
-				img {
-                    width: 14rem;
-                }
-            }
-
-            .nav {
-                top: 0.75rem;
-            }
-        }
-		
-    }
+	}
 
     /* Larger than standard desktop */
     @media (min-width: 1200px) {
@@ -1629,8 +1633,6 @@ footer {
 
         &--down {
             .logo {
-                top: 2.75rem;
-
                 svg,
 				img {
                     width: 14rem;
@@ -1638,7 +1640,7 @@ footer {
             }
 
             .nav {
-                top: 0.75rem;
+                top: 4rem;
 
 				&-menu {
 					top: 2.5rem;

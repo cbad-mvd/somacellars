@@ -1282,14 +1282,14 @@ footer {
 
     .logo {
         position: absolute;
-        top: 0.25rem;
+        top: 1.25rem;
         left: 1rem;
         margin: 0;
         height: 2.5rem;
 
 		svg,
         img {
-            width: 20rem;
+            width: 15rem;
 			fill: $color-main-accent;
         }
     }
@@ -1485,6 +1485,7 @@ footer {
 		min-height: 5.0rem;
 
         .logo {
+			top: 1.75rem;
             left: 2.5rem;
 
 			svg,
@@ -1560,6 +1561,8 @@ footer {
     @media (min-width: 750px) {
         .logo {
             left: 4rem;
+			top: 2.25rem;
+
 
 			svg,
             img {
@@ -2151,6 +2154,7 @@ footer {
 		margin: 0 auto;
 		width: 100%;
 		border: none;
+		padding-top: 1rem;
 
 		img {
 			width: 100%;
@@ -2202,6 +2206,9 @@ footer {
 	@media (min-width: 550px) {
 		h2 {
 			font-size: 2rem;
+		}
+		.pageImg {
+			padding-top: 2rem;
 		}
 	}
 

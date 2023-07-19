@@ -2085,7 +2085,7 @@ footer .copyright {
   .HdrNavRow .l2Nav-menu,
   .HdrNavRow .checkoutNav-menu,
   .HdrNavRow .nav-menu {
-    margin-top: 2.75rem;
+    margin-top: 0.25rem;
   }
   .HdrCheckoutRow .l2Nav-menu,
   .HdrCheckoutRow .checkoutNav-menu,
@@ -2172,7 +2172,7 @@ footer .copyright {
   .HdrNavRow .l2Nav-menu,
   .HdrNavRow .checkoutNav-menu,
   .HdrNavRow .nav-menu {
-    margin-top: 2.75rem;
+    margin-top: 0.25rem;
   }
   .HdrCheckoutRow .l2Nav-menu li a,
   .HdrCheckoutRow .checkoutNav-menu li a,
@@ -2217,7 +2217,7 @@ footer .copyright {
   .HdrNavRow .l2Nav-menu,
   .HdrNavRow .checkoutNav-menu,
   .HdrNavRow .nav-menu {
-    top: 2.75rem;
+    top: 0.25rem;
   }
   .HdrCheckoutRow .l2Nav-menu,
   .HdrCheckoutRow .checkoutNav-menu,

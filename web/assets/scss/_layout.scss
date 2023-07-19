@@ -1494,7 +1494,7 @@ footer {
 			display: none;
 
             &-menu {
-				margin-top: 2.75rem;
+				margin-top: 0.25rem;
             }
 		}
 		.l2Nav,
@@ -1580,8 +1580,9 @@ footer {
 		.checkoutNav,
         .nav {
 			display: block;
+			
             &-menu {
-				margin-top: 2.75rem;
+				margin-top: 0.25rem;
 				
 				li a {
 					padding: 0 0.5rem;
@@ -1620,7 +1621,7 @@ footer {
             height: 3.5rem;
 
             &-menu {
-                top: 2.75rem;
+                top: 0.25rem;
             }	
         }
 

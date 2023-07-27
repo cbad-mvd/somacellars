@@ -1,4 +1,4 @@
-dateModified: 1689437371
+dateModified: 1690486820
 elementSources:
   craft\elements\Entry:
     -
@@ -160,6 +160,7 @@ meta:
     9dcda578-d8ea-45b0-ba7c-1e15b0edcf5b: Shipping # Shipping
     9e18e062-4615-46d0-8cb5-ea397563810a: 'Site Logos' # Site Logos
     9f873772-0bd5-4a73-ac81-1e87058d57b0: Intro # Intro
+    12cbdbb4-afdc-4d16-bb16-2a840dbb4326: 'Bottle Price' # Bottle Price
     012e2658-c745-4e8f-a389-441590b2a56d: Quote # Quote
     024cc291-626a-44bd-8733-7aa26557b87d: 'About Us' # About Us
     30f67bfd-c2a3-4070-99a1-243e2f6e97c5: 'Blog Post' # Blog Post
@@ -208,6 +209,7 @@ meta:
     5913033f-7b45-4065-bcd2-5188d9764973: 'Contact Info' # Contact Info
     6822924f-0247-44c0-8bc5-90e4e23b31e2: 'Site Name' # Site Name
     55425038-9ff5-4dec-9006-d4aef7b84b74: Nav # Nav
+    a7c4e758-b6a7-45f5-add0-a4a408a0384e: 'Vineyard Wines' # Vineyard Wines
     a55f6ea0-9629-47e8-a329-1adaffcda25c: 'Global Nav' # Global Nav
     a527be69-82a9-462e-adaa-0b5958be9ce0: Links # Links
     adbfca1b-9d0f-40d3-8339-9076f117fb92: Specs # Specs

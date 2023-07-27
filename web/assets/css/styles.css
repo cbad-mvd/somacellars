@@ -1569,6 +1569,7 @@ footer .copyright {
   padding-right: 1.5rem;
 }
 .WineInfo .wineItem .TextBlock h3 {
+  margin-bottom: 0.25rem;
   font-family: "Crimson Text", serif;
   font-size: 1.5rem;
   font-weight: normal;
@@ -1576,6 +1577,7 @@ footer .copyright {
   color: #601008;
 }
 .WineInfo .wineItem .TextBlock h5, .WineInfo .wineItem .TextBlock .title {
+  margin-top: 0.25rem;
   text-transform: uppercase;
   color: #5b574d;
 }
@@ -1622,6 +1624,11 @@ footer .copyright {
   }
   .WineInfo .wineEntry .info h2, .WineInfo .wineEntry .info .compenent-title {
     text-align: left;
+    margin-bottom: 0.25rem;
+  }
+  .WineInfo .wineEntry .info h5, .WineInfo .wineEntry .info .title {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 960px) {
@@ -2552,14 +2559,13 @@ footer .copyright {
 }
 .Intro-title {
   position: absolute;
-  top: 4.5rem;
+  top: 4rem;
   left: 0;
   text-align: center;
   animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .Intro-title h1, .Intro-title p {
   color: rgba(255, 255, 255, 0.8);
-  color: #601008;
   color: #333;
 }
 .Intro h1 {
@@ -2569,7 +2575,6 @@ footer .copyright {
   line-height: 1.25em;
 }
 .Intro p {
-  display: none;
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
 }
@@ -2588,11 +2593,6 @@ footer .copyright {
   display: block;
   font-size: 0.75rem;
   line-height: 1.25em;
-}
-@media (min-width: 400px) {
-  .Intro-title {
-    top: 5rem;
-  }
 }
 @media (min-width: 550px) {
   .Intro h1 {

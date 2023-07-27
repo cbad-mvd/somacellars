@@ -7,8 +7,10 @@
                 <div class="nomargins">
                     <div class="topBorder"></div>
                     <div>
+                        {% set price = item.bottlePrice|money %}
+                        {% set size = item.bottleSize %}
                         <h3>{{ item.topicTitle }}</h3>
-                        <h5>{{ item.topicDesc }}</h5>
+                        <h5>{{ price }} / {{ size }}</h5>
                         <p>{{ item.topicIntro }}</p>
                     </div>
                 </div>
@@ -37,8 +39,11 @@
             <div class="PicBlock">
                 <figure>
                     {% set image = item.topicImage.one() %}
-                    <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
-                    <figcaption>{{ item.bottleSize }}</figcaption>
+                    {% set size  = item.bottleSize %}
+                    {% if image %}
+                        <img class="lazy" src="{{ image.url }}" alt="{{ image.altText }}" />
+                        <figcaption>{{ size }}</figcaption>
+                    {% endif %}
                 </figure>
             </div>
         </div>

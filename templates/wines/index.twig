@@ -25,9 +25,9 @@
         {% set handle = 'wines' %}
         {% set swapClass = '' %}
         {% if catID %}
-            {% set entries = craft.entries.section([handle]).type('wineItems').relatedTo(catID).limit(20) %}
+            {% set entries = craft.entries.section([handle]).type('wineItems').relatedTo(catID).orderBy('title ASC').all() %}
         {% else %}
-            {% set entries = craft.entries.section([handle]).type('wineItems').limit(20) %}
+            {% set entries = craft.entries.section([handle]).type('wineItems').orderBy('title', ASC).all() %}
         {% endif %}
         {% for item in entries %}
             {% set entry = item %}

@@ -97,7 +97,7 @@ handle: default
 hasTitleField: true
 name: Default
 section: ca1c4ea1-3384-4601-87d5-bbd4103dd286 # Wines
-sortOrder: 1
+sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

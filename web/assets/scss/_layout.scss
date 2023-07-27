@@ -992,6 +992,7 @@ footer {
 			}
 
 			h3 {
+				margin-bottom: 0.25rem;
 				font-family: $font-stack-title;
 				font-size: 1.5rem;
 				font-weight: normal;
@@ -1000,6 +1001,7 @@ footer {
 			}
 
 			h5 {
+				margin-top: 0.25rem;
 				text-transform: uppercase;
 				color: $color-bodytext;
 			}
@@ -1062,6 +1064,12 @@ footer {
 
 				h2 {
 					text-align: left;
+					margin-bottom: 0.25rem;
+				}
+
+				h5 {
+					margin-top: 0.25rem;
+					font-size: 1.25rem;
 				}
 		
 			}
@@ -2003,18 +2011,14 @@ footer {
 
 	&-title {
 		position: absolute;
-		top: 4.5rem;
+		top: 4rem;
 		left: 0;
 		text-align: center;
 		animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 		h1, p {
 		color: rgba(255, 255, 255, 0.8);
-		color: $color-main-accent;
 		color: #333;
-		//text-shadow: 1px 1px 7px rgba(127, 127, 127, 0.4),
-		//2px 2px 7px rgba(127, 127, 127, 0.4), 
-		//3px 3px 7px rgba(127, 127, 127, 0.4);
 		}
 	}
 
@@ -2026,7 +2030,7 @@ footer {
 	}
 
 	p {
-		display: none;
+		// display: none; if we want to turn off on phones
 		margin: 0 0 0.5rem 0;
 		font-size: 1rem;
 	}
@@ -2047,12 +2051,6 @@ footer {
 			display: block;
 			font-size: .75rem;
 			line-height: 1.25em;
-		}
-	}
-
-	@media (min-width: 400px) {
-		&-title {
-			top: 5rem;
 		}
 	}
 

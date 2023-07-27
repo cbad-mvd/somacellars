@@ -80,6 +80,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 12cbdbb4-afdc-4d16-bb16-2a840dbb4326 # Bottle Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55ed6372-1298-4f94-a019-75438ce80a96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: fb6507db-96e7-45af-bc5c-140e3c07d627 # Wine Category
             instructions: null
             label: null
@@ -145,7 +157,7 @@ handle: wineitems
 hasTitleField: true
 name: 'Wine Items'
 section: ca1c4ea1-3384-4601-87d5-bbd4103dd286 # Wines
-sortOrder: 2
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

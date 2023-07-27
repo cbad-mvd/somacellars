@@ -10,10 +10,16 @@
         <div class="wineEntry">
             <div class="bottle">
                 {% set image = entry.topicImage.one() %}
-                <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+                {% if image %}
+                    <img class="lazyx" src="{{ image.url }}" alt="{{ image.altText }}" />
+                {% endif %}
             </div>
             <div class="info">
                 <h2>{{ entry.topicTitle }}</h2>
+                {% set price = entry.bottlePrice|money %}
+                {% set size = entry.bottleSize %}
+                <h5>{{ price }} / {{ size }}</h5>
+
                 {% if entry.body %}
                     {% include "matrix" with {matrix: entry.body} %}
                 {% endif %}

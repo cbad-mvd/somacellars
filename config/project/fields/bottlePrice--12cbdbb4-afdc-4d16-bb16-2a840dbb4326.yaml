@@ -1,0 +1,17 @@
+columnSuffix: rlwjdcpt
+contentColumnType: integer(10)
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: bottlePrice
+instructions: null
+name: 'Bottle Price'
+searchable: false
+settings:
+  currency: USD
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: true
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

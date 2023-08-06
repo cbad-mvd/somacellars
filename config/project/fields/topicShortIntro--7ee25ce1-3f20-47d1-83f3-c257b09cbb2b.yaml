@@ -1,0 +1,19 @@
+columnSuffix: cakajfql
+contentColumnType: text
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: topicShortIntro
+instructions: null
+name: 'Topic Short Intro'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

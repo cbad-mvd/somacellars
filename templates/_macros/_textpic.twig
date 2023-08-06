@@ -1,4 +1,4 @@
-{% macro textpic(item = null, swapClass = "") %}
+{% macro textpic(item = null, swapClass = "", byVines = false) %}
 {% import '_macros/_srcset' as m_srcset %}
 
 {#
@@ -30,8 +30,11 @@
             <div class="buttons">                
                 {% for link in item.topicLink %}
                     {% if link %}
+                        {% set vLink = "wines"~"?vineyard="~item.id %}
+                        {% set linkUrl = byVines ? vLink : link.uri %}
+
                         <span class="button buttonLink">
-                            <a href="{{ link.uri }}">{{ link.label }}</a>
+                            <a href="{{ linkUrl }}">{{ link.label }}</a>
                         </span>
                     {% endif %}
                 {% endfor %}

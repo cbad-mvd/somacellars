@@ -23,12 +23,12 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: Vineyard
+  selectionLabel: 'Wines from Vineyard'
   showSiteMenu: true
   sources:
     - 'section:ca1c4ea1-3384-4601-87d5-bbd4103dd286' # Wines
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: null
 translationKeyFormat: null
 translationMethod: site

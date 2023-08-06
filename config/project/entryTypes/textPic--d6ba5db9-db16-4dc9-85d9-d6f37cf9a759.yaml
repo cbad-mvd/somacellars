@@ -68,6 +68,30 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 02deb508-8cb9-4c2c-836d-af35da1ebbfc # Topic Short Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b55d4d94-abbc-4c8f-9f9c-9339132662ab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7ee25ce1-3f20-47d1-83f3-c257b09cbb2b # Topic Short Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35e6d005-e625-47b0-9d9c-b0b234980d30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
             instructions: null
             label: null

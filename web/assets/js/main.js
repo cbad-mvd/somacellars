@@ -18,12 +18,11 @@ const setPageTop = (headerID, pageID = "") => {
 	return(elementHeight);
 }
 
-const URL_add_parameter = (url, param, value) => {
+const URL_add_parameter = (base, url, param, value) => {
     var hash       = {};
     var parser     = document.createElement('a');
 
-    parser.href    = url;
-
+    parser.href    = base ? base : url;
     var parameters = parser.search.split(/\?|&/);
 
     for(var i=0; i < parameters.length; i++) {
@@ -48,7 +47,9 @@ const URL_add_parameter = (url, param, value) => {
 const initWineCats = () => {
 	$(".jsSetWineCat").on("click", function () {
 		let catID = $(this).data('cat');
-		location.href = (URL_add_parameter(location.href, 'cat', catID));
+		let base = $(this).data('base');
+		
+		location.href = (URL_add_parameter(base, location.href, 'cat', catID));
 	});
 }
 

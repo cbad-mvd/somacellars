@@ -1820,6 +1820,10 @@ footer .copyright {
   margin: 0;
   height: 2.5rem;
 }
+.HdrCheckoutRow .logo a,
+.HdrNavRow .logo a {
+  display: block;
+}
 .HdrCheckoutRow .logo svg,
 .HdrCheckoutRow .logo img,
 .HdrNavRow .logo svg,
@@ -2024,6 +2028,10 @@ footer .copyright {
 .HdrNavRow--down .logo {
   top: 2rem;
 }
+.HdrCheckoutRow--down .logo a,
+.HdrNavRow--down .logo a {
+  display: block;
+}
 .HdrCheckoutRow--down .logo svg,
 .HdrCheckoutRow--down .logo img,
 .HdrNavRow--down .logo svg,
@@ -2108,6 +2116,10 @@ footer .copyright {
   .HdrNavRow--down .logo {
     top: 5.5rem;
   }
+  .HdrCheckoutRow--down .logo a,
+  .HdrNavRow--down .logo a {
+    display: block;
+  }
   .HdrCheckoutRow--down .logo svg,
   .HdrCheckoutRow--down .logo img,
   .HdrNavRow--down .logo svg,
@@ -2129,6 +2141,10 @@ footer .copyright {
     left: 4rem;
     top: 2.25rem;
   }
+  .HdrCheckoutRow .logo a,
+  .HdrNavRow .logo a {
+    display: block;
+  }
   .HdrCheckoutRow .logo svg,
   .HdrCheckoutRow .logo img,
   .HdrNavRow .logo svg,
@@ -2148,6 +2164,10 @@ footer .copyright {
   .HdrCheckoutRow--down .logo,
   .HdrNavRow--down .logo {
     top: 5.5rem;
+  }
+  .HdrCheckoutRow--down .logo a,
+  .HdrNavRow--down .logo a {
+    display: block;
   }
   .HdrCheckoutRow--down .logo svg,
   .HdrCheckoutRow--down .logo img,
@@ -2204,6 +2224,10 @@ footer .copyright {
     left: 4rem;
     height: 3.5rem;
   }
+  .HdrCheckoutRow .logo a,
+  .HdrNavRow .logo a {
+    display: block;
+  }
   .HdrCheckoutRow .logo svg,
   .HdrCheckoutRow .logo img,
   .HdrNavRow .logo svg,
@@ -2231,6 +2255,10 @@ footer .copyright {
   .HdrNavRow .l2Nav-menu,
   .HdrNavRow .checkoutNav-menu {
     margin: 0.25rem;
+  }
+  .HdrCheckoutRow--down .logo a,
+  .HdrNavRow--down .logo a {
+    display: block;
   }
   .HdrCheckoutRow--down .logo svg,
   .HdrCheckoutRow--down .logo img,
@@ -2407,6 +2435,10 @@ footer .copyright {
   padding: 0;
   height: 100%;
   width: 100%;
+}
+.LevelTwoHeader div.branding .title a,
+.LevelTwoHeader div.branding .logo a {
+  display: block;
 }
 .LevelTwoHeader div.branding .title h2, .LevelTwoHeader div.branding .title .compenent-title,
 .LevelTwoHeader div.branding .logo h2,

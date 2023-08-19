@@ -1291,6 +1291,10 @@ footer {
         margin: 0;
         height: 2.5rem;
 
+		a {
+			display: block;
+		}
+
 		svg,
         img {
             width: 15rem;
@@ -1448,6 +1452,10 @@ footer {
         .logo {
             top: 2rem;
 
+			a {
+				display: block;
+			}
+
 			svg,
             img {
 				fill: white;
@@ -1519,6 +1527,11 @@ footer {
         &--down {
             .logo {
 				top: 5.5rem;
+
+				a {
+					display: block;
+				}
+		
 				svg,
                 img {
                     width: 14rem;
@@ -1542,6 +1555,10 @@ footer {
 			left: 4rem;
 			top: 2.25rem;
 
+			a {
+				display: block;
+			}
+
 
 			svg,
 			img {
@@ -1564,6 +1581,10 @@ footer {
 			.logo {
 				top: 5.5rem;
 
+				a {
+					display: block;
+				}
+	
 				svg,
 				img {
 					width: 14rem;
@@ -1617,6 +1638,10 @@ footer {
             left: 4rem;					
             height: 3.5rem;
 
+			a {
+				display: block;
+			}
+
 			svg,
             img {
                 width: 22rem;
@@ -1642,6 +1667,11 @@ footer {
 
         &--down {
             .logo {
+				a {
+					display: block;
+				}
+	
+	
                 svg,
 				img {
                     width: 14rem;
@@ -1842,6 +1872,10 @@ footer {
 			height: 100%;
 			width: 100%;
 
+			a {
+				display: block;
+			}
+			
 			h2 {
 				margin: 0;
 			}

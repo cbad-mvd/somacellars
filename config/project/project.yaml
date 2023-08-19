@@ -1,4 +1,4 @@
-dateModified: 1691251112
+dateModified: 1692465124
 elementSources:
   craft\elements\Entry:
     -
@@ -55,6 +55,20 @@ email:
   fromName: 'Soma Cellars'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  blogImages:
+    hasUrls: false
+    name: 'Blog Images'
+    settings:
+      cdnUrlPattern: ''
+      customSubfolder: ''
+      makeUploadsPublic: true
+      optimisePrefix: ''
+      optimiseUrlPattern: ''
+      projectSlug: ''
+      securityKey: ''
+      subfolder: wine-site/local/
+    type: servd\AssetStorage\AssetsPlatform\Fs
+    url: 'https://cdn2.assets-servd.host/'
   siteHeros:
     hasUrls: false
     name: 'Site Heros'
@@ -241,6 +255,7 @@ meta:
     de98e50f-db7f-4753-b6f3-258c6bf7fef5: Company # Company
     dea523e9-68d6-4216-866b-28848edc405f: Text # Text
     df010c7c-174a-4ae6-87ad-8eebdaa837da: 'Company Address One' # Company Address One
+    df7c7840-afad-4139-a5be-e9a088c0c64c: 'Blog Images' # Blog Images
     e4b31730-a5a6-4618-b001-f950e3f8a351: 'Text Pic' # Text Pic
     e8ca7518-ae2e-484c-9ceb-09b6ca6c4379: Banner # Banner
     e14ce76a-d04d-41b6-a091-5c4147e737ca: 'Page Divider' # Page Divider

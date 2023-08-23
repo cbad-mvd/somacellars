@@ -1,5 +1,6 @@
 {% extends "item/default" %}
 {% import '_macros/_srcset'  as m_srcset %}
+{% set showReadMore = false %}
 
 {% block itemContent %}
         <div class="wineItem">
@@ -19,9 +20,12 @@
                     {# read more button #}
                     {% set link = item.topicLink[0] %}
 
-                    <span class="button buttonLink">
-                        <a href="{{ item.url }}">{{ link.label }}</a>
-                    </span>
+                    {% if showReadMore %}                    
+                        <span class="button buttonLink">
+                            <a href="{{ item.url }}">{{ link.label }}</a>
+                        </span>
+                    {% endif %}
+
 
                     {# buy now button #}
                     {% if item.soldOutToggle %}

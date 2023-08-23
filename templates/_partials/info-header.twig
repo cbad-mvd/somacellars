@@ -14,7 +14,9 @@
                     {% set image = thisEntry.siteLogo.one() %}
                     {% if image and image.extension == 'svg' %}
                         <a href="{{ alias('@web') }}">
-                            {{ svg(image) }}
+                            <figure>
+                                {{ svg(image) }}
+                            </figure>
                         </a>
                     {% endif %}
                 </div>

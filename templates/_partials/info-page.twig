@@ -1,8 +1,10 @@
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_pageintro'  as m_pageintro %}
+{% set item = entry ? craft.entries().section(entry.slug).one() : craft.entries().section('error404').one() %}
+{% set isErrorCode = entry ? false : true %}
 
 {% block titleTag %}
-<title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
+<title>{{ item.title }} | {{ globalVars.displayUrl }}</title>
 {% endblock titleTag %}
 
 {% block bodyTag %}
@@ -10,13 +12,16 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {% set item = craft.entries().section(entry.slug).one() %}
     {{ m_pageintro.pageintro(item.topicTitle, item.topicIntro, item, null, false, false) }}
 {% endblock %}
 
 {% block content %}
     <section class="row pagePadding">
-        {{ entry.topicRichText }}
+        {% if item.topicRichText %}
+            {{ item.topicRichText }}
+        {% else %}
+            Fucking a....
+        {% endif %}        
     </section>
 {% endblock %}
 

@@ -19,7 +19,7 @@
 {% block content %}
     <div class="row">
         {% set swapClass = '' %}
-        {% set entries = craft.entries.section([entry.slug]).type('textPic').limit(20) %}
+        {% set entries = craft.entries.section([entry.slug]).type('textPic').orderBy('topicTitle ASC').all() %}
         {% for item in entries %}
             {% set entry = item %}
             {% include "item" %}

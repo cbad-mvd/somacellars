@@ -1,8 +1,9 @@
 {
   "require": {
     "craftcms/ckeditor": "2.2.0",
-    "craftcms/cms": "4.4.17",
-    "servd/craft-asset-storage": "3.4.8",
+    "craftcms/cms": "4.5.3",
+    "nystudio107/craft-emptycoalesce": "4.0.0",
+    "servd/craft-asset-storage": "3.4.11",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -29,5 +30,12 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

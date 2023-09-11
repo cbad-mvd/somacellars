@@ -11,7 +11,8 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {{ m_pageintro.pageintro(entry.topicTitle, entry.topicIntro, entry, null, false, false) }}
+    {% set topicIntro = entry.topicIntro %}
+    {{ m_pageintro.pageintro(entry.topicTitle, topicIntro, entry, null, false, false) }}
 {% endblock %}
 
 {% block content %}

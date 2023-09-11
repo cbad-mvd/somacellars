@@ -1,4 +1,4 @@
-dateModified: 1692481437
+dateModified: 1694441230
 elementSources:
   craft\elements\Entry:
     -
@@ -159,6 +159,7 @@ meta:
     0b9622bd-967e-4c41-8bc0-38a79d56c3c6: 'Display Url' # Display Url
     0c10fa2a-4adf-44b9-b6c6-40c42b421fc1: Subtitle # Subtitle
     0e89c019-82d4-41f8-81f4-1f1f2d72a328: 'Wine Items' # Wine Items
+    1ad5cc75-42c9-4e55-bf81-80bb13959196: Varietal # Varietal
     02deb508-8cb9-4c2c-836d-af35da1ebbfc: 'Topic Short Title' # Topic Short Title
     2dfdcf51-6d59-41c7-8d01-f23a81e7b211: 'Contact Us' # Contact Us
     2f015bac-ca00-4129-9e30-45fc97b904fa: Common # Common
@@ -282,6 +283,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  empty-coalesce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   servd-asset-storage:
     edition: standard
     enabled: true
@@ -326,7 +331,7 @@ system:
   live: $IS_SYSTEM_LIVE
   name: $SYSTEM_NAME
   retryDuration: null
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

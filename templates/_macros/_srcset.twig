@@ -1,8 +1,103 @@
 {# public macro for creating a srcset image #}
+{% macro srcsetSimple(asset, type, lazy="") %}
+{% import _self as self %}
+
+    {% set image = asset %}
+    {% set full = (image.width > 2000) ? 2000 : image.width %}
+{#
+    {% set half = round(full / 2) %}
+    {% set fourth = round(full / 4) %}
+#}
+{% set half = (full / 2) | round %}
+{% set fourth = (full / 4) | round %}
+
+
+    <figure>
+    <img src="{{ image.url({ width: half }) }}" alt=""
+        srcset="{{ image.url({ width: fourth }) }} fourthw,
+                {{ image.url({ width: half }) }} {{ half }}w,
+                {{ image.url({ width: full }) }} {{ full }}w"
+        sizes="(min-width: {{ half + 1 }}px) {{ full }}px,
+                (min-width: {{ fourth + 1 }}px) {{ half }}px,
+                100vw"
+    >
+    </figure>
+{% endmacro %}
+
 {% macro srcset(asset, type, lazy="") %}
 {% import _self as self %}
 
-    {% set imgSets = { 
+    {% set image = asset %}
+    {% set full = (image.width > 2000) ? 2000 : image.width %}
+{#
+    {% set half = round(full / 2) %}
+    {% set fourth = round(full / 4) %}
+
+                
+                sizes: {
+                    "(min-width: (half + 1)px) (full)px",
+                    "(min-width: (fourth + 1)px) (half)px",
+                    "100vw"
+                }
+
+#}
+    {% set half = (full / 2) | round %}
+    {% set fourth = (full / 4) | round %}
+
+    {% set imgSets = {
+            fithero: {
+                xform: {
+                    small: { mode: 'fit', width: fourth, quality: 100 },
+                    medium: { mode: 'fit', width: half, quality: 100 },
+                    large: { mode: 'fit', width: full, quality: 100 },
+                },
+            },
+            default: {
+                xform: {
+                    small: { mode: 'stretch', width: fourth, quality: 100 },
+                    medium: { mode: 'stretch', width: half, quality: 100 },
+                    large: { mode: 'stretch', width: full, quality: 100 },
+                },
+                
+            }
+        } 
+    %}
+
+    {% set srcSet = imgSets.default %}      {# must initialize before the for loop #}
+    {% for key, item in imgSets %}
+        {% if key == type %}
+            {% set srcSet = item %}
+        {% endif %}
+    {% endfor %}
+
+    {% set lazyClass = lazy %}
+    {% if asset %}
+        {% if (aset.altText is not defined) and (asset.altText is empty) %}
+            {% set altText = "" %}
+        {% else %}
+            {% set altText = asset.altText %}
+        {% endif %}
+        <img class="{{ lazy }}" 
+                    src="{{ asset.getUrl(srcSet.xform.small) }}"
+                    data-src="{{ asset.getUrl(srcSet.xform.medium) }}" 
+                    data-srcset="
+                            {{ asset.getUrl(srcSet.xform.small) }} {{ srcSet.xform.small.width }}w,
+                            {{ asset.getUrl(srcSet.xform.medium) }} {{ srcSet.xform.medium.width }}w,
+                            {{ asset.getUrl(srcSet.xform.large) }} {{ srcSet.xform.large.width }}w "
+
+                            sizes=  "(min-width: {{ half + 1 }}px) {{ full }}px,
+                                     (min-width: {{ fourth + 1 }}px) {{ half }}px,
+                                     100vw"
+
+                            alt="{{ altText }}" />
+              
+    {% endif %}
+{% endmacro srcset %}
+
+{% macro srcset2(asset, type, lazy="") %}
+{% import _self as self %}
+
+    {% set imgSetsXXX = { 
         hero: {
             xform: {
                 small: { mode: 'stretch', width: 640, quality: 100 },
@@ -59,4 +154,4 @@
                         alt="{{ altText }}" />
 
     {% endif %}
-{% endmacro srcset %}
+{% endmacro srcset2 %}

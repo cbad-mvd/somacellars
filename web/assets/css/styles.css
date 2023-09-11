@@ -1832,7 +1832,7 @@ footer .copyright {
 .HdrCheckoutRow .logo img,
 .HdrNavRow .logo svg,
 .HdrNavRow .logo img {
-  width: 15rem;
+  width: 16rem;
   fill: #601008;
 }
 .HdrCheckoutRow .l2Nav,
@@ -2041,7 +2041,6 @@ footer .copyright {
 .HdrNavRow--down .logo svg,
 .HdrNavRow--down .logo img {
   fill: white;
-  width: 14rem;
 }
 .HdrCheckoutRow--down .mobile-nav,
 .HdrNavRow--down .mobile-nav {
@@ -2079,12 +2078,6 @@ footer .copyright {
   .HdrNavRow .logo {
     top: 1.75rem;
     left: 2.5rem;
-  }
-  .HdrCheckoutRow .logo svg,
-  .HdrCheckoutRow .logo img,
-  .HdrNavRow .logo svg,
-  .HdrNavRow .logo img {
-    width: 16rem;
   }
   .HdrCheckoutRow .mobile-nav,
   .HdrNavRow .mobile-nav {
@@ -2124,19 +2117,9 @@ footer .copyright {
   .HdrNavRow--down .logo a {
     display: block;
   }
-  .HdrCheckoutRow--down .logo svg,
-  .HdrCheckoutRow--down .logo img,
-  .HdrNavRow--down .logo svg,
-  .HdrNavRow--down .logo img {
-    width: 14rem;
-  }
   .HdrCheckoutRow--down .mobile-nav,
   .HdrNavRow--down .mobile-nav {
     top: 4.5rem;
-  }
-  .HdrCheckoutRow--down .nav,
-  .HdrNavRow--down .nav {
-    top: 2.5rem;
   }
 }
 @media (min-width: 750px) {
@@ -2148,12 +2131,6 @@ footer .copyright {
   .HdrCheckoutRow .logo a,
   .HdrNavRow .logo a {
     display: block;
-  }
-  .HdrCheckoutRow .logo svg,
-  .HdrCheckoutRow .logo img,
-  .HdrNavRow .logo svg,
-  .HdrNavRow .logo img {
-    width: 20rem;
   }
   .HdrCheckoutRow .mobile-nav,
   .HdrNavRow .mobile-nav {
@@ -2172,12 +2149,6 @@ footer .copyright {
   .HdrCheckoutRow--down .logo a,
   .HdrNavRow--down .logo a {
     display: block;
-  }
-  .HdrCheckoutRow--down .logo svg,
-  .HdrCheckoutRow--down .logo img,
-  .HdrNavRow--down .logo svg,
-  .HdrNavRow--down .logo img {
-    width: 14rem;
   }
   .HdrCheckoutRow--down .mobile-nav,
   .HdrNavRow--down .mobile-nav {
@@ -2219,7 +2190,7 @@ footer .copyright {
   }
   .HdrCheckoutRow--down .nav,
   .HdrNavRow--down .nav {
-    top: 4rem;
+    top: 7rem;
   }
 }
 @media (min-width: 1200px) {
@@ -2231,12 +2202,6 @@ footer .copyright {
   .HdrCheckoutRow .logo a,
   .HdrNavRow .logo a {
     display: block;
-  }
-  .HdrCheckoutRow .logo svg,
-  .HdrCheckoutRow .logo img,
-  .HdrNavRow .logo svg,
-  .HdrNavRow .logo img {
-    width: 22rem;
   }
   .HdrCheckoutRow .l2Nav,
   .HdrCheckoutRow .checkoutNav,
@@ -2263,16 +2228,6 @@ footer .copyright {
   .HdrCheckoutRow--down .logo a,
   .HdrNavRow--down .logo a {
     display: block;
-  }
-  .HdrCheckoutRow--down .logo svg,
-  .HdrCheckoutRow--down .logo img,
-  .HdrNavRow--down .logo svg,
-  .HdrNavRow--down .logo img {
-    width: 14rem;
-  }
-  .HdrCheckoutRow--down .nav,
-  .HdrNavRow--down .nav {
-    top: 4rem;
   }
   .HdrCheckoutRow--down .nav-menu,
   .HdrNavRow--down .nav-menu {
@@ -2424,17 +2379,11 @@ footer .copyright {
   justify-content: space-between;
 }
 .LevelTwoHeader div.branding {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
   height: 4rem;
   width: 40%;
 }
 .LevelTwoHeader div.branding .title,
 .LevelTwoHeader div.branding .logo {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -2442,20 +2391,28 @@ footer .copyright {
 }
 .LevelTwoHeader div.branding .title a,
 .LevelTwoHeader div.branding .logo a {
+  position: relative;
+  z-index: 1001;
+  width: 16rem;
   display: block;
+  background-color: none;
+}
+.LevelTwoHeader div.branding .title a figure,
+.LevelTwoHeader div.branding .logo a figure {
+  margin: 0;
+}
+.LevelTwoHeader div.branding .title a svg,
+.LevelTwoHeader div.branding .title a img,
+.LevelTwoHeader div.branding .logo a svg,
+.LevelTwoHeader div.branding .logo a img {
+  fill: white;
+  position: relative;
+  width: 16rem;
 }
 .LevelTwoHeader div.branding .title h2, .LevelTwoHeader div.branding .title .compenent-title,
 .LevelTwoHeader div.branding .logo h2,
 .LevelTwoHeader div.branding .logo .compenent-title {
   margin: 0;
-}
-.LevelTwoHeader div.branding .title svg,
-.LevelTwoHeader div.branding .title img,
-.LevelTwoHeader div.branding .logo svg,
-.LevelTwoHeader div.branding .logo img {
-  fill: white;
-  position: relative;
-  width: 18rem;
 }
 .LevelTwoHeader div.branding .title {
   text-align: right;

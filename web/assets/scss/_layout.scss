@@ -1301,7 +1301,7 @@ footer {
 
 		svg,
         img {
-            width: 15rem;
+            width: 16rem;
 			fill: $color-main-accent;
         }
     }
@@ -1463,7 +1463,6 @@ footer {
 			svg,
             img {
 				fill: white;
-                width: 14.0rem;
             }
         }
 
@@ -1497,11 +1496,6 @@ footer {
         .logo {
 			top: 1.75rem;
             left: 2.5rem;
-
-			svg,
-            img {
-                width: 16rem;
-            }
 		}
 		
 		.mobile-nav {
@@ -1535,20 +1529,11 @@ footer {
 				a {
 					display: block;
 				}
-		
-				svg,
-                img {
-                    width: 14rem;
-                }
             }
 
 			.mobile-nav {
 				top: 4.5rem;
 			}
-
-            .nav {
-                top: 2.5rem;
-            }
         }
 		
     }
@@ -1563,11 +1548,6 @@ footer {
 				display: block;
 			}
 
-
-			svg,
-			img {
-				width: 20rem;
-			}
 		}
 
 		.mobile-nav {
@@ -1587,11 +1567,6 @@ footer {
 
 				a {
 					display: block;
-				}
-	
-				svg,
-				img {
-					width: 14rem;
 				}
 			}
 
@@ -1630,7 +1605,7 @@ footer {
 
 		&--down {
 			.nav {
-				top: 4rem;
+				top: 7rem;
 			}
 		}
 	}
@@ -1645,11 +1620,6 @@ footer {
 			a {
 				display: block;
 			}
-
-			svg,
-            img {
-                width: 22rem;
-            }
 		}
 
 		.l2Nav,
@@ -1674,17 +1644,9 @@ footer {
 				a {
 					display: block;
 				}
-	
-	
-                svg,
-				img {
-                    width: 14rem;
-                }
             }
 
             .nav {
-                top: 4rem;
-
 				&-menu {
 					top: 2.5rem;
 				}	
@@ -1859,37 +1821,40 @@ footer {
 	}
 
 	div.branding {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
 		height: 4rem;
 		width: 40%;
 
 		.title, 
 		.logo {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: center;
-
 			margin: 0;
 			padding: 0;
 			height: 100%;
 			width: 100%;
 
 			a {
+				position: relative;
+				z-index: 1001;
+				width: 16rem;					// make anchor width equal to svg width
+
 				display: block;
+				background-color: none;
+
+				figure {
+					margin: 0;
+				}
+
+				svg,
+				img {
+					fill: white;
+					position: relative;
+					width: 16rem;
+				}
 			}
 			
 			h2 {
 				margin: 0;
 			}
 
-			svg,
-			img {
-				fill: white;
-				position: relative;
-				width: 18rem;
-			}
 		}
 
 		.title {
@@ -1984,6 +1949,7 @@ footer {
 	}
 
 }
+// end LevelTwoHeader
 
 // new mobile menu styles
 .mobile-panel {

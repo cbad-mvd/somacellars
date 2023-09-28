@@ -13,7 +13,15 @@
 
 {% block pageIntro %}
     {% set item = craft.entries().section(entry.slug).type('default').one() %}
-    {{ m_pageintro.pageintro(item.topicTitle, item.topicIntro, item, null, false, false) }}
+    {% set itemImage = item.topicImage.one() %}
+    {{ m_pageintro.pageintro(   item.topicTitle, 
+                                item.topicIntro,
+                                null, 
+                                itemImage, 
+                                item.topicBanner, 
+                                null, 
+                                false, 
+                                false) }}
 {% endblock %}
 
 {% block content %}

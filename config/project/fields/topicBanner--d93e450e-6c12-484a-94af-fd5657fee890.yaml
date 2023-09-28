@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 2f015bac-ca00-4129-9e30-45fc97b904fa # Common
+handle: topicBanner
+instructions: null
+name: 'Topic Banner'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_topicbanner}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

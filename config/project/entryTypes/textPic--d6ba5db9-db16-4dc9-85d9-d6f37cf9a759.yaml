@@ -145,7 +145,7 @@ handle: textpic
 hasTitleField: true
 name: 'Text Pic'
 section: b92b198b-8053-4363-a3cd-224ad4867fed # Vineyards
-sortOrder: 2
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

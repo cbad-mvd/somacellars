@@ -12,7 +12,15 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {{ m_pageintro.pageintro(entry.topicTitle, entry.topicIntro, entry, null, false, false) }}
+    {% set topicImage = entry.topicImage.one() %}
+    {{ m_pageintro.pageintro(   entry.topicTitle, 
+                                entry.topicIntro, 
+                                null,   
+                                topicImage, 
+                                entry.topicBanner, 
+                                null, 
+                                false, 
+                                false) }}
 {% endblock %}
 
 {% block content %}

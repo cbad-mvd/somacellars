@@ -10,6 +10,9 @@
  └─────────────────────────────────────────────────────────────────────────────┘
 #}
 {% apply spaceless %}
+<!DOCTYPE html>
+{# must come first before any head content #}
+
 
 	{# -- Prefetch & preconnect headers and links -- #}
 	{% set prefetchUrls = [
@@ -43,6 +46,7 @@
 	{% set CAStateId = 26 %}
 	
 	{% set displayURL = getenv('PRIMARY_DISPLAY_URL') %}
+
 	{# -- Twig output from the render; this must be in a block -- #}
 	{% block htmlPage %}
 	{% endblock %}

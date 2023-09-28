@@ -18,13 +18,35 @@
     {% set cats = craft.entries.section('wineCategory').type('category') %}
     {% set wineCat = craft.entries().section('wineCategory').type('category').id(byCatID).one() %}
     {% set vineyard = craft.entries().section('vineyards').id(byVineyardID).one() %}
-
+    {% set topicImage = entry.topicImage.one() %}
+    
     {% if byVineyardID %}
-        {{ m_pageintro.pageintro( vineyard.topicShortTitle, vineyard.topicShortIntro, entry, cats, true, true) }}
+        {{ m_pageintro.pageintro(   vineyard.topicShortTitle, 
+                                    vineyard.topicShortIntro, 
+                                    null,
+                                    topicImage, 
+                                    entry.topicBanner, 
+                                    cats, 
+                                    true, 
+                                    true) }}
     {% elseif byCatID %}
-        {{ m_pageintro.pageintro( wineCat.topicTitle, wineCat.topicIntro, entry, cats, true, false) }}
+        {{ m_pageintro.pageintro(   wineCat.topicTitle, 
+                                    wineCat.topicIntro, 
+                                    wineCat.topicRichText,
+                                    topicImage, 
+                                    wineCat.topicBanner, 
+                                    cats, 
+                                    true, 
+                                    false) }}
     {% else %}
-        {{ m_pageintro.pageintro( entry.topicTitle, entry.topicIntro, entry, cats, true, false) }}  
+        {{ m_pageintro.pageintro(   entry.topicTitle, 
+                                    entry.topicIntro, 
+                                    null,
+                                    topicImage, 
+                                    entry.topicBanner, 
+                                    cats, 
+                                    true, 
+                                    false) }}  
     {% endif %}
 
 {% endblock %}

@@ -1,19 +1,26 @@
 
-{% macro pageintro(topicTitle = '', topicIntro, item, cats = null, hasMenu = false, hasReturnBtn = false) %}
+{% macro pageintro( topicTitle = '', 
+                    topicIntro, 
+                    topicRichText = null,
+                    topicImage, 
+                    topicBanner, 
+                    cats = null, 
+                    hasMenu = false, 
+                    hasReturnBtn = false) %}
     {% import '_macros/_srcset' as m_srcset %}
     {% set pageCatID = craft.app.request.getQueryParam('cat', null) %}
     {% set pageImgStyle = hasMenu ? 'topRound' : '' %}
 
-    {% if item %}
-        <section class="row pagePadding PageIntro">
-            <div class="pageImg {{ pageImgStyle }}">
+    <section class="row pagePadding PageIntro">
+        <div class="pageImg {{ pageImgStyle }}">
+            <div class="wrapper">
                 <div class="topRound"></div>
-                {% if item.topicImage %}
-                    {% set img = item.topicImage.one() %}
-                    {{ m_srcset.srcset(img, 'fithero') }}  
+                {% if topicImage %}
+                    {{ m_srcset.srcset(topicImage, 'fithero') }}  
                 {% endif %}
-                <div class="localMenu">
-                    {% if hasMenu %}
+                
+                {% if hasMenu %}
+                    <div class="localMenu">
                         {% if cats|length %}
                             <ul>
                                 {% for cat  in cats %}
@@ -24,26 +31,41 @@
                                 {% endfor %}
                             </ul>
                         {% endif %}    
-                    {% endif %}
-                </div>
-            </div>
+                    </div>
+                {% endif %}
 
+                {% if topicBanner %}    
+                    <div class="banner">
+                        {% include "matrix" with {matrix: topicBanner} %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if topicTitle %}        
             <div class="pageText">
                 <h2>{{ topicTitle }}</h2>
             </div>
+        {% endif %}
+        {% if topicIntro %}
             <div class="pageText">
                 <p>{{ topicIntro }}</p>
             </div>
+        {% endif %}
+        {% if topicRichText %}
+            <div class="pageText left">
+                <p>{{ topicRichText }}</p>
+            </div>
+        {% endif %}
 
-            {% if hasReturnBtn %}
-                <div style="text-align: center">
-                    <span class="button buttonLink">
-                        <a onclick="history.back()">{{ globalVars.returnVineyards }}</a>
-                    </span>
-                </div>
-            {% endif %}
-    
-        </section>
-    {% endif %}
+        {% if hasReturnBtn %}
+            <div style="text-align: center">
+                <span class="button buttonLink">
+                    <a onclick="history.back()">{{ globalVars.returnVineyards }}</a>
+                </span>
+            </div>
+        {% endif %}
+
+    </section>
 {% endmacro %}
 

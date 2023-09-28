@@ -38,7 +38,7 @@ input[type="button"] {
     color: $color-second-accent;
     font-weight: normal;
 
-    &:hover {
+    &:hover, &.soldout {
         border-top: 2px solid $color-second-accent;
         border-bottom: 2px solid $color-second-accent;
         background-color: $color-second-accent;
@@ -63,7 +63,7 @@ input[type="button"] {
     &.disabled {
         border-top: 2px solid $color-disabled-accent;
         border-bottom: 2px solid $color-disabled-accent;
-        background-color: transparent;
+        xbackground-color: transparent;
         color: $color-disabled-accent;
     }
 }

@@ -12,7 +12,16 @@
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {{ m_pageintro.pageintro(entry.topicTitle, entry.topicIntro, entry, null, false, false) }}
+
+    {{ m_pageintro.pageintro(   entry.topicTitle, 
+                                entry.topicIntro, 
+                                entry.topicRichText,
+                                entry.topicImage.one(), 
+                                entry.topicBanner, 
+                                null, 
+                                false, 
+                                false) }}
+
 {% endblock %}
 
 {% block content %}

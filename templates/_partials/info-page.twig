@@ -3,27 +3,34 @@
 {% set item = entry ? craft.entries().section(entry.slug).one() : craft.entries().section('error404').one() %}
 {% set isErrorCode = entry ? false : true %}
 
-{% block titleTag %}
-<title>{{ item.title }} | {{ globalVars.displayUrl }}</title>
-{% endblock titleTag %}
 
-{% block bodyTag %}
-	<body id="{{ entry.slug }}" class="{{ entry.slug }}">
-{% endblock bodyTag %}
+    {% block titleTag %}
+    <title>{{ item.title }} | {{ globalVars.displayUrl }}</title>
+    {% endblock titleTag %}
 
-{% block pageIntro %}
-    {{ m_pageintro.pageintro(item.topicTitle, item.topicIntro, item, null, false, false) }}
-{% endblock %}
+    {% block bodyTag %}
+        <body id="{{ entry.slug }}" class="{{ entry.slug }}">
+    {% endblock bodyTag %}
 
-{% block content %}
-    <section class="row pagePadding">
-        {% if item.topicRichText %}
-            {{ item.topicRichText }}
-        {% else %}
-            Fucking a....
-        {% endif %}        
-    </section>
-{% endblock %}
+    {% block pageIntro %}
+        {% set topicImage = item.topicImage.one() ??? null %}
+        {{ m_pageintro.pageintro(   item.topicTitle, 
+                                    item.topicIntro, 
+                                    item.topicRichText,
+                                    topicImage, 
+                                    item.topicBanner,
+                                    null, 
+                                    false, 
+                                    false) }}
+    {% endblock %}
+
+    {% block content %}
+        <section class="row pagePadding">
+            {% if item.topicRichText %}
+                {{ item.topicRichText }}
+            {% endif %}        
+        </section>
+    {% endblock %}
 
 {% block pageJs %}
 <script>

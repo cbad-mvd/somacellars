@@ -12,7 +12,16 @@
 
 {% block pageIntro %}
     {% set topicIntro = entry.topicIntro %}
-    {{ m_pageintro.pageintro(entry.topicTitle, topicIntro, entry, null, false, false) }}
+    {% set topicImage = entry.topicImage.one() %}
+
+    {{ m_pageintro.pageintro(   entry.topicTitle, 
+                                topicIntro, 
+                                null,
+                                topicImage, 
+                                entry.topicBanner, 
+                                null, 
+                                false, 
+                                false) }}
 {% endblock %}
 
 {% block content %}

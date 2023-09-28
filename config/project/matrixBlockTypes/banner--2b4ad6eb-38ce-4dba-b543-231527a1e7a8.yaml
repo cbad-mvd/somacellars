@@ -1,0 +1,50 @@
+field: d93e450e-6c12-484a-94af-fd5657fee890 # Topic Banner
+fieldLayouts:
+  407216e4-4110-4f8d-93e1-4ca30439b3d2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ec3a965a-4129-47ed-9b52-8ba88a7f7538 # Text Msg
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcf7bf18-e012-4cd8-8bb5-18bdbd6af184
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0a783bf7-f5c6-4a6e-8cff-f12ba969782b
+        userCondition: null
+fields:
+  ec3a965a-4129-47ed-9b52-8ba88a7f7538: # Text Msg
+    columnSuffix: rrjdvhjg
+    contentColumnType: text
+    fieldGroup: null
+    handle: textMsg
+    instructions: null
+    name: 'Text Msg'
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      defaultTransform: null
+      initJs: null
+      purifierConfig: null
+      purifyHtml: true
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: banner
+name: banner
+sortOrder: 1

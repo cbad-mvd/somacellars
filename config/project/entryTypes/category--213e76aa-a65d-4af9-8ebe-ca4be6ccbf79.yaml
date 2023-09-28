@@ -56,6 +56,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 3ae3c238-06e6-4e13-a49a-de1dbff1d4ff # Topic RichText
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 91a6cd58-634a-4e0a-b173-d383dbebdcc8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: e38ee93c-6ae1-447f-8913-bc5d8a542ff5 # Topic Image
             instructions: null
             label: null
@@ -66,6 +78,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: d93e450e-6c12-484a-94af-fd5657fee890 # Topic Banner
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2f118db-e568-4fde-81bc-062ad3c3105e
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 0bd0adc7-bfca-4561-8875-408011247ee5
         userCondition: null
@@ -73,6 +97,9 @@ handle: category
 hasTitleField: true
 name: Category
 section: 86243be3-8e67-464f-a760-6ee3eaebbb51 # Wine Category
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

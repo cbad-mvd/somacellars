@@ -609,7 +609,7 @@ input[type=button] > a:hover {
   color: #b18956;
   font-weight: normal;
 }
-.buttonLink:hover {
+.buttonLink:hover, .buttonLink.soldout {
   border-top: 2px solid #b18956;
   border-bottom: 2px solid #b18956;
   background-color: #b18956;
@@ -630,7 +630,7 @@ input[type=button] > a:hover {
 .buttonLink.disabled {
   border-top: 2px solid #666666;
   border-bottom: 2px solid #666666;
-  background-color: transparent;
+  xbackground-color: transparent;
   color: #666666;
 }
 
@@ -2660,6 +2660,10 @@ footer .copyright {
   font-family: "Crimson Text", serif;
   color: #601008;
 }
+.PageIntro .wrapper {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
 .PageIntro .pageImg {
   margin: 0 auto;
   width: 100%;
@@ -2672,18 +2676,50 @@ footer .copyright {
 .PageIntro .pageImg .topRound {
   margin: 0;
   min-height: 0.5rem;
-  border-radius: 0.75rem 0.75rem 0 0;
+  border-radius: 0;
   background-color: #d2d0c8;
+}
+.PageIntro .banner {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  background-color: #601008;
+  color: white;
+}
+.PageIntro .banner div {
+  margin: 0;
+  padding: 0;
+}
+.PageIntro .banner div p {
+  margin: 0;
+  color: white;
+}
+.PageIntro .banner .leftcolumn {
+  width: 100%;
+  text-align: center;
+}
+.PageIntro .banner .rightcolumn {
+  width: 39%;
+  text-align: left;
+}
+.PageIntro .banner .rightcolumn p {
+  font-weight: 700;
 }
 .PageIntro .pageText {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
+.PageIntro .pageText.left {
+  text-align: left;
+}
 .PageIntro .localMenu {
   margin: 0;
   background-color: #d2d0c8;
-  border-radius: 0 0 0.75rem 0.75rem;
+  border-radius: 0;
   min-height: 0.5rem;
 }
 .PageIntro .localMenu ul {

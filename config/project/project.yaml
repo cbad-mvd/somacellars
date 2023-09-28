@@ -1,4 +1,4 @@
-dateModified: 1694441230
+dateModified: 1695922192
 elementSources:
   craft\elements\Entry:
     -
@@ -160,6 +160,7 @@ meta:
     0c10fa2a-4adf-44b9-b6c6-40c42b421fc1: Subtitle # Subtitle
     0e89c019-82d4-41f8-81f4-1f1f2d72a328: 'Wine Items' # Wine Items
     1ad5cc75-42c9-4e55-bf81-80bb13959196: Varietal # Varietal
+    2b4ad6eb-38ce-4dba-b543-231527a1e7a8: banner # banner
     02deb508-8cb9-4c2c-836d-af35da1ebbfc: 'Topic Short Title' # Topic Short Title
     2dfdcf51-6d59-41c7-8d01-f23a81e7b211: 'Contact Us' # Contact Us
     2f015bac-ca00-4129-9e30-45fc97b904fa: Common # Common
@@ -251,6 +252,7 @@ meta:
     d6ba5db9-db16-4dc9-85d9-d6f37cf9a759: 'Text Pic' # Text Pic
     d6fcde0d-7cc8-4640-bc3e-01ff7fdcc14a: 'Mobile Menu Open' # Mobile Menu Open
     d8ce2279-af7e-4faa-b51d-ef27da4de5e0: 'Global Header' # Global Header
+    d93e450e-6c12-484a-94af-fd5657fee890: 'Topic Banner' # Topic Banner
     d757e6b1-163c-497f-8356-5d82e49d796b: Intro # Intro
     d908aebd-1cc2-4651-9ffd-8fbccd972be3: Image # Image
     d9384ecd-eae2-4521-bfb3-8cbaedca5327: 'Social Instgram' # Social Instgram
@@ -267,6 +269,7 @@ meta:
     e435e90b-5ebd-4ba8-81d3-7516cac588b7: Headline # Headline
     e524f9fc-7285-428c-b0f0-71307175c157: 'Intro Heading' # Intro Heading
     eb03ba26-2494-4f8f-80d5-bd9880e5f97a: Privacy # Privacy
+    ec3a965a-4129-47ed-9b52-8ba88a7f7538: 'Text Msg' # Text Msg
     edc1f49a-35cc-438f-99df-287e33d6ced8: 'Bottle Size' # Bottle Size
     f008995e-d896-4b98-bde5-082ddb9d8bcc: 'Sold Out Toggle' # Sold Out Toggle
     f03b5a17-9cda-4969-809d-7e2c36b10bd3: Headline # Headline

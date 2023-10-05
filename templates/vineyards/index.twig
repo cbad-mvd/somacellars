@@ -2,17 +2,18 @@
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_pageintro'  as m_pageintro %}
 {% set entry = craft.entries().section('vineyards').type('default').one() %}
+{% set slugHandle = entry.slug %}
 
 {% block titleTag %}
 <title>{{ entry.title }} | {{ globalVars.displayUrl }}</title>
 {% endblock titleTag %}
 
 {% block bodyTag %}
-	<body id="{{ entry.slug }}" class="{{ entry.slug }}">
+	<body id="{{ slugHandle }}" class="{{ slugHandle }}">
 {% endblock bodyTag %}
 
 {% block pageIntro %}
-    {% set item = craft.entries().section(entry.slug).type('default').one() %}
+    {% set item = craft.entries().section(slugHandle).type('default').one() %}
     {% set itemImage = item.topicImage.one() %}
     {{ m_pageintro.pageintro(   item.topicTitle, 
                                 item.topicIntro,
@@ -25,9 +26,35 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
         {% set swapClass = '' %}
-        {% set entries = craft.entries.section([entry.slug]).type('textPic').orderBy('topicTitle ASC').all() %}
+
+        {% set levelOne = craft.entries.section([slugHandle]).type('region').all() %}
+        {# sort wines first by varietal #}
+        {% for level in levelOne %}
+            <div class="row vineyard">
+                <h2 class="regionTitle"><span>{{ level.title }}</span></h2>
+            </div>
+            <div class="row">
+                {% set vines = craft.entries.section([slugHandle]).descendantOf(level.id).type('textPic').orderBy('topicTitle ASC').all() %}
+                {% for item in vines %}
+                    {% set entry = item %}
+                    {% set pic = item.topicImage.one() %}
+                    
+                    {% include "item" %}
+
+                    {% if (swapClass == "swapOrder") %}
+                        {% set swapClass = "" %}
+                    {% else %}
+                        {% set swapClass = "swapOrder" %}
+                    {% endif %}
+                {#
+                #}
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        {## old listing order
+        {% set entries = craft.entries.section([slugHandle]).type('textPic').orderBy('topicTitle ASC').all() %}
         {% for item in entries %}
             {% set entry = item %}
             {% include "item" %}
@@ -40,6 +67,7 @@
     
         {% endfor %}
     </div>
+    end old listing order ##}
 {% endblock %}
 
 

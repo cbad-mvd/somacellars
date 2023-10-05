@@ -24,7 +24,7 @@
                     <div>
                         {% for link in footer.links  %}
                             <span class="footerLinks">
-                                <a href="{{ alias('@web') }}/{{ link.uri }}">{{ link.label }}</a>
+                                <a href="{{ link.uri }}">{{ link.label }}</a>
                             </span>
                             {% if loop.index == (loop.length / 2) %}
                                 </div>

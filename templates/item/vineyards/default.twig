@@ -8,7 +8,10 @@
         <h2>{{ item.topicTitle }}</h2>
     </div>
     <div class="pageImg">
-        {{ m_srcset.srcset(item.topicImage.one(), 'default') }}      
+        {% set pic = item.topicImage.one() %}
+        {% if pic %}
+            {{ m_srcset.srcset(pic, 'default') }} 
+        {% endif %}     
     </div>
     <div class="pageText">
         <p>{{ item.topicIntro }}</p>

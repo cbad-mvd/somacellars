@@ -57,6 +57,35 @@
             
         {% set handle = 'wines' %}
         {% set swapClass = '' %}
+        {% set levelOne = craft.entries.section([handle]).type('wineType').all() %}
+
+        {# sort wines first by varietal #}
+        {% for level in levelOne %}
+            {% set wines = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byCatID).orderBy('title ASC').all() %}
+
+            {# then sort by price according to category/vineyard #}
+            {% if byCatID %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byCatID).orderBy('bottlePrice ASC').all() %}
+            {% elseif byVineyardID %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byVineyardID).orderBy('bottlePrice ASC').all() %}
+            {% else %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).orderBy('bottlePrice ASC').all() %}
+            {% endif %}
+
+            {% for item in entries %}
+                {% set entry = item %}
+                {% include "item" %}
+
+                {% if (swapClass == "swapOrder") %}
+                    {% set swapClass = "" %}
+                {% else %}
+                    {% set swapClass = "swapOrder" %}
+                {% endif %}
+        
+            {% endfor %}
+        {% endfor %}
+
+        {## old sort logic
         {% if byCatID %}
             {% set entries = craft.entries.section([handle]).type('wineItems').relatedTo(byCatID).orderBy('title ASC').all() %}
         {% elseif byVineyardID %}
@@ -75,6 +104,8 @@
             {% endif %}
     
         {% endfor %}
+        end old sort logic ##}
+
     </section>
     
 {% endblock %}

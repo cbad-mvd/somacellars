@@ -317,6 +317,18 @@ footer {
 }
 
 
+.vineyard {
+	.regionTitle {
+		text-align: center;
+		font-size: 2.25rem;
+		color: $color-main-accent;
+
+		span {
+			padding: 0.75rem;
+			border-top: 0.25rem solid $color-second-accent;
+		}
+	}
+}
 /*
  * a row element with a side by side text block / image
  */

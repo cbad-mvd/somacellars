@@ -1,4 +1,4 @@
-dateModified: 1695922192
+dateModified: 1696088712
 elementSources:
   craft\elements\Entry:
     -
@@ -216,6 +216,7 @@ meta:
     5156b851-a0fb-40b6-aae0-30410a513a0b: 'Company Postal Code' # Company Postal Code
     5265c1ef-5790-4cfd-bd23-13996ad3d0ee: Default # Default
     05418c21-53f8-4f73-9b54-63dff2e49d7d: 'Wine Club' # Wine Club
+    5625cd6d-885d-41cb-ae15-76b0f1ba9599: Region # Region
     6014ea73-e0f0-4cd4-a2ac-eff43e74101f: Copyright # Copyright
     6906d71b-e35c-4406-8644-0197c79a10c6: 'Simple Logo' # Simple Logo
     8890c4af-24db-46a4-bdba-7c9733d4e525: Blog # Blog

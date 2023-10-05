@@ -97,7 +97,7 @@ handle: default
 hasTitleField: true
 name: Default
 section: b92b198b-8053-4363-a3cd-224ad4867fed # Vineyards
-sortOrder: 2
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

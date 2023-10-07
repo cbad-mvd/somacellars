@@ -65,11 +65,11 @@
 
             {# then sort by price according to category/vineyard #}
             {% if byCatID %}
-                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byCatID).orderBy('bottlePrice ASC').all() %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byCatID).orderBy('title DESC').all() %}
             {% elseif byVineyardID %}
-                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byVineyardID).orderBy('bottlePrice ASC').all() %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).relatedTo(byVineyardID).orderBy('title DESC').all() %}
             {% else %}
-                {% set entries = craft.entries.section([handle]).descendantOf(level.id).orderBy('bottlePrice ASC').all() %}
+                {% set entries = craft.entries.section([handle]).descendantOf(level.id).orderBy('title DESC').all() %}
             {% endif %}
 
             {% for item in entries %}

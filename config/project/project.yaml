@@ -1,4 +1,4 @@
-dateModified: 1696088712
+dateModified: 1696799137
 elementSources:
   craft\elements\Entry:
     -
@@ -174,6 +174,7 @@ meta:
     5d795099-4e5b-4b16-a44a-9379e1ebdfd1: Blockquote # Blockquote
     5f3fdd63-04df-4e36-9eb5-bdc1a77ca793: Default # Default
     6bfa764f-e6e3-4ea3-a769-0507cfbbc88f: Default # Default
+    7da1a796-2cb6-4787-8166-777e059bd054: Age # Age
     7ee25ce1-3f20-47d1-83f3-c257b09cbb2b: 'Topic Short Intro' # Topic Short Intro
     8c51f1b8-451f-41d5-b139-f9d030efcf45: 'Topic Title' # Topic Title
     9dcda578-d8ea-45b0-ba7c-1e15b0edcf5b: Shipping # Shipping
@@ -209,6 +210,7 @@ meta:
     580df5a8-303c-40f7-912a-97daffa71ea1: Default # Default
     858f3bb6-7cf5-4474-b1e4-de9c33c1a234: Default # Default
     907f3d95-de77-4dfb-a587-e072100f395c: 'User Icon' # User Icon
+    929b4bb2-17ce-4099-96bd-cc3ba4168435: 'Btn OK' # Btn OK
     949a4cea-4e29-4d73-a731-7a68775274d4: 'Body Text' # Body Text
     988b989a-a7d1-466a-9689-70f9dc57a7c6: 'Site Images' # Site Images
     2694eaad-966f-429f-be1b-02ae779300b8: 'Alt Text' # Alt Text
@@ -224,6 +226,7 @@ meta:
     86243be3-8e67-464f-a760-6ee3eaebbb51: 'Wine Category' # Wine Category
     88201cae-dd20-461e-9eeb-e00723531e55: 'Company Phone' # Company Phone
     237372ee-6401-4537-83c1-c858fd11da8d: Item # Item
+    594023e9-6ef4-44bc-b75f-b3cc76cf5bdf: 'Btn Cancel' # Btn Cancel
     744293fd-8b7f-4c64-ab78-602c09d5b4ce: TextPic # TextPic
     920134a8-c4e4-444b-b1ca-38a95d0a7b43: Return # Return
     2640767f-64a9-46f2-aeb7-37c8f4b7c19d: Image # Image
@@ -241,6 +244,7 @@ meta:
     b210e6df-b6ce-436e-8b65-10f838522fff: 'Global Nav' # Global Nav
     ba700213-75f7-4cac-90d0-83101e67f7db: 'Soma Cellars' # Soma Cellars
     bacc9914-340e-463e-8d19-5345afda9138: Body # Body
+    bd4d76ba-a71a-4e62-b4a0-7459f8a9efcb: 'Btn No' # Btn No
     bfc48201-3ef2-4750-9269-167f90da381f: globalVars # globalVars
     c073a991-8eeb-4c72-9f93-c9d390d1d922: 'Company Address Two' # Company Address Two
     c9c255f8-fc50-429f-8dbf-a15827828e42: 'Wine Bottles' # Wine Bottles
@@ -248,6 +252,7 @@ meta:
     c8511db1-6c85-4a7b-883b-eb8283f3660d: Footer # Footer
     c463785e-e4a5-4ff8-b55a-ef45370e727a: 'Sold Out' # Sold Out
     ca1c4ea1-3384-4601-87d5-bbd4103dd286: Wines # Wines
+    cd4725d9-6885-461a-a1a9-1fa00808e74a: 'Age Prompt' # Age Prompt
     cdf9ec0d-9ae8-410a-a62e-eaba0a11884f: 'Social Twitter' # Social Twitter
     cfe9d056-446f-4756-9dc5-880d807f6a6a: Default # Default
     d6ba5db9-db16-4dc9-85d9-d6f37cf9a759: 'Text Pic' # Text Pic
@@ -269,6 +274,7 @@ meta:
     e88b6eff-e6b3-4a5f-8db7-fcf54a8e9c57: 'Site Logo' # Site Logo
     e435e90b-5ebd-4ba8-81d3-7516cac588b7: Headline # Headline
     e524f9fc-7285-428c-b0f0-71307175c157: 'Intro Heading' # Intro Heading
+    e14579af-e292-4a8b-88ab-e241d8f36b4c: 'Btn Yes' # Btn Yes
     eb03ba26-2494-4f8f-80d5-bd9880e5f97a: Privacy # Privacy
     ec3a965a-4129-47ed-9b52-8ba88a7f7538: 'Text Msg' # Text Msg
     edc1f49a-35cc-438f-99df-287e33d6ced8: 'Bottle Size' # Bottle Size
@@ -284,6 +290,10 @@ meta:
     ffdcc74b-97d2-41a6-91bf-4459dbbad872: 'Intro Hero' # Intro Hero
 plugins:
   ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cookies:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

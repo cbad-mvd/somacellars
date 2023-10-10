@@ -1,7 +1,107 @@
 function test() {
 	return;
+}	
+
+
+/*
+ * general purpose utilities
+ */
+function addEventListenerByClass( theClass, theFunction ) {
+	let elements = document.getElementsByClassName(theClass);
+	
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].addEventListener('click', theFunction, false);
+	}
 }
 
+
+
+/*
+ * cookie utilities
+ */
+function addMinutes(startDate, minutes) {
+    return new Date(startDate.getTime() + minutes*60000);
+}
+
+function cookieExists(theCookie) {
+	if ( document.cookie.split(";").some((item) => item.trim().startsWith(theCookie))) {
+		return true;
+	}
+	return false;
+}
+
+function getCookieValue( theCookie ) {
+	const cookieValue = document.cookie
+	.split("; ")
+	.find((row) => row.startsWith(theCookie))
+	?.split("=")[1];
+
+	return(cookieValue);
+}
+
+function setCookie( name, value, minutes ) {
+	const startDate = new Date();
+	let   expireDate = addMinutes(startDate, minutes);
+	let   newCookie = name + '=' + value + ';expires=' + expireDate.toUTCString();
+	
+	// alert(newCookie);
+	document.cookie = newCookie;
+}
+
+function getCookie( name ) {
+	let retVal = null;
+
+	if ( cookieExists(name) ) {
+		let cookieValue = getCookieValue(name);
+		
+		retVal = name + "=" + cookieValue;
+	}
+	return retVal;
+}
+
+/*
+ * verify age functions
+ */
+
+// event handler when user click age verification buttons
+function confirmAgeVerication() {
+	let elem = document.getElementById( 'ageVerify' );
+	let body = document.getElementById( 'home-page' );
+	let result = this.getAttribute('data-result');
+
+	if ( result == 'true' ) {
+		setCookie( 'SOMA-ageCheck', 'over21', 2 );
+		elem.classList.add("noshow");
+		body.classList.remove("bodyNoScroll");
+	}
+	else {
+		location.href = "https://www.responsibility.org/";
+	}
+	
+}
+
+function setupAgeVerification(age) {
+	let theCookie = 'SOMA-ageCheck';
+	let elem = document.getElementById( 'ageVerify' );
+	let body = document.getElementById( 'home-page' );
+
+	if ( cookieExists(theCookie) ) {
+		//alert( getCookie(theCookie) );
+
+		elem.classList.add("noshow");
+		body.classList.remove("bodyNoScroll");
+	}
+	else {
+		elem.classList.remove("noshow");
+		body.classList.add("bodyNoScroll");
+
+		addEventListenerByClass( 'jsConfirmAge', confirmAgeVerication );
+	}
+}	
+
+/*
+ * adjust page top for header nav
+ */
 const setPageTop = (headerID, pageID = "") => {
 		
 	let element = document.querySelector('#'+headerID);
@@ -55,8 +155,7 @@ const initWineCats = () => {
 
 
 // @ts-ignore
-$(document).ready(function () {
-
+$(document).ready(function () {	
 	/*
 	 * detect hover enabled devices
 	 */

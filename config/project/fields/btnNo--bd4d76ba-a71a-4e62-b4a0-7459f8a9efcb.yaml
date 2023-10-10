@@ -1,0 +1,19 @@
+columnSuffix: lzhvsphc
+contentColumnType: text
+fieldGroup: 7da1a796-2cb6-4787-8166-777e059bd054 # Age
+handle: btnNo
+instructions: null
+name: 'Btn No'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

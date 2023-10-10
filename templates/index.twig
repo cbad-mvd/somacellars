@@ -1,13 +1,38 @@
 {% extends "_layouts/site-layout-base.twig" %}
 {% import '_macros/_textpic' as m_textpic %}
 
+{% block bodyHtml %}
+<div id="ageVerify">
+	<div class="msg" >
+		<div class="logo">
+			{% set image = globalVars.siteLogo.one() %}
+			{% if image and image.extension == 'svg' %}
+				<a href="{{ alias('@web') }}">
+					<figure>
+						{{ svg(image) }}
+					</figure>
+				</a>
+			{% endif %}
+		</div>
+		<div class="body">
+			<p class="prompt">{{ globalVars.agePrompt }}</p>
+		</div>
+		<div class="buttons">
+			<span data-result="false" class="button buttonLink jsConfirmAge">{{ globalVars.btnNo }}</span>
+			<span data-result="true" class="button buttonLink jsConfirmAge">{{ globalVars.btnYes }}</span>
+		</div>
+	</div>
+</div>
+{{ parent() }}
+{% endblock %}
+
 {# -- Primary content block -- #}
 {% block titleTag %}
 <title>{{ globalVars.displayUrl }}</title>
 {% endblock titleTag %}
 
 {% block bodyTag %}
-	<body class="home-page">
+	<body id="home-page" class="home-page">
 {% endblock bodyTag %}
 
 {% block header %}
@@ -82,5 +107,18 @@
 {% endblock %}
 
 {% block pageJs %}
+
+{% set ageCheck = getCookie('SOMA-ageCheck') %}
+{% if ageCheck  %}
+	{# {% do setCookie('SOMA-ageCheck') %} #}
+{% else %}
+	{# {% do setCookie('SOMA-ageCheck', '', now | date_modify("-5 minutes").timestamp) %} #}
+{% endif %}
+
+<script>	
+	let ageCheck = '{{ ageCheck }}';
+	setupAgeVerification( ageCheck );
+</script>
+
 {% endblock pageJs %}
 

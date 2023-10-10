@@ -3497,3 +3497,74 @@ div.flatpickr-calendar {
 										</div>
 **/
 
+
+/*
+ * Age verification on startup
+ */
+ 
+.bodyNoScroll {
+	overflow: hidden;
+}
+
+#ageVerify {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	margin: 0;
+	width: 100%; 
+	height: 150%; 
+	background-color: rgba(0, 0, 0, 50%); 
+	z-index: 2000;
+
+	&.noshow {
+		display: none;
+	}
+
+	div {
+		margin: 0;
+	}
+	
+	.msg {
+		position: absolute; 
+		left: 25%; 
+		top: 10rem;
+		width: 55%; 
+		background-color: $color-bg;
+		border-radius: 0.5rem;
+
+		.body {
+			color: $color-bodytext;
+			margin: 0 2rem;
+
+			p {
+				margin-bottom: 2rem;
+			}
+		}
+		
+		.logo {
+			display: block;
+			margin: 2rem auto 0 auto;
+			width: 65%;
+			
+			svg {
+				fill: $color-main-accent;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			margin-bottom: 2rem;
+
+			span {
+				width: 20%;
+				margin: 0 1rem;
+			}
+
+			.button {
+			}
+
+		}
+	}
+}

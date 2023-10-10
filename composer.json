@@ -2,6 +2,7 @@
   "require": {
     "craftcms/ckeditor": "2.2.0",
     "craftcms/cms": "4.5.6.1",
+    "nystudio107/craft-cookies": "4.0.0",
     "nystudio107/craft-emptycoalesce": "4.0.0",
     "servd/craft-asset-storage": "3.5.0",
     "vlucas/phpdotenv": "^5.4.0"

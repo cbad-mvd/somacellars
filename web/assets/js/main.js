@@ -23,6 +23,11 @@ function addMinutes(startDate, minutes) {
     return new Date(startDate.getTime() + minutes*60000);
 }
 
+function addHours(startDate, hours) {
+	let minutes = hours*60;
+	return( addMinutes(startDate, minutes) );
+}
+
 function cookieExists(theCookie) {
 	if ( document.cookie.split(";").some((item) => item.trim().startsWith(theCookie))) {
 		return true;
@@ -39,9 +44,10 @@ function getCookieValue( theCookie ) {
 	return(cookieValue);
 }
 
-function setCookie( name, value, minutes ) {
+function setCookie( name, value, hours, minutes=0 ) {
 	const startDate = new Date();
-	let   expireDate = addMinutes(startDate, minutes);
+	let   totalMinutes = (hours * 60) + minutes;
+	let   expireDate = addMinutes(startDate, totalMinutes);
 	let   newCookie = name + '=' + value + ';expires=' + expireDate.toUTCString();
 	
 	// alert(newCookie);
@@ -70,7 +76,7 @@ function confirmAgeVerication() {
 	let result = this.getAttribute('data-result');
 
 	if ( result == 'true' ) {
-		setCookie( 'SOMA-ageCheck', 'over21', 2 );
+		setCookie( 'SOMA-ageCheck', 'over21', 24, 0 );
 		elem.classList.add("noshow");
 		body.classList.remove("bodyNoScroll");
 	}

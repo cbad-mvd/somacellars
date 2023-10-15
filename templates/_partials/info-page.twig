@@ -16,7 +16,7 @@
         {% set topicImage = item.topicImage.one() ??? null %}
         {{ m_pageintro.pageintro(   item.topicTitle, 
                                     item.topicIntro, 
-                                    item.topicRichText,
+                                    null,
                                     topicImage, 
                                     item.topicBanner,
                                     null, 

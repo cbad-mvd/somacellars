@@ -1,4 +1,4 @@
-dateModified: 1696799137
+dateModified: 1749599126
 elementSources:
   craft\elements\Entry:
     -
@@ -177,6 +177,7 @@ meta:
     7da1a796-2cb6-4787-8166-777e059bd054: Age # Age
     7ee25ce1-3f20-47d1-83f3-c257b09cbb2b: 'Topic Short Intro' # Topic Short Intro
     8c51f1b8-451f-41d5-b139-f9d030efcf45: 'Topic Title' # Topic Title
+    08dd51fa-b973-4c46-8bc8-585db0f4aaec: ShipCode # ShipCode
     9dcda578-d8ea-45b0-ba7c-1e15b0edcf5b: Shipping # Shipping
     9e18e062-4615-46d0-8cb5-ea397563810a: 'Site Logos' # Site Logos
     9f873772-0bd5-4a73-ac81-1e87058d57b0: Intro # Intro
@@ -221,7 +222,9 @@ meta:
     5625cd6d-885d-41cb-ae15-76b0f1ba9599: Region # Region
     6014ea73-e0f0-4cd4-a2ac-eff43e74101f: Copyright # Copyright
     6906d71b-e35c-4406-8644-0197c79a10c6: 'Simple Logo' # Simple Logo
+    7789b732-fa0f-45d4-8847-667cc4e9dbe7: ShipCodePre # ShipCodePre
     8890c4af-24db-46a4-bdba-7c9733d4e525: Blog # Blog
+    15714a59-9b34-434f-9c1e-35e463fab1f7: Editors # Editors
     33306d0a-6b4b-425a-9a1b-2460ab24d2ac: 'Company State' # Company State
     86243be3-8e67-464f-a760-6ee3eaebbb51: 'Wine Category' # Wine Category
     88201cae-dd20-461e-9eeb-e00723531e55: 'Company Phone' # Company Phone
@@ -230,6 +233,7 @@ meta:
     744293fd-8b7f-4c64-ab78-602c09d5b4ce: TextPic # TextPic
     920134a8-c4e4-444b-b1ca-38a95d0a7b43: Return # Return
     2640767f-64a9-46f2-aeb7-37c8f4b7c19d: Image # Image
+    04554934-5d8a-40c3-a23d-8d7aa0b90855: ShipCodePost # ShipCodePost
     5913033f-7b45-4065-bcd2-5188d9764973: 'Contact Info' # Contact Info
     6822924f-0247-44c0-8bc5-90e4e23b31e2: 'Site Name' # Site Name
     55425038-9ff5-4dec-9006-d4aef7b84b74: Nav # Nav
@@ -347,9 +351,3 @@ system:
   retryDuration: null
   schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

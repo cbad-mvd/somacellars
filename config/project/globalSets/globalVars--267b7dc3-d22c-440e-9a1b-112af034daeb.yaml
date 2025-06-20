@@ -220,6 +220,42 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 7789b732-fa0f-45d4-8847-667cc4e9dbe7 # ShipCodePre
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf862380-a164-47da-af39-54ea399c24a5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 04554934-5d8a-40c3-a23d-8d7aa0b90855 # ShipCodePost
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1805e9c1-0791-4a40-a69e-9df6278a4d52
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08dd51fa-b973-4c46-8bc8-585db0f4aaec # ShipCode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e70e491f-9fb6-4892-aeec-d13bb0d32d47
+            userCondition: null
+            warning: null
+            width: 100
         name: Fields
         uid: 6e6fc68f-1bed-45aa-b31d-de6748c74eae
         userCondition: null

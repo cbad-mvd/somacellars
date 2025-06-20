@@ -4,6 +4,18 @@
 
 {% block blockContent %}
 <div class="leftcolumn">
-    <p>{{ banner.textMsg }}</p>
+    {% if banner.textMsg|striptags == globalVars.shipcode %}
+        {% set message = "%s %s %s"|format( globalVars.shipcodepre, 
+                                            globalVars.shipcode, 
+                                            globalVars.shipcodepost) %}
+
+    {% else %}
+        {% set message = banner.textMsg  %}
+    {% endif %}
+    <p>
+        {{ message }}
+    </p>
+
 </div>
+
 {% endblock %}

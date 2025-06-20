@@ -1,0 +1,5 @@
+description: 'Content Editors'
+handle: editors
+name: Editors
+permissions:
+  - 'viewassets:df7c7840-afad-4139-a5be-e9a088c0c64c' # Blog Images
